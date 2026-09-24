@@ -308,17 +308,27 @@ export function defaultP3DotenvPath(): string {
 }
 
 export function readElevenLabsKey(env: NodeJS.ProcessEnv = process.env, dotenvPath: string = defaultP3DotenvPath()): { key: string; source: "env" | "dotenv" } | undefined {
+  // Candidates in priority order: environment, then P3 .env. ElevenLabs API keys
+  // start with "sk_"; a value without it (e.g. the key ID pasted by mistake) must
+  // not shadow a real key from the other source, so a "sk_" key wins wherever it is.
+  const candidates: { key: string; source: "env" | "dotenv" }[] = [];
   const fromEnv = env.ELEVENLABS_API_KEY?.trim();
-  if (fromEnv) return { key: fromEnv, source: "env" };
-  if (!existsSync(dotenvPath)) return undefined;
-  const text = readFileSync(dotenvPath, "utf8");
-  for (const line of text.split(/\r?\n/)) {
-    const m = line.match(/^\s*(?:export\s+)?ELEVENLABS_API_KEY\s*=\s*(.*)\s*$/);
-    if (!m) continue;
-    const v = m[1]!.trim().replace(/^(['"])(.*)\1$/, "$2").trim();
-    if (v && !/^<|your_|_here$|^x+$/i.test(v)) return { key: v, source: "dotenv" };
+  if (fromEnv) candidates.push({ key: fromEnv, source: "env" });
+  if (existsSync(dotenvPath)) {
+    const text = readFileSync(dotenvPath, "utf8");
+    for (const line of text.split(/\r?\n/)) {
+      const m = line.match(/^\s*(?:export\s+)?ELEVENLABS_API_KEY\s*=\s*(.*)\s*$/);
+      if (!m) continue;
+      const v = m[1]!.trim().replace(/^(['"])(.*)\1$/, "$2").trim();
+      if (v && !/^<|your_|_here$|^x+$/i.test(v)) candidates.push({ key: v, source: "dotenv" });
+    }
   }
-  return undefined;
+  return candidates.find((c) => looksLikeElevenLabsKey(c.key)) ?? candidates[0];
+}
+
+/** ElevenLabs API keys start with "sk_"; key IDs and other values do not. */
+export function looksLikeElevenLabsKey(v: string): boolean {
+  return /^sk_[A-Za-z0-9]{16,}$/.test(v);
 }
 
 // ------------------------------------------------------------------ config file

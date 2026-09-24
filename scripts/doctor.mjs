@@ -37,7 +37,31 @@ add("VERIFY", "Remotion browser (P3 real-render test)", true, remotionBrowser ? 
 
 // ---- needed for real production only
 const p3env = { ...envFile(join(root, "branches/a/pipeline3_production/.env")), ...process.env };
-add("PRODUCTION", "ElevenLabs API key (P3.05)", isSet(p3env.ELEVENLABS_API_KEY), isSet(p3env.ELEVENLABS_API_KEY) ? "set" : "set ELEVENLABS_API_KEY (env or branches/a/pipeline3_production/.env)");
+{
+  // Same rule as the bridges' p3-voice: a real key starts with "sk_" and wins over a
+  // non-key value (e.g. a key ID) in the other source. Checked live with a free,
+  // read-only call; the key value is never printed.
+  const cands = [process.env.ELEVENLABS_API_KEY, envFile(join(root, "branches/a/pipeline3_production/.env")).ELEVENLABS_API_KEY]
+    .map((v) => (v ?? "").trim().replace(/^["']|["']$/g, "")).filter(isSet);
+  const key = cands.find((v) => v.startsWith("sk_")) ?? cands[0];
+  let detail = "set ELEVENLABS_API_KEY (env or branches/a/pipeline3_production/.env)";
+  let ok = false;
+  if (key && !key.startsWith("sk_")) detail = "value found but it is not an API key (keys start with sk_; a key ID does not work)";
+  else if (key) {
+    try {
+      const res = await fetch("https://api.elevenlabs.io/v1/user/subscription", { headers: { "xi-api-key": key }, signal: AbortSignal.timeout(8000) });
+      if (res.ok) {
+        const sub = await res.json();
+        ok = true;
+        detail = `valid — plan ${sub.tier}, ${sub.character_count}/${sub.character_limit} characters used this period`;
+      } else detail = `rejected by ElevenLabs (HTTP ${res.status}) — create a new key in the ElevenLabs dashboard`;
+    } catch {
+      ok = true;
+      detail = "set (not checked — ElevenLabs unreachable from here)";
+    }
+  }
+  add("PRODUCTION", "ElevenLabs API key (P3.05)", ok, detail);
+}
 add("VERIFY", "seal key (.unified/seal.key)", existsSync(join(root, ".unified", "seal.key")), existsSync(join(root, ".unified", "seal.key")) ? "present (never share it)" : "created by npm run setup / npm run kur");
 const py = has(WIN ? "python" : "python3");
 add("PRODUCTION", "Python 3 (araç ortamı tools/.venv için)", !!py, py ?? "not found");
@@ -50,10 +74,18 @@ add("PRODUCTION", "Python 3 (araç ortamı tools/.venv için)", !!py, py ?? "not
     add("PRODUCTION", "gTTS (önizleme yedeği)", spawnSync(pyBin, ["-c", "import gtts"], { shell: WIN && pyBin !== vpy }).status === 0, "npm run setup:voice");
   }
 }
-const kg = has("kaggle", ["--version"]);
-add("PRODUCTION", "Kaggle CLI (P3.10 archive / distributed render)", !!kg, kg ?? "optional — pip install kaggle + ~/.kaggle/kaggle.json");
+const kgVenv = join(root, "tools", ".venv", WIN ? "Scripts" : "bin", WIN ? "kaggle.exe" : "kaggle");
+const kg = has("kaggle", ["--version"]) ?? (existsSync(kgVenv) ? has(kgVenv, ["--version"]) : null);
+const home = process.env.HOME || process.env.USERPROFILE || "";
+const kgAuth = !!process.env.KAGGLE_API_TOKEN || (!!process.env.KAGGLE_USERNAME && !!process.env.KAGGLE_KEY) || ["kaggle.json", "access_token"].some((f) => existsSync(join(home, ".kaggle", f)));
+add("PRODUCTION", "Kaggle CLI (P3.10 archive / distributed render)", !!kg && kgAuth, !kg ? "optional — pip install kaggle (or tools/.venv/bin/pip install kaggle)" : kgAuth ? kg : `${kg} — no credentials: KAGGLE_API_TOKEN or ~/.kaggle/access_token`);
 const yenv = envFile(join(root, "apps/youtube-agent/.env"));
-add("PRODUCTION", "YouTube agent .env", existsSync(join(root, "apps/youtube-agent/.env")), "cd apps/youtube-agent && npm run walkthrough (OAuth + provider keys)");
+{
+  const ytTokens = join(root, "apps/youtube-agent/config/tokens.json");
+  let linked = false;
+  try { linked = !!JSON.parse(readFileSync(ytTokens, "utf8")).youtube?.refresh_token; } catch { /* not linked yet */ }
+  add("PRODUCTION", "YouTube channel linked (OAuth)", linked, linked ? "tokens present" : "not linked — cd apps/youtube-agent && npm run walkthrough (see docs/KULLANICI_GIRDILERI.txt)");
+}
 const upm = String(process.env.UNIFIED_PIPELINE_MODE ?? yenv.UNIFIED_PIPELINE_MODE ?? "").trim().replace(/^["']|["']$/g, "").toLowerCase() === "true";
 add("PRODUCTION", "UNIFIED_PIPELINE_MODE=true in YouTube agent", upm, upm ? "on" : "set UNIFIED_PIPELINE_MODE=true in apps/youtube-agent/.env");
 const venvBin = (n) => { const p = join(root, "tools", ".venv", WIN ? "Scripts" : "bin", WIN ? `${n}.exe` : n); return existsSync(p) ? p : null; };

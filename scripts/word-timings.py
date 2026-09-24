@@ -40,7 +40,10 @@ def _key_from_dotenv():
                 return v
     return None
 
-key = os.environ.get("ELEVENLABS_API_KEY") or _key_from_dotenv()
+# A real ElevenLabs key starts with "sk_"; prefer it over a non-key value
+# (e.g. a key ID) from the other source, same rule as the bridges' p3-voice.
+_candidates = [k for k in (os.environ.get("ELEVENLABS_API_KEY", "").strip(), _key_from_dotenv()) if k]
+key = next((k for k in _candidates if k.startswith("sk_")), _candidates[0] if _candidates else None)
 if not key:
     sys.exit("ELEVENLABS_API_KEY yok — branches/a/pipeline3_production/.env içine ELEVENLABS_API_KEY=... yazın")
 sys.path.insert(0, str(tools))

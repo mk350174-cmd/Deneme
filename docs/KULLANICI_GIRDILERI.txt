@@ -1,0 +1,343 @@
+================================================================================
+ BİRLEŞİK VİDEO HATTI — SİZİN DOLDURMANIZ GEREKEN BİLGİLER
+================================================================================
+
+Nasıl kullanılır:
+  • [ ... ] ile işaretli yerleri doldurun. Bilmediğiniz yeri boş bırakın,
+    birlikte doldururuz.
+  • Doldurduktan sonra dosyanın tamamını sohbete yapıştırın ya da yükleyin.
+  • ÖNEMLİ: API anahtarlarını bu dosyaya YAZMAYIN. Anahtarlar Bölüm 1'de
+    anlatıldığı gibi "ortam ayarlarına" girilir. Bu dosyada yalnızca
+    "ekledim / eklemedim" diye işaretleyin.
+
+Bölümler:
+  1. API anahtarları (ortam ayarlarına girilecek)
+  2. İnsan onay kapıları için adınız
+  3. Kanal bilgileri (brief)
+  4. YouTube hesabını bağlama (adım adım)
+  5. Ses (ElevenLabs) tercihleri
+  6. Google Flow görselleri (elle yapılan kısım)
+  7. Müzik ve altyazı
+  8. Elle yapılan / onay gereken adımların tam listesi
+  9. Sonraya bırakılanlar (Kaggle dağıtık render)
+
+
+================================================================================
+ 1. API ANAHTARLARI
+================================================================================
+
+Anahtarlar nereye girilir?
+  claude.ai/code → bu oturumun başlığındaki bulut ortamı menüsü → "Edit"
+  → ortam değişkenleri (environment variables). Her satır: AD=değer
+  Kaydettikten sonra açılan YENİ oturumlar anahtarları görür.
+
+Anahtarlar birbirini ezer mi?
+  Hayır; her servisin kendi değişken adı var, hepsi aynı anda durabilir.
+  ElevenLabs için ek bir düzeltme yaptım: ortamdaki değer gerçek bir anahtar
+  değilse (ör. "339…" ile başlayan anahtar kimliği), hat artık onu atlayıp
+  .env dosyasındaki "sk_…" anahtarını kullanıyor. İki yerde de gerçek anahtar
+  varsa ortam ayarındaki kazanır.
+
+Hattın gerçekten okuduğu anahtarlar:
+
+  Değişken adı          Ne için                         Gerekli mi?        Eklendi mi?
+  --------------------  ------------------------------  -----------------  -----------
+  ELEVENLABS_API_KEY    Üretim anlatımı (P3.05),        EVET               [ ]
+                        kelime zamanlı altyazı
+                        → "sk_" ile başlamalı. ElevenLabs panelinde
+                          Profile → API Keys → "Create API Key".
+                          Tabloda görünen kısa "Key ID" DEĞİL; oluştururken
+                          bir kez gösterilen uzun "sk_..." değeri.
+                          Şu an ortamdaki değer bir Key ID, lütfen
+                          değiştirin.
+  KAGGLE_API_TOKEN      Kaggle CLI (arşiv, dağıtık      Sonra (Bölüm 9)    [ ]
+                        render)
+  KAGGLE_USERNAME       Dağıtık render (P3.08)          Sonra (Bölüm 9)    [ ]
+
+Yalnızca YouTube agent'ın "yorumlara yanıt taslağı" özelliği için
+(isteğe bağlı; video üretim hattı bunları KULLANMAZ):
+
+  GLM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY / MOONSHOT_API_KEY /
+  MIMO_API_KEY / GEMINI_API_KEY
+  → Agent yukarıdaki sırayla ilk bulduğunu kullanır; bir tanesi yeterli.
+
+GLM anahtarı hakkında (sorunuz 5):
+  GLM anahtarına İHTİYAÇ YOK. Başarısız görünen test, ortamda GLM anahtarı
+  olduğu için bozuluyordu; testi ortamdan bağımsız hale getirdim. GLM
+  anahtarınızı tutmak isterseniz tutun; yalnızca yorum yanıt taslakları
+  için kullanılır.
+
+Dikkat, şu an hiçbir şeyin okumadığı anahtarlar:
+  GEMINI_API_KEY1 … GEMINI_API_KEY10 (numaralı) ve DEEPSEEK_API_KEY.
+  Agent numarasız "GEMINI_API_KEY" adını arar; DeepSeek desteği yok.
+  Gemini kullanılacaksa bir tanesini GEMINI_API_KEY adıyla ekleyin.
+
+  Gemini'yi yorum taslakları için kullanayım mı?   [ evet / hayır ]
+
+
+================================================================================
+ 2. İNSAN ONAY KAPILARI İÇİN ADINIZ
+================================================================================
+
+Hatta 10'dan fazla onay noktası var (A1–A7, B commit, F1, yayın onayı). Her
+onayda kodun kaydettiği bir kişi adı gerekir. Claude bu adı uyduramaz;
+"system", "PREVIEW" gibi değerleri kod zaten reddediyor.
+
+  Onaylarda kullanılacak adınız (en az 2 harf):  [                         ]
+
+Not: Adınızı burada yazmanız ONAY VERMEK değildir. Her kapıda Claude durur,
+inceleme dosyasını özetler ve "onaylıyorum" demenizi bekler.
+
+
+================================================================================
+ 3. KANAL BİLGİLERİ (work/brief.json — bir kez doldurulur)
+================================================================================
+
+B strateji modülleri bu bilgiler olmadan boş strateji üretir.
+
+  Kanal adı:                          [                                      ]
+  YouTube kanal adresi (@...):        [ https://www.youtube.com/@            ]
+  Kanalın konumu (1–2 cümle; ne anlatıyor, kime):
+    [                                                                        ]
+  Değerler (ör. kaynak odaklılık, tarihsel doğruluk):
+    [                                                                        ]
+  Kitle türü (birini seçin):          [ niche / broad / lifestyle / creators / professional ]
+  Anlatım dili:                       [ tr / en / ikisi ]
+  Hedef ülkeler (ör. TR, AZ, DE):     [                                      ]
+
+Kitle verisi (YouTube Studio → Analytics → Kitle). Kanal yeniyse "yeni kanal"
+yazın:
+  Yaş / cinsiyet özeti:               [                                      ]
+  İlgi alanları:                      [                                      ]
+  Bu rakamları okuduğunuz tarih:      [ GG.AA.YYYY ]
+  (Tarih yoksa B03 kitleye 0 güven verir ve strateji "HAZIR DEĞİL" çıkar.)
+
+Kanal hedefleriniz (serbest; ör. "ilk 3 saniyede birincil kaynakla aç"):
+  1. [                                                                       ]
+  2. [                                                                       ]
+  3. [                                                                       ]
+
+Kısıtlarınız (ör. "güncel siyasete benzetme yok"):
+  1. [                                                                       ]
+  2. [                                                                       ]
+
+Rakip veya benzer kanallar (trend taraması için, isteğe bağlı):
+  [                                                                          ]
+
+İlk video konusu:                     [                                      ]
+Hedef süre (saniye, ör. 30–60):       [                                      ]
+
+
+================================================================================
+ 4. YOUTUBE HESABINI BAĞLAMA — ADIM ADIM (sorunuz 3)
+================================================================================
+
+Ne gerekiyor: Google Cloud'da ücretsiz bir "OAuth istemcisi" oluşturup
+agent'a bir kez YouTube hesabınıza erişim izni vermek. Yaklaşık 15 dakika.
+
+A) Google Cloud tarafı (tarayıcıda, kendi Google hesabınızla)
+   1. https://console.cloud.google.com/ → üstten "Proje seç" → "Yeni proje"
+      → ad: ör. "video-hatti" → Oluştur.
+   2. Menü → "APIs & Services" → "Library":
+        • "YouTube Data API v3" → Enable
+        • "YouTube Analytics API" → Enable  (analytics ve öğrenme döngüsü
+          için gerekli; agent'ın kendi kurulum sihirbazı bunu söylemiyor)
+   3. "APIs & Services" → "OAuth consent screen" (Google Auth Platform):
+        • User type: External
+        • Uygulama adı, destek e-postası, geliştirici e-postası: kendi
+          bilgileriniz
+        • "Test users" (Audience) bölümüne YouTube kanalının bağlı olduğu
+          Google hesabını ekleyin
+   4. "APIs & Services" → "Credentials" → "Create credentials" →
+      "OAuth client ID" → Application type: "Desktop app" (Web DEĞİL)
+      → Oluştur → "Download JSON" (client_secret_....json).
+      Bu dosya gizlidir; sohbete yapıştırmayın.
+
+B) Bağlantıyı yapma (kendi bilgisayarınızda önerilir)
+   Onay ekranı tarayıcınızdan 127.0.0.1 adresine geri döndüğü ve Review
+   Studio (yayın onay ekranı) http://localhost:3456 adresinde açıldığı için
+   YouTube kısmı en rahat kendi bilgisayarınızda çalışır:
+     git clone https://github.com/mk350174-cmd/Deneme.git
+     cd Deneme
+     git checkout claude/gallant-euler-vl6d3t   (ya da main'e birleştirildiyse main)
+     npm run kur
+     cd apps/youtube-agent
+     npm run walkthrough
+   → http://localhost:3456 açılır. Sihirbaz client_id / client_secret
+     değerlerini ister (indirdiğiniz JSON'da), sonra Google giriş ekranını
+     açar. Kanal hesabınızla girip izin verin. Bitince
+     apps/youtube-agent/config/tokens.json oluşur (git'e girmez).
+   → Kontrol: depo kökünde `npm run doctor` →
+     "YouTube channel linked (OAuth) ✔"
+
+   Alternatif (her şey bulutta kalsın isterseniz): Claude bu oturumda bir
+   giriş bağlantısı üretir. İzin verdikten sonra tarayıcı "sayfa
+   açılamadı" der; adres çubuğundaki http://127.0.0.1:…/?code=… adresini
+   kopyalayıp gönderirsiniz, Claude bağlantıyı tamamlar. Kod tek kullanımlık
+   ve kısa ömürlü. Ancak Review Studio'yu yine kendi bilgisayarınızda açmanız
+   gerekir.
+
+C) Bilmeniz gereken iki Google kısıtı
+   • Uygulama "Testing" durumunda kaldıkça Google verdiği izni 7 günde bir
+     sona erdirir. Haftada bir yeniden giriş gerekir. Kalıcı çözüm: OAuth
+     consent screen → "Publish app" (In production).
+   • Google'ın denetiminden (audit) geçmemiş API projelerinden yüklenen
+     videolar YouTube'da "Özel" (private) olarak kilitlenir. İlk videolar
+     için pratik yol: agent yükler, siz YouTube Studio'dan kontrol edip
+     herkese açık yaparsınız (kilitliyse Studio'dan yeniden yükleyin).
+     Kalıcı çözüm: Google'ın "YouTube API Services Audit" formu.
+
+   Yayın modu tercihiniz:
+     [ ] Agent yüklesin, özel kalsın, ben Studio'dan açayım
+     [ ] Audit başvurusu yapacağım, sonra otomatik yayın
+     [ ] Şimdilik yükleme yok; bitmiş MP4'ü ben elle yüklerim
+
+   Adımlar tamam mı?  A) [ ]   B) [ ]
+   Takıldığınız adım: [                                                      ]
+
+
+================================================================================
+ 5. SES — ELEVENLABS
+================================================================================
+
+  • Anahtarınız çalışıyor: ücretsiz plan, ayda 10.000 karakter
+    (≈ 30 saniyelik 15–20 video; 30 sn Türkçe anlatım ≈ 500 karakter).
+  • ElevenLabs'in ücretsiz planı ticari kullanım hakkı vermiyor ve
+    atıf ister. Kanalda para kazanacaksanız ücretli plan (Starter veya üstü)
+    gerekir.
+      Planınız:  [ ücretsiz kalacak / yükselteceğim ]
+
+  Anlatım sesi (voice_id):
+    ElevenLabs → Voices → sesi seçin → "..." → "Copy voice ID".
+    Türkçe için model "eleven_multilingual_v2" (hazır ayarlı).
+      voice_id:           [                                   ]
+      Ses tarifi (bulamadıysanız, ör. "sakin, orta yaşlı erkek belgesel sesi"):
+                          [                                   ]
+    Ses klonlama yalnızca KENDİ sesiniz ya da açık izni olan bir ses için
+    yapılabilir.
+
+  Önizleme sesi (Piper, çevrimdışı Türkçe) kurulu ve ücretsiz. Gate A5'te
+  telaffuzu önce onunla dinlersiniz; kredi harcanmaz.
+
+
+================================================================================
+ 6. GOOGLE FLOW GÖRSELLERİ (ELLE YAPILAN KISIM)
+================================================================================
+
+Hat görselleri kendisi üretmez. Akış şöyle:
+  1. P2 onaylandıktan sonra Claude `p3-plan` çalıştırır ve
+     work/cycle-NNN/assets_checklist.md üretir. Her çekim için:
+       - dosya adı (ör. assets/shot_taydula_01.png ya da .mp4)
+       - Google Flow istemi (prompt)
+       - o çekimde okunacak anlatım metni
+  2. Siz https://labs.google/flow adresinde her istemi çalıştırıp çıktıyı
+     TAM O ADLA kaydedersiniz.
+  3. Dosyaları döngünün assets/ klasörüne koyarsınız. Bulut oturumunda
+     dosyaları sohbete yükleyin, Claude yerine koysun.
+  4. Claude `p3-ingest` ile kontrol eder: dosya adı, 9:16 oran, süre, çözünürlük.
+     Uymayanları listeler. Gate A4'ü görselleri gördükten sonra siz verirsiniz.
+
+  Kurallar (kanalın dürüstlük ilkesi; P2 sanat yönü kontrol listesine yazılır):
+  • Kaynakta tasviri olmayan kişilerin yüzü net portre olarak gösterilmez.
+  • Ekranda "AI rekonstrüksiyon" ibaresi bulunur.
+  • Başka birinin filigranlı görselini kullanmayın; hat filigran kaldırma
+    işini bilinçli olarak yapmaz.
+
+  Tercihleriniz:
+    Görsel dil:  [ minyatür esintili / fotogerçekçi sinematik / gravür / başka: ___ ]
+    Çekim türü:  [ çoğunlukla hareketsiz görsel (.png) / Flow video klipleri (.mp4) / karışık ]
+    Flow hesabınız var mı / hangi plan?  [                              ]
+
+
+================================================================================
+ 7. MÜZİK VE ALTYAZI (BİTİRME — Gate F1)
+================================================================================
+
+  Altyazı: anlatıma kelime kelime hizalı, videoya gömülü (ElevenLabs
+  anahtarıyla otomatik).                               İstiyor musunuz? [ evet / hayır ]
+
+  Müzik: lisansını SİZ beyan edersiniz (kod ad ve lisans ister).
+    [ ] Müzik yok
+    [ ] YouTube Ses Kitaplığı'ndan (dosyayı ben yükleyeceğim)
+    [ ] Satın aldığım/abone olduğum kütüphaneden (Epidemic, Artlist vb.):
+        kütüphane adı: [                ]
+    [ ] Yapay zekâyla üretilsin (video-toolkit; lisans koşullarını birlikte
+        kontrol ederiz)
+  Müzik ses seviyesi tercihi:  [ çok hafif / hafif / belirgin ]
+
+  F1 onayını bitmiş videoyu (finish/finished.mp4) İZLEDİKTEN sonra verirsiniz.
+
+
+================================================================================
+ 8. ELLE YAPILAN / ONAY GEREKEN ADIMLARIN TAM LİSTESİ
+================================================================================
+
+Her satırda Claude durur ve sizi bekler. "Sizin işiniz" sütunu, o adımda
+gerçekten yapmanız gerekeni yazar.
+
+ #  Aşama / Kapı                 Claude ne yapar                 Sizin işiniz
+ -- ---------------------------- ------------------------------- ---------------------------------
+ 1  P1 kapsam onayı              Konu, ana soru, amaç, kısıtları p1_scope.md'yi okuyup
+                                 yazar                           "kapsam tamam" demek
+ 2  P1 araştırma — Gate A1       Kaynaklı bulguları toplar,      p1_review.md'de özellikle
+                                 VERIFIED/INFERRED/UNKNOWN       UNKNOWN / INFERRED iddiaları
+                                 atar                            kontrol edip onaylamak. Elinizde
+                                                                 kitap/PDF kaynak varsa vermek.
+ 3  B strateji — B commit        B01–B11'i çalıştırır,           review.md'yi okuyup her modülü
+                                 review.md'yi özetler            onaylamak ve kısa gerekçe
+                                                                 söylemek. Not: B04/B05 kampanya
+                                                                 hedefleri ŞABLON metin (bilinen
+                                                                 eksik B-3); asıl hedefler
+                                                                 Bölüm 3'teki sizin hedefleriniz.
+ 4  P2 kreatif — Gate A2 +       Sahneleri, çekimleri, Flow      Sanat yönünü ve açılış çekimi
+    karar onayları               istemlerini, anlatımı yazar     gibi kararları seçmek
+ 5  P2 paket — Gate A3           p2_review.md'yi özetler         Senaryo + anlatım metnini
+                                                                 onaylamak
+ 6  Google Flow görselleri       assets_checklist.md verir       Görselleri Flow'da üretip
+                                                                 yüklemek (Bölüm 6)
+ 7  Gate A4 — varlık teslimi     Dosyaları denetler              Görselleri gördüğünüzü onaylamak
+ 8  Gate A5 — ses önizleme       Piper ile ücretsiz önizleme     Önizlemeyi DİNLEMEK; telaffuzu
+                                 üretir                          yanlış isimleri söylemek
+ 9  Gate A6 — telaffuz           Belirsiz isimleri listeler      Doğru okunuşu onaylamak
+    (gerekirse)
+ 10 Gerçek anlatım               ElevenLabs'le üretir            — (kredi harcar; aynı metin
+                                 (≈ metin uzunluğu kadar         tekrar üretilmez)
+                                 karakter)
+ 11 Gate A7 — final render       Remotion 9:16 render + QA       render/master.mp4'ü İZLEYİP
+                                                                 onaylamak
+ 12 Bitirme — Gate F1            Altyazı + müzik ekler           Müzik lisansını beyan etmek,
+                                                                 finished.mp4'ü İZLEYİP onaylamak
+ 13 YouTube Review Studio        Videoyu agent'a aktarır         Evidence desk'te bekleyen
+                                                                 iddiaları çözmek, factual +
+                                                                 rights onayı, sentetik medya
+                                                                 beyanı, başlık/açıklama,
+                                                                 yayın zamanı (localhost:3456)
+ 14 Öğrenme (~7 gün sonra)       Analytics'i B'ye taşır          Hangi YouTube metriğinin hangi
+                                                                 hedefi ölçtüğünü seçmek
+                                                                 (kpi_bindings) ve rakamları
+                                                                 Studio'dan teyit etmek
+
+Otomatik olmayan ama sizin yapmanız gerekmeyen: araştırma (Claude web'de
+yapar, siz denetlersiniz), Flow istemleri, senaryo, render, QA.
+
+
+================================================================================
+ 9. SONRAYA BIRAKILANLAR
+================================================================================
+
+  Kaggle dağıtık render (P3.08): Token şu an bu oturumda çalışıyor, CLI kurulu.
+  Denemeye geçtiğimizde gerekecekler:
+    KAGGLE_USERNAME:        [                          ]  (ortam ayarına)
+    P309_GITHUB_REPO_URL:   [ https://github.com/mk350174-cmd/Deneme.git ? ]
+  Kaggle token'ını da ortam ayarlarına KAGGLE_API_TOKEN adıyla ekleyin.
+  ~/.kaggle/access_token bu oturum kapanınca silinir.
+
+
+================================================================================
+ SON NOT
+================================================================================
+  • Sohbete daha önce yapıştırılan ElevenLabs ve Kaggle anahtarları sohbet
+    geçmişinde duruyor. Panellerden yenileyip yenilerini yalnızca ortam
+    ayarlarına girmeniz önerilir.
+  • Soru/eklemek istedikleriniz:
+    [                                                                        ]

@@ -37,6 +37,7 @@ import {
   p3Status,
   p3Voice,
   parseP3Config,
+  readElevenLabsKey,
   type MuxNarration,
   type P3MediaProbe,
   assertFinalDeliveryBound,
@@ -493,4 +494,18 @@ describe.runIf(REAL)("P3 stage runner — REAL Remotion render (UNIFIED_REAL_REN
     },
     300_000,
   );
+});
+
+describe("ElevenLabs key resolution", () => {
+  it("a real sk_ key wins over a non-key value in the other source; env still wins between two real keys", async () => {
+    const dir = await mkdtemp(join(tmpdir(), "p3-key-"));
+    const dotenv = join(dir, "p3.env");
+    await writeFile(dotenv, `ELEVENLABS_API_KEY=${FAKE_KEY}\n`);
+    const keyId = "3".repeat(64);
+    expect(readElevenLabsKey({ ELEVENLABS_API_KEY: keyId }, dotenv)).toEqual({ key: FAKE_KEY, source: "dotenv" });
+    const otherKey = "sk_" + "f".repeat(48);
+    expect(readElevenLabsKey({ ELEVENLABS_API_KEY: otherKey }, dotenv)).toEqual({ key: otherKey, source: "env" });
+    // no sk_ key anywhere: previous behaviour (env first) is kept
+    expect(readElevenLabsKey({ ELEVENLABS_API_KEY: keyId }, join(dir, "missing.env"))).toEqual({ key: keyId, source: "env" });
+  });
 });
