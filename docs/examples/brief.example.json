@@ -1,0 +1,36 @@
+{
+  "brief_type": "OWNER_STRATEGY_BRIEF",
+  "brand": {
+    "brand_name": "<Kanal adı>",
+    "positioning": "Orta Asya bozkırı tarihindeki önemli kadın figürlerini kaynak temelli, dikey (9:16) belgesellerle anlatmak",
+    "values": ["kaynak odaklılık", "tarihsel doğruluk"]
+  },
+  "channels": [
+    { "channel_id": "ch_yt_main", "name": "<Kanal adı>", "platform": "YouTube", "audience_category": "niche", "url": "https://www.youtube.com/@<kanal>" }
+  ],
+  "documentation": {
+    "channel_policies": "<Yayın bölgesi ve dil politikası — ör. 'Turkish and English narration; viewers in Europe and Asia'>",
+    "editorial_standards": "Her tarihli iddia P1'de VERIFIED olmalı; AI görsel rekonstrüksiyonlar açıkça belirtilir."
+  },
+  "audience": {
+    "platform_analytics": [
+      {
+        "platform_id": "youtube",
+        "channel_id": "ch_yt_main",
+        "demographic_data": "<YouTube Studio → Kitle: yaş/cinsiyet özeti>",
+        "geography": ["TR"],
+        "interests": ["history", "documentary"],
+        "source": "YouTube Analytics",
+        "verified_at": "2026-09-01T00:00:00Z"
+      }
+    ]
+  },
+  "owner_goals": [
+    "İlk 3 saniyede en güçlü birincil kaynak detayıyla aç",
+    "Her videoyu bir önceki figürle bağlantı kuran tek cümleyle bitir"
+  ],
+  "owner_constraints": [
+    "Güncel siyasete benzetme yok",
+    "Tarihli her iddia P1 VERIFIED iddiasına dayanmalı"
+  ]
+}

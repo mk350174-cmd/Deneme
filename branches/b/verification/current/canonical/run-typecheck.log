@@ -1,0 +1,5 @@
+
+> b-branch-strategic-control-plane@5.0.3-agent-reach.20260906 typecheck
+> tsc --noEmit -p tsconfig.json
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.

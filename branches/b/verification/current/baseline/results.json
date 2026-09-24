@@ -1,0 +1,42 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exit": 0
+  },
+  {
+    "command": "npm run build",
+    "exit": 0
+  },
+  {
+    "command": "npm run test:legacy",
+    "exit": 1
+  },
+  {
+    "command": "npm run test:repair",
+    "exit": 0
+  },
+  {
+    "command": "npm test",
+    "exit": 1
+  },
+  {
+    "command": "npm run verify:critical",
+    "exit": 0
+  },
+  {
+    "command": "npm run verify:integration",
+    "exit": 0
+  },
+  {
+    "command": "npm run verify:remaining",
+    "exit": 0
+  },
+  {
+    "command": "npm run lint:policy",
+    "exit": 0
+  },
+  {
+    "command": "npm run verify:manifest",
+    "exit": 1
+  }
+]

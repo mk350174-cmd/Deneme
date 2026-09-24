@@ -1,0 +1,219 @@
+{
+  "input_type": "P2_CREATIVE_INPUT",
+  "_readme": [
+    "P2 kreatif girdisi (örnek). Bu dosyadaki yaratıcı içeriği siz (ya da sizin adınıza Claude) yazarsınız; P2 doğrular, araştırmaya bağlar ve mühürler.",
+    "claim_id değerleri örnektir: kendi research.json dosyanızdaki claims[].claim_id değerleriyle değiştirin. Araştırmada olmayan bir claim_id reddedilir (P2_UNKNOWN_CLAIM).",
+    "approvals altındaki her \"<adınız>\" alanına, o adımı gerçekten inceleyip onaylayan kişinin adını siz yazın. Yer tutucu, PREVIEW veya system kabul edilmez (P2_APPROVAL_REQUIRED).",
+    "duration_intention saniye cinsindendir (\"3-4s\", \"5s\"); P3 zamanlaması bunu okur. asset_type: VISUAL_IMAGE, VISUAL_VIDEO veya GRAPHIC."
+  ],
+  "references": [
+    { "source": "Kendi kanalımızdaki 'Bozkırın Kadınları' serisinin 1. bölümü (9:16, 45 sn)", "note": "tempo ve altyazı yerleşimi için" },
+    { "source": "İbn Battûta Seyahatnamesi — Altın Orda sarayı betimlemesi (metin referansı)", "note": "saray ortamı ve otağ düzeni için görsel ipucu; olgu kaynağı değil" }
+  ],
+  "understanding": {
+    "central_idea": "Taydula Hatun, Özbek Han'ın başhatunu olarak Altın Orda sarayında resmî yetki kullanan bir kadındı.",
+    "key_claims_used": ["claim_3f9a1c2b7d4e8a10", "claim_8b2e4d6f1a3c5e79", "claim_c47d2a9e0b1f6a33"],
+    "narrative_material": ["Özbek Han'ın eşi olarak konumu", "Canibek Han'ın annesi olması", "İbn Battûta'nın saray gözlemi"],
+    "objective": "İzleyiciye Altın Orda'da bir hatunun siyasi ağırlığını kaynak temelli, 30 saniyelik dikey bir videoda göstermek"
+  },
+  "strategy": {
+    "communication_direction": "Kaynak odaklı, sakin ve merak uyandıran anlatım; her tarihli iddia kaynağıyla",
+    "narrative_direction": "Saray kapısından içeri: kim olduğu → gücü → neden hatırlanması gerektiği",
+    "audience_intent": "Tarih meraklısı Türkçe izleyicinin ilk 3 saniyede kalması",
+    "creative_priorities": ["tarihsel doğruluk", "ilk 3 saniyede güçlü görsel", "AI görsel rekonstrüksiyonun açıkça belirtilmesi"],
+    "creative_approach": "documentary",
+    "scope_level": "video_episode"
+  },
+  "decisions": [
+    {
+      "key": "gorsel_dil",
+      "question": "art_direction_visual_language",
+      "target": "art_direction",
+      "options": [
+        { "choice": "minyatür esintili sıcak belgesel", "rationale": "Dönem estetiğine yakın, rekonstrüksiyon olduğu belli" },
+        { "choice": "fotogerçekçi sinematik", "rationale": "Çarpıcı ama gerçek fotoğraf sanılabilir" }
+      ],
+      "recommendation": "minyatür esintili sıcak belgesel",
+      "rationale": "Kanıtı olmayan yüz ve kıyafet ayrıntılarını gerçek fotoğraf gibi sunmamak için stilize dil seçildi."
+    },
+    {
+      "key": "acilis_cekimi",
+      "question": "opening_shot",
+      "target": "shot_taydula_01",
+      "options": [
+        { "choice": "otağ kapısına yavaş yaklaşma" },
+        { "choice": "harita üzerinde Altın Orda" }
+      ],
+      "recommendation": "otağ kapısına yavaş yaklaşma",
+      "rationale": "İlk 3 saniyede mekân ve merak; harita ikinci sahnede bağlam için kullanılır."
+    }
+  ],
+  "art_direction": {
+    "visual_language": "Minyatür esintili sıcak belgesel: toprak tonları, altın ve lacivert vurgular, yumuşak gün batımı ışığı, 9:16 dikey kadraj",
+    "checklist": [
+      "Hatun'un yüzü net portre olarak gösterilmez (kaynakta tasvir yok)",
+      "Otağ ve keçe dokusu tüm çekimlerde aynı",
+      "Ekranda 'AI rekonstrüksiyon' ibaresi"
+    ],
+    "decision_keys": ["gorsel_dil"]
+  },
+  "scenes": [
+    {
+      "scene_id": "scene_giris",
+      "purpose": "Mekânı kurmak ve merak uyandırmak",
+      "narrative_function": "açılış kancası",
+      "continuity_requirements": ["otağ keçesi deseni aynı", "gün batımı ışığı"],
+      "claim_ids": ["claim_3f9a1c2b7d4e8a10"],
+      "shots": [
+        {
+          "shot_id": "shot_taydula_01",
+          "purpose": "Bozkırda büyük otağa yaklaşma",
+          "duration_intention": "5-6s",
+          "camera": { "angle": "göz hizası", "movement": "yavaş ileri kaydırma", "lens": "geniş", "framing": "geniş plan" },
+          "action": "Kamera rüzgârda dalgalanan sancakların arasından altın işlemeli otağ kapısına yaklaşır",
+          "continuity_anchors": ["otağ_keçesi", "gün_batımı"],
+          "asset_type": "VISUAL_VIDEO",
+          "generation_method": "google_flow",
+          "media_properties": { "aspect_ratio": "9:16", "max_duration_s": 8 },
+          "prompt": {
+            "prompt_family": "flow.shot.establishing",
+            "decision_key": "acilis_cekimi",
+            "subject": "14. yüzyıl Altın Orda hanlık otağı, altın işlemeli kapı, rüzgârda sancaklar",
+            "action": "kamera otağ kapısına doğru yavaşça ilerler",
+            "environment": "geniş bozkır, alçak tepeler, uzakta at sürüsü",
+            "composition": "dikey 9:16, otağ kapısı kadrajın ortasında",
+            "camera": "geniş lens, göz hizası, yavaş dolly-in",
+            "lighting": "sıcak gün batımı, uzun gölgeler",
+            "style": "minyatür esintili sıcak belgesel, toprak tonları, altın ve lacivert vurgular",
+            "negative_constraints": ["modern nesne yok", "yazı veya logo yok", "net kadın yüzü yok"],
+            "axis_tags": ["establishing", "dolly_in"]
+          }
+        },
+        {
+          "shot_id": "shot_taydula_02",
+          "purpose": "Otağ içinde tahtın yanında oturan hatun silueti",
+          "duration_intention": "6s",
+          "camera": { "angle": "hafif alt açı", "movement": "sabit", "lens": "normal", "framing": "orta plan" },
+          "action": "Mum ışığında, han tahtının yanında yüksek başlıklı (boğtak) bir kadın silueti",
+          "continuity_anchors": ["otağ_keçesi"],
+          "asset_type": "VISUAL_IMAGE",
+          "generation_method": "google_flow",
+          "media_properties": { "aspect_ratio": "9:16" },
+          "prompt": {
+            "prompt_family": "flow.shot.interior",
+            "decision_key": "gorsel_dil",
+            "subject": "yüksek boğtak başlıklı bir Moğol-Türk hatunun silueti, han tahtının yanında",
+            "environment": "keçe kaplı otağ içi, halılar, pirinç mangal",
+            "composition": "dikey 9:16, siluet kadrajın sağ üçte birinde",
+            "lighting": "mum ve mangal ışığı, sıcak kontrast",
+            "style": "minyatür esintili sıcak belgesel, toprak tonları, altın vurgular",
+            "negative_constraints": ["net yüz ayrıntısı yok", "modern nesne yok"],
+            "axis_tags": ["interior", "silhouette"]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_guc",
+      "purpose": "Hatunun sarayda resmî konumunu göstermek",
+      "narrative_function": "gelişme",
+      "continuity_requirements": ["aynı renk paleti"],
+      "claim_ids": ["claim_8b2e4d6f1a3c5e79"],
+      "shots": [
+        {
+          "shot_id": "shot_taydula_03",
+          "purpose": "Altın Orda'nın konumunu gösteren stilize harita",
+          "duration_intention": "5s",
+          "camera": { "angle": "tepeden", "movement": "yavaş uzaklaşma", "lens": "normal", "framing": "harita tam kadraj" },
+          "action": "Eski parşömen üzerinde Altın Orda toprakları altın çizgiyle belirir",
+          "asset_type": "GRAPHIC",
+          "generation_method": "google_flow",
+          "assets": [
+            { "role": "map", "media_type": "GRAPHIC", "media_properties": { "aspect_ratio": "9:16" } },
+            { "role": "texture", "media_type": "VISUAL_IMAGE", "media_properties": { "aspect_ratio": "9:16" } }
+          ],
+          "prompt": {
+            "prompt_family": "flow.graphic.map",
+            "decision_key": "gorsel_dil",
+            "subject": "parşömen üzerinde 14. yüzyıl Altın Orda toprakları, stilize harita",
+            "composition": "dikey 9:16, Volga havzası kadrajın ortasında",
+            "style": "minyatür esintili, mürekkep çizgi, altın vurgular",
+            "materials": "yıpranmış parşömen, mürekkep",
+            "negative_constraints": ["modern sınırlar yok", "okunaklı yazı yok"],
+            "axis_tags": ["map", "graphic"]
+          }
+        },
+        {
+          "shot_id": "shot_taydula_04",
+          "purpose": "Mühürlü bir belge (yarlık) yakın çekimi",
+          "duration_intention": "5s",
+          "camera": { "angle": "tepeden", "movement": "yavaş yaklaşma", "lens": "makro", "framing": "yakın plan" },
+          "action": "Kırmızı mühürlü bir ferman rulosu ahşap masa üzerinde açılır",
+          "asset_type": "VISUAL_VIDEO",
+          "generation_method": "google_flow",
+          "media_properties": { "aspect_ratio": "9:16", "max_duration_s": 8 },
+          "prompt": {
+            "prompt_family": "flow.shot.detail",
+            "decision_key": "gorsel_dil",
+            "subject": "kırmızı tamgalı mühürlü bir ferman rulosu",
+            "action": "rulo yavaşça açılır",
+            "composition": "dikey 9:16, mühür kadrajın alt üçte birinde",
+            "camera": "makro lens, yavaş push-in",
+            "lighting": "yandan gelen sıcak mum ışığı",
+            "style": "minyatür esintili sıcak belgesel",
+            "negative_constraints": ["okunaklı gerçek metin yok", "modern kâğıt yok"],
+            "axis_tags": ["detail", "push_in"]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_kapanis",
+      "purpose": "Mirası ve serinin bir sonraki figürünü bağlamak",
+      "narrative_function": "kapanış",
+      "claim_ids": ["claim_c47d2a9e0b1f6a33"],
+      "shots": [
+        {
+          "shot_id": "shot_taydula_05",
+          "purpose": "Gün batımında bozkırda uzaklaşan kervan",
+          "duration_intention": "6-7s",
+          "camera": { "angle": "göz hizası", "movement": "sabit", "lens": "tele", "framing": "geniş plan" },
+          "action": "Otağın önünden ufka doğru uzaklaşan bir kervan",
+          "continuity_anchors": ["gün_batımı"],
+          "asset_type": "VISUAL_VIDEO",
+          "generation_method": "google_flow",
+          "media_properties": { "aspect_ratio": "9:16", "max_duration_s": 8 },
+          "prompt": {
+            "prompt_family": "flow.shot.closing",
+            "decision_key": "gorsel_dil",
+            "subject": "gün batımında bozkırda ufka uzaklaşan deve ve at kervanı",
+            "environment": "geniş bozkır, önde otağ",
+            "composition": "dikey 9:16, ufuk çizgisi alt üçte birde",
+            "camera": "tele lens, sabit",
+            "lighting": "altın saat, uzun gölgeler",
+            "style": "minyatür esintili sıcak belgesel",
+            "negative_constraints": ["modern nesne yok"],
+            "axis_tags": ["closing", "static"]
+          }
+        }
+      ]
+    }
+  ],
+  "narration": [
+    { "text": "Bu otağın içinde, Altın Orda'nın en güçlü kadınlarından biri oturuyordu.", "scene_id": "scene_giris" },
+    { "text": "Adı Taydula'ydı; Özbek Han'ın başhatunu ve Canibek Han'ın annesiydi.", "claim_id": "claim_3f9a1c2b7d4e8a10", "scene_id": "scene_giris" },
+    { "text": "Kaynaklar, onun adına mühürlü belgeler düzenlendiğini aktarır.", "claim_id": "claim_8b2e4d6f1a3c5e79", "scene_id": "scene_guc" },
+    { "text": "İbn Battûta bu sarayı ziyaret ettiğinde, hatunların han ile birlikte kabul verdiğini yazar.", "claim_id": "claim_c47d2a9e0b1f6a33", "scene_id": "scene_kapanis" },
+    { "text": "Bir sonraki bölümde, bozkırın bir başka hatununu tanıyacağız.", "scene_id": "scene_kapanis" }
+  ],
+  "format_notes": "9:16, 30 saniye civarı, altyazı alt üçte birde",
+  "approvals": {
+    "references": "<adınız>",
+    "format_matrix": "<adınız>",
+    "art_direction": "<adınız>",
+    "decisions": {
+      "gorsel_dil": "<adınız>",
+      "acilis_cekimi": "<adınız>"
+    }
+  }
+}

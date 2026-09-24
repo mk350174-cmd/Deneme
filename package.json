@@ -1,0 +1,25 @@
+{
+  "name": "unified-video-pipeline",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Strategic merge of A-Branch (P1 research, P2 creative, P3 production), B-Branch (B00–B12 strategy control plane + Agent Reach) and the YouTube automation agent (review, publish, learn).",
+  "type": "module",
+  "scripts": {
+    "kur": "node scripts/kur.mjs",
+    "bootstrap": "node scripts/kur.mjs",
+    "durum": "node scripts/durum.mjs",
+    "yeni-dongu": "node scripts/yeni-dongu.mjs",
+    "setup": "node scripts/setup.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "verify": "node scripts/verify-all.mjs",
+    "unified": "node integration/bridges/dist/cli.js",
+    "plan": "node integration/bridges/dist/cli.js plan",
+    "setup:extras": "node scripts/setup-extras.mjs all",
+    "setup:toolkit": "node scripts/setup-extras.mjs toolkit",
+    "setup:reach": "node scripts/setup-extras.mjs reach",
+    "setup:voice": "node scripts/setup-extras.mjs voice"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

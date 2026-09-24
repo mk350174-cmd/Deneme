@@ -1,0 +1,1186 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> b-branch-strategic-control-plane@5.0.2-final.20260906 test
+> vitest run
+
+
+ RUN  v2.1.9 /workspace/scratch/945cbe44077d/work/B_BRANCH_V5_REPAIRED_FINAL_20260906
+
+ ✓ tests/b04.test.ts (53 tests) 65ms
+ ✓ tests/b05.test.ts (64 tests) 99ms
+ ❯ tests/b02.test.ts (77 tests | 2 failed) 139ms
+   × B02 Provenance Preservation Tests > should preserve provenance_refs through candidate→canonical 26ms
+     → expected [ { …(11) }, { …(11) }, …(10) ] to deeply equal [ { …(5) }, { …(5) }, { …(5) }, …(9) ]
+   × B02 Canonicalization Loss Guard Tests > should not have undeclared canonicalization drops 6ms
+     → expected [ 'parent_references' ] to deeply equal []
+stderr | tests/b03.test.ts > B03 — Audience Intelligence > Category 5: Validation & Conflict Detection > should reject segments with no evidence
+Segment bad has no evidence (fabricated?)
+
+stderr | tests/b03.test.ts > B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should enforce semantic versioning
+Promise returned by `expect(actual).rejects.toThrow(expected)` was not awaited. Vitest currently auto-awaits hanging assertions at the end of the test, but this will cause the test to fail in Vitest 3. Please remember to await the assertion.
+    at /workspace/scratch/945cbe44077d/work/B_BRANCH_V5_REPAIRED_FINAL_20260906/tests/b03.test.ts:677:24
+
+stderr | tests/b03.test.ts > B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should enforce immutability: duplicate version throws error
+Promise returned by `expect(actual).rejects.toThrow(expected)` was not awaited. Vitest currently auto-awaits hanging assertions at the end of the test, but this will cause the test to fail in Vitest 3. Please remember to await the assertion.
+    at /workspace/scratch/945cbe44077d/work/B_BRANCH_V5_REPAIRED_FINAL_20260906/tests/b03.test.ts:703:23
+
+ ❯ tests/b03.test.ts (91 tests | 5 failed) 164ms
+   × B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should track canonical only DECIDED items 7ms
+     → expected +0 to be 1 // Object.is equality
+   × B03 Governance Routing Tests > should include approved segments in canonical 6ms
+     → expected 1 to be 2 // Object.is equality
+   × B03 Evidence Preservation Tests > should preserve per-segment evidence_refs in canonical 9ms
+     → expected [ { …(8) }, { …(8) }, { …(8) } ] to deeply equal [ { …(8) }, { …(8) }, { …(8) }, …(1) ]
+   × B03 Provenance Preservation Tests > should preserve provenance_refs through candidate→canonical 12ms
+     → expected [ { type: 'INFERRED', …(9) }, …(3) ] to deeply equal [ { type: 'INFERRED', …(3) }, …(3) ]
+   × B03 Canonicalization Loss Guard Tests > should not have undeclared canonicalization drops 6ms
+     → expected [ 'parent_references' ] to deeply equal []
+ ❯ tests/b12-real-integration.test.ts (7 tests | 1 failed) 40ms
+   × B12 Real Upstream Integration (PHASE 6+) > PHASE 10: Determinism > produces identical state_id for same content, different timestamps 14ms
+     → expected 'branch_9f7f9318ba5de5f47c6a3bd18e8686…' to be 'branch_d77a3775588f7f335fc0beeabe473f…' // Object.is equality
+ ❯ tests/b12.test.ts (44 tests | 4 failed) 74ms
+   × B12 — State Management > state ID is deterministic: same semantic input produces same ID regardless of timestamp 15ms
+     → expected 'branch_3503a2c3039b2735585894408933c1…' to be 'branch_02eafd07db1c1b51bed176409d5124…' // Object.is equality
+   × B12 — State Management > module versions have canonical state IDs 2ms
+     → expected 'b01:v1.0' to contain 'state_'
+   × B12 — State Management > transitions have provenance 1ms
+     → expected 'DECIDED' to be 'INFERRED' // Object.is equality
+   × B12 — State Management > state_id is deterministic regardless of B12 creation timestamps 2ms
+     → expected 'branch_3503a2c3039b2735585894408933c1…' to be 'branch_d77a3775588f7f335fc0beeabe473f…' // Object.is equality
+ ✓ tests/b01.test.ts (133 tests) 249ms
+ ✓ tests/b00.test.ts (29 tests) 16ms
+ ✓ tests/b00-governance.test.ts (40 tests) 142ms
+ ✓ tests/b10.test.ts (28 tests) 31ms
+ ✓ tests/b07.test.ts (33 tests) 36ms
+ ✓ tests/b06.test.ts (33 tests) 47ms
+ ❯ tests/b11.test.ts (33 tests | 27 failed) 53ms
+   × B11 — Risk & Compliance > runs compliance checks 9ms
+     → Cannot read properties of undefined (reading 'length')
+   × B11 — Risk & Compliance > generates findings for non-compliant checks 1ms
+     → Cannot read properties of undefined (reading 'length')
+   × B11 — Risk & Compliance > detects unchecked rules conflict 2ms
+     → checks.filter is not a function
+   × B11 — Risk & Compliance > detects compliance violations conflict 1ms
+     → checks.filter is not a function
+   × B11 — Risk & Compliance > identifies missing rules gap 4ms
+     → checks.filter is not a function
+   × B11 — Risk & Compliance > identifies incomplete checks gap 1ms
+     → checks.filter is not a function
+   × B11 — Risk & Compliance > identifies compliance violations gap 1ms
+     → checks.filter is not a function
+   × B11 — Risk & Compliance > calculates compliance completeness score 7ms
+     → checks.some is not a function
+   × B11 — Risk & Compliance > detects missing inputs in completeness 0ms
+     → checks.some is not a function
+   × B11 — Risk & Compliance > identifies blocking violations 0ms
+     → checks.some is not a function
+   × B11 — Risk & Compliance > returns candidate state from runB11 3ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > creates immutable canonical state 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > rejects duplicate version 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > enforces semantic versioning 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > does not mutate input state 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > marks all inferred data as INFERRED 0ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > evidence and provenance are separate 0ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > loads and lists versions 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > retrieves latest version 0ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > audit trail tracks changes 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > preserves b10_version lineage in candidate 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > preserves b10_version in canonical state 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > governance routing marks items DECIDED after approval 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > governance_events preserved in canonical state 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > deterministic candidate IDs across different dates 0ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > audit trail appends rather than prepends 1ms
+     → Cannot read properties of undefined (reading 'map')
+   × B11 — Risk & Compliance > initializes governance_events as empty in candidate 1ms
+     → Cannot read properties of undefined (reading 'map')
+ ✓ tests/repair/repair-adversarial.test.ts (11 tests) 19ms
+ ❯ tests/b08.test.ts (17 tests | 5 failed) 31ms
+   × B08 — Analytics Strategy > returns candidate state from runB08 10ms
+     → The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+   × B08 — Analytics Strategy > creates immutable canonical state 1ms
+     → The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+   × B08 — Analytics Strategy > rejects duplicate version 2ms
+     → The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+   × B08 — Analytics Strategy > enforces semantic versioning 1ms
+     → The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+   × B08 — Analytics Strategy > does not mutate input state 1ms
+     → The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+ ✓ tests/repair/remaining-repair.test.ts (7 tests) 11ms
+ ✓ tests/repair/b00-b12-lineage.integration.test.ts (1 test) 19ms
+ ❯ tests/b09.test.ts (14 tests | 4 failed) 25ms
+   × B09 — Learning Loops > generates learning observations 11ms
+     → expected 0 to be greater than 0
+   × B09 — Learning Loops > generates learning signals from observations 1ms
+     → expected 0 to be greater than 0
+   × B09 — Learning Loops > evidence and provenance are separate 1ms
+     → Cannot read properties of undefined (reading 'evidence_refs')
+   × B09 — Learning Loops > generates deterministic IDs 1ms
+     → Cannot read properties of undefined (reading 'observation_id')
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 48 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/b02.test.ts > B02 Provenance Preservation Tests > should preserve provenance_refs through candidate→canonical
+AssertionError: expected [ { …(11) }, { …(11) }, …(10) ] to deeply equal [ { …(5) }, { …(5) }, { …(5) }, …(9) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "decision_authority": "B02_strategist_agent",
+      "id": "prov_ch_001_positioning",
+      "rationale": "Algorithm inferred: platform audience category matches positioning theme",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B02_capability_matcher",
+      "id": "prov_ch_001_capability",
+      "rationale": "Algorithm inferred: platform capabilities enable content distribution strategy",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B01_orchestration",
+      "id": "prov_ch_001_role",
+      "rationale": "B01 explicitly identified channel role; opportunity follows directly",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "OBSERVED",
+    },
+    Object {
+      "decision_authority": "B02_strategist_agent",
+      "id": "prov_ch_002_positioning",
+      "rationale": "Algorithm inferred: platform audience category matches positioning theme",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B02_capability_matcher",
+      "id": "prov_ch_002_capability",
+      "rationale": "Algorithm inferred: platform capabilities enable content distribution strategy",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B01_orchestration",
+      "id": "prov_ch_002_role",
+      "rationale": "B01 explicitly identified channel role; opportunity follows directly",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "OBSERVED",
+    },
+    Object {
+      "decision_authority": "B02_strategist_agent",
+      "id": "prov_ch_003_positioning",
+      "rationale": "Algorithm inferred: platform audience category matches positioning theme",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B02_capability_matcher",
+      "id": "prov_ch_003_capability",
+      "rationale": "Algorithm inferred: platform capabilities enable content distribution strategy",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B01_orchestration",
+      "id": "prov_ch_003_role",
+      "rationale": "B01 explicitly identified channel role; opportunity follows directly",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "OBSERVED",
+    },
+    Object {
+      "decision_authority": "B02_editorial_analyzer",
+      "id": "prov_ch_001_editorial",
+      "rationale": "Algorithm inferred: editorial constitution rule permits these content angles on this channel",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B02_editorial_analyzer",
+      "id": "prov_ch_002_editorial",
+      "rationale": "Algorithm inferred: editorial constitution rule permits these content angles on this channel",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B02_editorial_analyzer",
+      "id": "prov_ch_003_editorial",
+      "rationale": "Algorithm inferred: editorial constitution rule permits these content angles on this channel",
++     "source_evidence_refs": Array [
++       "ev_ch_001_audience_alignment",
++       "ev_capabilities_ch_001",
++       "ev_role_ch_001",
++       "ev_ch_002_audience_alignment",
++       "ev_capabilities_ch_002",
++       "ev_role_ch_002",
++       "ev_ch_003_audience_alignment",
++       "ev_capabilities_ch_003",
++       "ev_role_ch_003",
++       "ev_editorial_ch_001_rule_001",
++       "ev_editorial_ch_002_rule_001",
++       "ev_editorial_ch_003_rule_001",
++     ],
++     "subject_content_hash": "3fc3be0936a0fe3e91715fe3a86a36f4c7c804d4f3009fc974c21202633edd5b",
++     "subject_id": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
++     "subject_type": "B02_CANDIDATE_STATE",
++     "subject_version": "opp_cbc80fbe27d6f4c3bd8cc54218de2e2622fe4fa4673e17a0e016727ba1b574e4",
+      "timestamp": "2026-09-06T07:03:15.168Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+  ]
+
+ ❯ tests/b02.test.ts:1071:39
+    1069|     );
+    1070| 
+    1071|     expect(canonical.provenance_refs).toEqual(candidate.provenance_ref…
+       |                                       ^
+    1072|   });
+    1073| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/48]⎯
+
+ FAIL  tests/b02.test.ts > B02 Canonicalization Loss Guard Tests > should not have undeclared canonicalization drops
+AssertionError: expected [ 'parent_references' ] to deeply equal []
+
+- Expected
++ Received
+
+- Array []
++ Array [
++   "parent_references",
++ ]
+
+ ❯ tests/b02.test.ts:1203:19
+    1201|     );
+    1202| 
+    1203|     expect(drops).toEqual([]);
+       |                   ^
+    1204|   });
+    1205| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/48]⎯
+
+ FAIL  tests/b03.test.ts > B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should track canonical only DECIDED items
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/b03.test.ts:769:50
+    767| 
+    768|       // Canonical should only have 1 DECIDED segment
+    769|       expect(canonical.audience_segments.length).toBe(1);
+       |                                                  ^
+    770|     });
+    771|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/48]⎯
+
+ FAIL  tests/b03.test.ts > B03 Governance Routing Tests > should include approved segments in canonical
+AssertionError: expected 1 to be 2 // Object.is equality
+
+- Expected
++ Received
+
+- 2
++ 1
+
+ ❯ tests/b03.test.ts:1006:48
+    1004| 
+    1005|     expect(canonical.audience_segments.length).toBeGreaterThan(0);
+    1006|     expect(canonical.audience_segments.length).toBe(approved.audience_…
+       |                                                ^
+    1007|   });
+    1008| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/48]⎯
+
+ FAIL  tests/b03.test.ts > B03 Evidence Preservation Tests > should preserve per-segment evidence_refs in canonical
+AssertionError: expected [ { …(8) }, { …(8) }, { …(8) } ] to deeply equal [ { …(8) }, { …(8) }, { …(8) }, …(1) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "basis": "OBSERVED",
+-     "excerpt": "YouTube Analytics Jan 2026: mostly 25-45 age range, 70% male",
+-     "id": "ev_analytics_youtube_primary_demographics",
++     "excerpt": "LinkedIn Insights: enterprise professionals",
++     "id": "ev_analytics_linkedin_secondary_demographics",
+      "origin": "PROVIDER_DATA",
+      "production_eligible": true,
+-     "source": "YouTube Analytics Jan 2026",
++     "source": "LinkedIn Insights",
+      "source_mode": "REAL",
+      "status": "VERIFIED",
+    },
+    Object {
+      "basis": "OBSERVED",
+-     "excerpt": "YouTube Analytics Jan 2026: Geography reach in US, UK, Canada",
+-     "id": "ev_analytics_youtube_primary_geography",
++     "excerpt": "LinkedIn Insights: Geography reach in US, EU",
++     "id": "ev_analytics_linkedin_secondary_geography",
+      "origin": "PROVIDER_DATA",
+      "production_eligible": true,
+-     "source": "YouTube Analytics Jan 2026",
++     "source": "LinkedIn Insights",
+      "source_mode": "REAL",
+      "status": "VERIFIED",
+    },
+    Object {
+      "basis": "OBSERVED",
+-     "excerpt": "YouTube Analytics Jan 2026: Audience interests include machine learning, databases",
+-     "id": "ev_analytics_youtube_primary_interests",
++     "excerpt": "LinkedIn Insights: Audience interests include engineering, management",
++     "id": "ev_analytics_linkedin_secondary_interests",
+      "origin": "PROVIDER_DATA",
+      "production_eligible": true,
+-     "source": "YouTube Analytics Jan 2026",
+-     "source_mode": "REAL",
+-     "status": "VERIFIED",
+-   },
+-   Object {
+-     "basis": "OBSERVED",
+-     "excerpt": "YouTube Analytics Jan 2026: Engagement pattern shows peak engagement 9am-11am EST",
+-     "id": "ev_analytics_youtube_primary_engagement",
+-     "origin": "PROVIDER_DATA",
+-     "production_eligible": true,
+-     "source": "YouTube Analytics Jan 2026",
++     "source": "LinkedIn Insights",
+      "source_mode": "REAL",
+      "status": "VERIFIED",
+    },
+  ]
+
+ ❯ tests/b03.test.ts:1106:60
+    1104| 
+    1105|     for (let i = 0; i < canonical.audience_segments.length; i++) {
+    1106|       expect(canonical.audience_segments[i].evidence_refs).toEqual(
+       |                                                            ^
+    1107|         approved.audience_segments[i].evidence_refs,
+    1108|       );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/48]⎯
+
+ FAIL  tests/b03.test.ts > B03 Provenance Preservation Tests > should preserve provenance_refs through candidate→canonical
+AssertionError: expected [ { type: 'INFERRED', …(9) }, …(3) ] to deeply equal [ { type: 'INFERRED', …(3) }, …(3) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "decision_authority": "B03_segmentation_agent",
+      "rationale": "Inferred segment from YOUTUBE channel evidence and B01 ecosystem data",
++     "source_evidence_refs": Array [
++       "ev_analytics_youtube_primary_demographics",
++       "ev_analytics_youtube_primary_geography",
++       "ev_analytics_youtube_primary_interests",
++       "ev_analytics_youtube_primary_engagement",
++       "ev_analytics_linkedin_secondary_demographics",
++       "ev_analytics_linkedin_secondary_geography",
++       "ev_analytics_linkedin_secondary_interests",
++       "ev_research_res_1",
++       "ev_doc_audience_profile",
++       "ev_doc_brand_guidelines",
++       "ev_user_input",
++     ],
++     "subject_content_hash": "86a987c405162fdaa6423162b079b0b4741008d35ccda4212256af7d5da85d29",
++     "subject_id": "cand_cand_b03_23a820fc25d1ab7af3c19219",
++     "subject_type": "B03_CANDIDATE_STATE",
++     "subject_version": "cand_cand_b03_23a820fc25d1ab7af3c19219",
+      "timestamp": "2026-09-06T07:03:15.192Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B03_segmentation_agent",
+      "rationale": "Inferred segment from LINKEDIN channel evidence and B01 ecosystem data",
++     "source_evidence_refs": Array [
++       "ev_analytics_youtube_primary_demographics",
++       "ev_analytics_youtube_primary_geography",
++       "ev_analytics_youtube_primary_interests",
++       "ev_analytics_youtube_primary_engagement",
++       "ev_analytics_linkedin_secondary_demographics",
++       "ev_analytics_linkedin_secondary_geography",
++       "ev_analytics_linkedin_secondary_interests",
++       "ev_research_res_1",
++       "ev_doc_audience_profile",
++       "ev_doc_brand_guidelines",
++       "ev_user_input",
++     ],
++     "subject_content_hash": "86a987c405162fdaa6423162b079b0b4741008d35ccda4212256af7d5da85d29",
++     "subject_id": "cand_cand_b03_23a820fc25d1ab7af3c19219",
++     "subject_type": "B03_CANDIDATE_STATE",
++     "subject_version": "cand_cand_b03_23a820fc25d1ab7af3c19219",
+      "timestamp": "2026-09-06T07:03:15.192Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B03_profile_synthesizer",
+      "rationale": "Synthesized profile from 1 related segments",
++     "source_evidence_refs": Array [
++       "ev_analytics_youtube_primary_demographics",
++       "ev_analytics_youtube_primary_geography",
++       "ev_analytics_youtube_primary_interests",
++       "ev_analytics_youtube_primary_engagement",
++       "ev_analytics_linkedin_secondary_demographics",
++       "ev_analytics_linkedin_secondary_geography",
++       "ev_analytics_linkedin_secondary_interests",
++       "ev_research_res_1",
++       "ev_doc_audience_profile",
++       "ev_doc_brand_guidelines",
++       "ev_user_input",
++     ],
++     "subject_content_hash": "86a987c405162fdaa6423162b079b0b4741008d35ccda4212256af7d5da85d29",
++     "subject_id": "cand_cand_b03_23a820fc25d1ab7af3c19219",
++     "subject_type": "B03_CANDIDATE_STATE",
++     "subject_version": "cand_cand_b03_23a820fc25d1ab7af3c19219",
+      "timestamp": "2026-09-06T07:03:15.192Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+    Object {
+      "decision_authority": "B03_profile_synthesizer",
+      "rationale": "Synthesized profile from 1 related segments",
++     "source_evidence_refs": Array [
++       "ev_analytics_youtube_primary_demographics",
++       "ev_analytics_youtube_primary_geography",
++       "ev_analytics_youtube_primary_interests",
++       "ev_analytics_youtube_primary_engagement",
++       "ev_analytics_linkedin_secondary_demographics",
++       "ev_analytics_linkedin_secondary_geography",
++       "ev_analytics_linkedin_secondary_interests",
++       "ev_research_res_1",
++       "ev_doc_audience_profile",
++       "ev_doc_brand_guidelines",
++       "ev_user_input",
++     ],
++     "subject_content_hash": "86a987c405162fdaa6423162b079b0b4741008d35ccda4212256af7d5da85d29",
++     "subject_id": "cand_cand_b03_23a820fc25d1ab7af3c19219",
++     "subject_type": "B03_CANDIDATE_STATE",
++     "subject_version": "cand_cand_b03_23a820fc25d1ab7af3c19219",
+      "timestamp": "2026-09-06T07:03:15.192Z",
++     "transformation": "module_candidate_to_canonical",
+      "type": "INFERRED",
+    },
+  ]
+
+ ❯ tests/b03.test.ts:1161:39
+    1159|     );
+    1160| 
+    1161|     expect(canonical.provenance_refs).toEqual(candidate.provenance_ref…
+       |                                       ^
+    1162|   });
+    1163| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/48]⎯
+
+ FAIL  tests/b03.test.ts > B03 Canonicalization Loss Guard Tests > should not have undeclared canonicalization drops
+AssertionError: expected [ 'parent_references' ] to deeply equal []
+
+- Expected
++ Received
+
+- Array []
++ Array [
++   "parent_references",
++ ]
+
+ ❯ tests/b03.test.ts:1273:19
+    1271|     );
+    1272| 
+    1273|     expect(drops).toEqual([]);
+       |                   ^
+    1274|   });
+    1275| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/48]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > returns candidate state from runB08
+TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+ ❯ Object.sha256 [as hash] src/b00/hashing.ts:11:31
+      9| 
+     10| export function sha256(input: string): string {
+     11|   return createHash("sha256").update(input, "utf8").digest("hex");
+       |                               ^
+     12| }
+     13| 
+ ❯ stableWorkflowId src/b08/orchestration.ts:319:77
+ ❯ Module.defineAnalyticsWorkflows src/b08/phases/B08_04_workflows.ts:22:20
+ ❯ Module.runB08 src/b08/orchestration.ts:34:21
+ ❯ tests/b08.test.ts:159:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/48]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > creates immutable canonical state
+TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+ ❯ Object.sha256 [as hash] src/b00/hashing.ts:11:31
+      9| 
+     10| export function sha256(input: string): string {
+     11|   return createHash("sha256").update(input, "utf8").digest("hex");
+       |                               ^
+     12| }
+     13| 
+ ❯ stableWorkflowId src/b08/orchestration.ts:319:77
+ ❯ Module.defineAnalyticsWorkflows src/b08/phases/B08_04_workflows.ts:22:20
+ ❯ Module.runB08 src/b08/orchestration.ts:34:21
+ ❯ tests/b08.test.ts:182:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/48]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > rejects duplicate version
+TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+ ❯ Object.sha256 [as hash] src/b00/hashing.ts:11:31
+      9| 
+     10| export function sha256(input: string): string {
+     11|   return createHash("sha256").update(input, "utf8").digest("hex");
+       |                               ^
+     12| }
+     13| 
+ ❯ stableWorkflowId src/b08/orchestration.ts:319:77
+ ❯ Module.defineAnalyticsWorkflows src/b08/phases/B08_04_workflows.ts:22:20
+ ❯ Module.runB08 src/b08/orchestration.ts:34:21
+ ❯ tests/b08.test.ts:205:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/48]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > enforces semantic versioning
+TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+ ❯ Object.sha256 [as hash] src/b00/hashing.ts:11:31
+      9| 
+     10| export function sha256(input: string): string {
+     11|   return createHash("sha256").update(input, "utf8").digest("hex");
+       |                               ^
+     12| }
+     13| 
+ ❯ stableWorkflowId src/b08/orchestration.ts:319:77
+ ❯ Module.defineAnalyticsWorkflows src/b08/phases/B08_04_workflows.ts:22:20
+ ❯ Module.runB08 src/b08/orchestration.ts:34:21
+ ❯ tests/b08.test.ts:227:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/48]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > does not mutate input state
+TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+ ❯ Object.sha256 [as hash] src/b00/hashing.ts:11:31
+      9| 
+     10| export function sha256(input: string): string {
+     11|   return createHash("sha256").update(input, "utf8").digest("hex");
+       |                               ^
+     12| }
+     13| 
+ ❯ stableWorkflowId src/b08/orchestration.ts:319:77
+ ❯ Module.defineAnalyticsWorkflows src/b08/phases/B08_04_workflows.ts:22:20
+ ❯ Module.runB08 src/b08/orchestration.ts:34:21
+ ❯ tests/b08.test.ts:263:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/48]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > generates learning observations
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/b09.test.ts:29:33
+     27|     const observations = generateLearningObservations(b08State, b06Sta…
+     28| 
+     29|     expect(observations.length).toBeGreaterThan(0);
+       |                                 ^
+     30|     expect(observations[0]).toHaveProperty("observation_id");
+     31|     expect(observations[0].provenance.type).toBe("INFERRED");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/48]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > generates learning signals from observations
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/b09.test.ts:41:28
+     39|     const signals = generateLearningSignals(observations);
+     40| 
+     41|     expect(signals.length).toBeGreaterThan(0);
+       |                            ^
+     42|     expect(signals[0].source_observations.length).toBeGreaterThan(0);
+     43|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/48]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > evidence and provenance are separate
+TypeError: Cannot read properties of undefined (reading 'evidence_refs')
+ ❯ tests/b09.test.ts:85:42
+     83|     const observations = generateLearningObservations(b08State, b06Sta…
+     84| 
+     85|     expect(Array.isArray(observations[0].evidence_refs)).toBe(true);
+       |                                          ^
+     86|     expect(typeof observations[0].provenance).toBe("object");
+     87|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/48]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > generates deterministic IDs
+TypeError: Cannot read properties of undefined (reading 'observation_id')
+ ❯ tests/b09.test.ts:125:20
+    123|     const obs2 = generateLearningObservations(b08State, b06State);
+    124| 
+    125|     expect(obs1[0].observation_id).toBe(obs2[0].observation_id);
+       |                    ^
+    126|   });
+    127| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > runs compliance checks
+TypeError: Cannot read properties of undefined (reading 'length')
+ ❯ Module.runComplianceChecks src/b11/phases/B11_03_checks.ts:15:32
+     13| export function runComplianceChecks(rules:ComplianceRule[],subjects:Co…
+     14|  const h=deps?.hash||createDefaultB11Deps().hash!,now=deps?.now||(()=>…
+     15|  const actualSubjects=subjects.length?subjects:[{subject_id:"B_BRANCH_…
+       |                                ^
+     16|  const out:ComplianceCheckResult[]=[];
+     17|  for(const rule of rules){
+ ❯ tests/b11.test.ts:67:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > generates findings for non-compliant checks
+TypeError: Cannot read properties of undefined (reading 'length')
+ ❯ Module.runComplianceChecks src/b11/phases/B11_03_checks.ts:15:32
+     13| export function runComplianceChecks(rules:ComplianceRule[],subjects:Co…
+     14|  const h=deps?.hash||createDefaultB11Deps().hash!,now=deps?.now||(()=>…
+     15|  const actualSubjects=subjects.length?subjects:[{subject_id:"B_BRANCH_…
+       |                                ^
+     16|  const out:ComplianceCheckResult[]=[];
+     17|  for(const rule of rules){
+ ❯ tests/b11.test.ts:77:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > detects unchecked rules conflict
+TypeError: checks.filter is not a function
+ ❯ Module.detectComplianceConflicts src/b11/phases/B11_04_validation.ts:5:374
+
+ ❯ tests/b11.test.ts:87:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > detects compliance violations conflict
+TypeError: checks.filter is not a function
+ ❯ Module.detectComplianceConflicts src/b11/phases/B11_04_validation.ts:5:374
+
+ ❯ tests/b11.test.ts:94:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > identifies missing rules gap
+TypeError: checks.filter is not a function
+ ❯ Module.identifyComplianceGaps src/b11/phases/B11_04_validation.ts:6:280
+
+ ❯ tests/b11.test.ts:100:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > identifies incomplete checks gap
+TypeError: checks.filter is not a function
+ ❯ Module.identifyComplianceGaps src/b11/phases/B11_04_validation.ts:6:280
+
+ ❯ tests/b11.test.ts:106:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > identifies compliance violations gap
+TypeError: checks.filter is not a function
+ ❯ Module.identifyComplianceGaps src/b11/phases/B11_04_validation.ts:6:280
+
+ ❯ tests/b11.test.ts:112:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > calculates compliance completeness score
+TypeError: checks.some is not a function
+ ❯ Module.calculateComplianceCompleteness src/b11/phases/B11_04_validation.ts:7:243
+
+ ❯ tests/b11.test.ts:118:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > detects missing inputs in completeness
+TypeError: checks.some is not a function
+ ❯ Module.calculateComplianceCompleteness src/b11/phases/B11_04_validation.ts:7:243
+
+ ❯ tests/b11.test.ts:125:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > identifies blocking violations
+TypeError: checks.some is not a function
+ ❯ Module.calculateComplianceCompleteness src/b11/phases/B11_04_validation.ts:7:243
+
+ ❯ tests/b11.test.ts:131:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > returns candidate state from runB11
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:138:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[27/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > creates immutable canonical state
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:150:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[28/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > rejects duplicate version
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:159:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[29/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > enforces semantic versioning
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:167:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[30/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > does not mutate input state
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:184:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[31/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > marks all inferred data as INFERRED
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:194:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[32/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > evidence and provenance are separate
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:207:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[33/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > loads and lists versions
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:218:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[34/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > retrieves latest version
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:230:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[35/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > audit trail tracks changes
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:240:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[36/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > preserves b10_version lineage in candidate
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:249:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[37/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > preserves b10_version in canonical state
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:256:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[38/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > governance routing marks items DECIDED after approval
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:264:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > governance_events preserved in canonical state
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:277:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[40/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > deterministic candidate IDs across different dates
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:288:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[41/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > audit trail appends rather than prepends
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:296:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[42/48]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > initializes governance_events as empty in candidate
+TypeError: Cannot read properties of undefined (reading 'map')
+ ❯ complianceSubjects src/b11/orchestration.ts:14:125
+
+ ❯ Module.runB11 src/b11/orchestration.ts:18:168
+ ❯ tests/b11.test.ts:312:29
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[43/48]⎯
+
+ FAIL  tests/b12-real-integration.test.ts > B12 Real Upstream Integration (PHASE 6+) > PHASE 10: Determinism > produces identical state_id for same content, different timestamps
+AssertionError: expected 'branch_9f7f9318ba5de5f47c6a3bd18e8686…' to be 'branch_d77a3775588f7f335fc0beeabe473f…' // Object.is equality
+
+Expected: "branch_d77a3775588f7f335fc0beeabe473f05"
+Received: "branch_9f7f9318ba5de5f47c6a3bd18e868670"
+
+ ❯ tests/b12-real-integration.test.ts:502:31
+    500| 
+    501|       // VERIFY DETERMINISTIC state_id
+    502|       expect(state1.state_id).toBe(state2.state_id);
+       |                               ^
+    503|       expect(state1.evidence_refs).toEqual(state2.evidence_refs);
+    504|       expect(state1.provenance_refs).toEqual(state2.provenance_refs);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[44/48]⎯
+
+ FAIL  tests/b12.test.ts > B12 — State Management > state ID is deterministic: same semantic input produces same ID regardless of timestamp
+AssertionError: expected 'branch_3503a2c3039b2735585894408933c1…' to be 'branch_02eafd07db1c1b51bed176409d5124…' // Object.is equality
+
+Expected: "branch_02eafd07db1c1b51bed176409d512433"
+Received: "branch_3503a2c3039b2735585894408933c132"
+
+ ❯ tests/b12.test.ts:204:29
+    202| 
+    203|     // Same module versions → same state_id, regardless of wall-clock …
+    204|     expect(state1.state_id).toBe(state2.state_id);
+       |                             ^
+    205|     // But timestamps differ
+    206|     expect(state1.created_at).not.toBe(state2.created_at);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[45/48]⎯
+
+ FAIL  tests/b12.test.ts > B12 — State Management > module versions have canonical state IDs
+AssertionError: expected 'b01:v1.0' to contain 'state_'
+
+Expected: "state_"
+Received: "b01:v1.0"
+
+ ❯ tests/b12.test.ts:233:44
+    231| 
+    232|     expect(versions[0].canonical_state_id).toBeDefined();
+    233|     expect(versions[0].canonical_state_id).toContain("state_");
+       |                                            ^
+    234|   });
+    235| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[46/48]⎯
+
+ FAIL  tests/b12.test.ts > B12 — State Management > transitions have provenance
+AssertionError: expected 'DECIDED' to be 'INFERRED' // Object.is equality
+
+Expected: "INFERRED"
+Received: "DECIDED"
+
+ ❯ tests/b12.test.ts:249:40
+    247| 
+    248|     expect(transition.provenance).toBeDefined();
+    249|     expect(transition.provenance.type).toBe("INFERRED");
+       |                                        ^
+    250|   });
+    251| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[47/48]⎯
+
+ FAIL  tests/b12.test.ts > B12 — State Management > state_id is deterministic regardless of B12 creation timestamps
+AssertionError: expected 'branch_3503a2c3039b2735585894408933c1…' to be 'branch_d77a3775588f7f335fc0beeabe473f…' // Object.is equality
+
+Expected: "branch_d77a3775588f7f335fc0beeabe473f05"
+Received: "branch_3503a2c3039b2735585894408933c132"
+
+ ❯ tests/b12.test.ts:896:29
+    894| 
+    895|     // state_id should be identical (content-derived, wall-clock indep…
+    896|     expect(state1.state_id).toBe(state2.state_id);
+       |                             ^
+    897| 
+    898|     // But metadata timestamps should differ
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[48/48]⎯
+
+ Test Files  7 failed | 11 passed (18)
+      Tests  48 failed | 667 passed (715)
+   Start at  09:03:14
+   Duration  1.99s (transform 3.00s, setup 0ms, collect 5.07s, tests 1.26s, environment 4ms, prepare 1.65s)
+

@@ -1,0 +1,31 @@
+{
+  "release_id": "B_BRANCH_V5_REPAIRED_20260906",
+  "production_readiness": "NOT_VERIFIED",
+  "items": [
+    {"id":"R00","status":["FIXED","VERIFIED"]},
+    {"id":"R01","status":["FIXED","VERIFIED"]},
+    {"id":"R02","status":["FIXED","VERIFIED"]},
+    {"id":"R03","status":["FIXED","VERIFIED"]},
+    {"id":"R04","status":["FIXED","VERIFIED","REJECTED_SUBFINDING"]},
+    {"id":"R05","status":["FIXED","VERIFIED"]},
+    {"id":"R06","status":["VERIFIED","REJECTED_SUBFINDING","DEFERRED_CONTRACT_EVOLUTION"]},
+    {"id":"R07","status":["FIXED","PARTIALLY_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R08","status":["FIXED","PARTIALLY_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R09","status":["FIXED","PARTIALLY_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R10","status":["FIXED","PARTIALLY_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R11","status":["FIXED","PARTIALLY_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R12","status":["FIXED","PARTIALLY_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R13","status":["FIXED","VERIFIED"]},
+    {"id":"R14","status":["FIXED","VERIFIED"]},
+    {"id":"R15","status":["FIXED","VERIFIED"]},
+    {"id":"R16","status":["FIXED","VERIFIED"]},
+    {"id":"R17","status":["FIXED","VERIFIED"]},
+    {"id":"R18","status":["FIXED","VERIFIED","REJECTED_INTERPRETATION"]},
+    {"id":"R19","status":["FIXED","VERIFIED"]},
+    {"id":"R20","status":["FIXED","VERIFIED"]},
+    {"id":"R21","status":["FIXED","HARNESS_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R22","status":["FIXED","LOCAL_INTEGRATION_VERIFIED","VITEST_NOT_VERIFIED"]},
+    {"id":"R23","status":["FIXED","VERIFIED"]},
+    {"id":"R24","status":["NOT_VERIFIED","PARTIAL_LOCAL_VERIFICATION"]}
+  ]
+}

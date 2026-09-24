@@ -1,0 +1,53 @@
+{
+  "name": "b-branch-strategic-control-plane",
+  "version": "5.0.3-agent-reach.20260906",
+  "description": "B-Branch V5 repaired strategic control plane (B00-B12): governed, versioned, evidence-aware and lineage-preserving.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "RELEASE_STATUS.md",
+    "manifest.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:repair": "vitest run tests/repair",
+    "lint": "node scripts/source-policy-check.mjs",
+    "manifest": "node scripts/generate-manifest.mjs",
+    "verify:manifest": "node scripts/verify-manifest.mjs",
+    "verify:critical": "node verification/critical-invariants.mjs",
+    "verify:integration": "node verification/integration-fixture.mjs",
+    "test:legacy": "vitest run tests/*.test.ts",
+    "verify:remaining": "node verification/remaining-repair-guards.mjs",
+    "lint:policy": "node scripts/source-policy-check.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "test:agent-reach": "vitest run tests/repair/agent-reach.test.ts",
+    "typecheck:repair": "tsc --noEmit -p tsconfig.repair.json"
+  },
+  "keywords": [
+    "b-branch",
+    "control-plane",
+    "governance",
+    "provenance",
+    "lineage"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^20.14.15",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

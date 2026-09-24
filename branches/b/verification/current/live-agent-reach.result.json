@@ -1,0 +1,129 @@
+{
+  "request": {
+    "channel_id": "verification-only",
+    "max_results": 1,
+    "observation_kind": "CommunityObservation",
+    "platform": "web",
+    "project_id": "b-branch-provider-verification",
+    "purpose": "Verify access and normalization; not content truth",
+    "query": "https://example.com/",
+    "request_id": "live-public-web-check",
+    "source_types": [
+      "web"
+    ]
+  },
+  "provider": "agent-reach",
+  "provider_version": "1.5.0",
+  "backend": "jina-reader",
+  "status": "EXECUTED_REAL",
+  "source_mode": "REAL",
+  "retrieved_at": "2026-09-06T07:22:10.785Z",
+  "sources": [
+    {
+      "canonical_url": "https://example.com/",
+      "platform": "web",
+      "retrieval_method": "jina-reader HTTPS read (Agent Reach documented backend)",
+      "content": "Title: Example Domain\n\nURL Source: https://example.com/\n\nPublished Time: Wed, 02 Sep 2026 22:14:26 GMT\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\n[Learn more](https://iana.org/domains/example)\n",
+      "source_id": "extsrc_2fbe7a9e449ded0801eb4cff13b8258b65d91c9454451af24a7a292acfd069a0",
+      "project_id": "b-branch-provider-verification",
+      "retrieved_at": "2026-09-06T07:22:10.785Z",
+      "content_hash": "15adee6232daf62bcd6bf3b811d809abc95b9e2e9b7463bdb253fd422c34460c",
+      "source_mode": "REAL",
+      "backend": "jina-reader",
+      "provider_version": "1.5.0"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6",
+      "source": "https://example.com/",
+      "status": "UNKNOWN",
+      "origin": "PROVIDER_DATA",
+      "basis": "OBSERVED",
+      "source_mode": "REAL",
+      "production_eligible": false,
+      "excerpt": "Title: Example Domain\n\nURL Source: https://example.com/\n\nPublished Time: Wed, 02 Sep 2026 22:14:26 GMT\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\n[Learn more](https://iana.org/domains/example)\n"
+    }
+  ],
+  "provenance": [
+    {
+      "id": "extprov_extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6",
+      "type": "OBSERVED",
+      "decision_authority": "B08:AgentReachAdapter",
+      "timestamp": "2026-09-06T07:22:10.785Z",
+      "rationale": "Source retrieval recorded; content truth remains UNKNOWN",
+      "subject_id": "extsrc_2fbe7a9e449ded0801eb4cff13b8258b65d91c9454451af24a7a292acfd069a0",
+      "subject_type": "B08_EXTERNAL_SOURCE",
+      "subject_version": "15adee6232daf62bcd6bf3b811d809abc95b9e2e9b7463bdb253fd422c34460c",
+      "subject_content_hash": "2976458a0bfa4f852eb355de9ff0bdcef5c30a36be92af6e6b9fed232c9dc8f5",
+      "source_evidence_refs": [
+        "extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6"
+      ],
+      "transformation": "agent_reach_retrieval_to_source"
+    },
+    {
+      "id": "obsprov_extobs_6799e25f2518d126e48075298d6bf067412276dcbe8e78a5aa6596d4323efa0c",
+      "type": "OBSERVED",
+      "decision_authority": "B08:normalizeExternalResponse",
+      "timestamp": "2026-09-06T07:22:10.785Z",
+      "prior_provenance_id": "extprov_extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6",
+      "rationale": "Normalized source report; not verified truth",
+      "subject_id": "extobs_6799e25f2518d126e48075298d6bf067412276dcbe8e78a5aa6596d4323efa0c",
+      "subject_type": "B08_EXTERNAL_OBSERVATION",
+      "subject_version": "v1",
+      "subject_content_hash": "9dab2034a2bbceda38971e44502755de3b8fbb97fc590acbecc46d0b3d1d0c2a",
+      "source_evidence_refs": [
+        "extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6"
+      ],
+      "transformation": "source_to_b08_observation"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "extobs_6799e25f2518d126e48075298d6bf067412276dcbe8e78a5aa6596d4323efa0c",
+      "kind": "CommunityObservation",
+      "project_id": "b-branch-provider-verification",
+      "channel_id": "verification-only",
+      "source_id": "extsrc_2fbe7a9e449ded0801eb4cff13b8258b65d91c9454451af24a7a292acfd069a0",
+      "source_mode": "REAL",
+      "observed_at": "2026-09-06T07:22:10.785Z",
+      "statement": "Title: Example Domain\n\nURL Source: https://example.com/\n\nPublished Time: Wed, 02 Sep 2026 22:14:26 GMT\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\n[Learn more](https://iana.org/domains/example)\n",
+      "evidence_refs": [
+        {
+          "id": "extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6",
+          "source": "https://example.com/",
+          "status": "UNKNOWN",
+          "origin": "PROVIDER_DATA",
+          "basis": "OBSERVED",
+          "source_mode": "REAL",
+          "production_eligible": false,
+          "excerpt": "Title: Example Domain\n\nURL Source: https://example.com/\n\nPublished Time: Wed, 02 Sep 2026 22:14:26 GMT\n\nWarning: This is a cached snapshot of the original page, consider retry with caching opt-out.\n\nMarkdown Content:\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\n[Learn more](https://iana.org/domains/example)\n"
+        }
+      ],
+      "provenance": {
+        "id": "obsprov_extobs_6799e25f2518d126e48075298d6bf067412276dcbe8e78a5aa6596d4323efa0c",
+        "type": "OBSERVED",
+        "decision_authority": "B08:normalizeExternalResponse",
+        "timestamp": "2026-09-06T07:22:10.785Z",
+        "prior_provenance_id": "extprov_extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6",
+        "rationale": "Normalized source report; not verified truth",
+        "subject_id": "extobs_6799e25f2518d126e48075298d6bf067412276dcbe8e78a5aa6596d4323efa0c",
+        "subject_type": "B08_EXTERNAL_OBSERVATION",
+        "subject_version": "v1",
+        "subject_content_hash": "9dab2034a2bbceda38971e44502755de3b8fbb97fc590acbecc46d0b3d1d0c2a",
+        "source_evidence_refs": [
+          "extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6"
+        ],
+        "transformation": "source_to_b08_observation"
+      }
+    }
+  ],
+  "identity": {
+    "object_id": "extresult_2e5937d4a7a042f6c537aa08f85d7a5d0705ce853f35925fb234d509c8b5427a",
+    "object_type": "B08_EXTERNAL_ACCESS_RESULT",
+    "version": "v1",
+    "content_hash": "2e5937d4a7a042f6c537aa08f85d7a5d0705ce853f35925fb234d509c8b5427a",
+    "parent_references": [],
+    "created_at": "2026-09-06T07:22:10.785Z"
+  }
+}

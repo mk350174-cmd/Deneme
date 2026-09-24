@@ -1,0 +1,6 @@
+NON-CANONICAL DIAGNOSTIC ONLY
+Command: strict TypeScript check of the 15 preserved legacy test files using temporary Vitest/Node declaration shims.
+Result: EXIT 2; 223 TypeScript fixture/contract typing diagnostics.
+Important: Vitest normally transpiles test TypeScript and this diagnostic is NOT a canonical Vitest runtime result.
+Runtime-import defect found by this diagnostic: tests/b12-real-integration.test.ts imported missing B10 createMockPersistence; source was repaired by adding a backward-compatible B10 factory/export.
+After repair: no TS2305 / missing-export diagnostic remains. Remaining diagnostics are legacy fixture strict-typing debt and were not mass-edited merely to make a fallback check green.

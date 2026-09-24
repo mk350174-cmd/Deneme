@@ -1,0 +1,10 @@
+{
+  "plan_type": "B08_REACH_PLAN",
+  "project_id": "<B proje id — export-feed --project ile aynı değer olmalı>",
+  "channel_id": "ch_yt_main",
+  "items": [
+    { "id": "yt-figure", "backend": "youtube_search", "query": "Taydula Hatun Altın Orda", "observation_kind": "CompetitiveObservation", "purpose": "Aynı figür hakkında mevcut videolar", "max_results": 10 },
+    { "id": "yt-topic", "backend": "youtube_search", "query": "Altın Orda kadın hükümdarlar", "observation_kind": "TrendObservation", "purpose": "Konu etrafındaki güncel içerik", "max_results": 10 },
+    { "id": "rss-source", "backend": "rss", "query": "https://<dergi-veya-blog>/feed", "observation_kind": "TrendObservation", "purpose": "Yeni yayınlar / makaleler", "max_results": 10 }
+  ]
+}

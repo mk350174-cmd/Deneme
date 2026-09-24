@@ -1,0 +1,205 @@
+
+> b-branch-strategic-control-plane@5.0.3-agent-reach.20260906 test:legacy
+> vitest run tests/*.test.ts
+
+
+ RUN  v2.1.9 /workspace/scratch/945cbe44077d/work/B_BRANCH_V5_REPAIRED_FINAL_20260906
+
+ ✓ tests/b04.test.ts (53 tests) 93ms
+ ✓ tests/b05.test.ts (64 tests) 119ms
+ ✓ tests/b02.test.ts (77 tests) 145ms
+ ❯ tests/b03.test.ts (91 tests | 1 failed) 291ms
+   × B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should track canonical only DECIDED items 6ms
+     → expected +0 to be 1 // Object.is equality
+ ✓ tests/b12-real-integration.test.ts (7 tests) 48ms
+ ❯ tests/b12.test.ts (44 tests | 2 failed) 181ms
+   × B12 — State Management > module versions have canonical state IDs 17ms
+     → expected 'b01:v1.0' to contain 'state_'
+   × B12 — State Management > transitions have provenance 4ms
+     → expected 'DECIDED' to be 'INFERRED' // Object.is equality
+ ✓ tests/b01.test.ts (133 tests) 256ms
+ ✓ tests/b00.test.ts (29 tests) 12ms
+ ✓ tests/b10.test.ts (28 tests) 17ms
+ ✓ tests/b07.test.ts (33 tests) 31ms
+ ❯ tests/b11.test.ts (33 tests | 1 failed) 61ms
+   × B11 — Risk & Compliance > runs compliance checks 11ms
+     → expected [ 'compliant', 'non_compliant', …(2) ] to include 'UNKNOWN'
+ ✓ tests/b06.test.ts (33 tests) 60ms
+ ✓ tests/b00-governance.test.ts (40 tests) 174ms
+ ❯ tests/b08.test.ts (17 tests | 2 failed) 40ms
+   × B08 — Analytics Strategy > builds analytics context from upstream states 11ms
+     → expected [] to have a length of 1 but got +0
+   × B08 — Analytics Strategy > defines analytics workflows 1ms
+     → expected 0 to be greater than 0
+ ❯ tests/b09.test.ts (14 tests | 4 failed) 24ms
+   × B09 — Learning Loops > generates learning observations 8ms
+     → expected 0 to be greater than 0
+   × B09 — Learning Loops > generates learning signals from observations 1ms
+     → expected 0 to be greater than 0
+   × B09 — Learning Loops > evidence and provenance are separate 1ms
+     → Cannot read properties of undefined (reading 'evidence_refs')
+   × B09 — Learning Loops > generates deterministic IDs 1ms
+     → Cannot read properties of undefined (reading 'observation_id')
+
+ Test Files  5 failed | 10 passed (15)
+      Tests  10 failed | 686 passed (696)
+   Start at  09:27:33
+   Duration  2.48s (transform 3.78s, setup 0ms, collect 6.85s, tests 1.55s, environment 3ms, prepare 2.54s)
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+stderr | tests/b03.test.ts > B03 — Audience Intelligence > Category 5: Validation & Conflict Detection > should reject segments with no evidence
+Segment bad has no evidence (fabricated?)
+
+stderr | tests/b03.test.ts > B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should enforce semantic versioning
+Promise returned by `expect(actual).rejects.toThrow(expected)` was not awaited. Vitest currently auto-awaits hanging assertions at the end of the test, but this will cause the test to fail in Vitest 3. Please remember to await the assertion.
+    at /workspace/scratch/945cbe44077d/work/B_BRANCH_V5_REPAIRED_FINAL_20260906/tests/b03.test.ts:677:24
+
+stderr | tests/b03.test.ts > B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should enforce immutability: duplicate version throws error
+Promise returned by `expect(actual).rejects.toThrow(expected)` was not awaited. Vitest currently auto-awaits hanging assertions at the end of the test, but this will cause the test to fail in Vitest 3. Please remember to await the assertion.
+    at /workspace/scratch/945cbe44077d/work/B_BRANCH_V5_REPAIRED_FINAL_20260906/tests/b03.test.ts:703:23
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 10 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/b03.test.ts > B03 — Audience Intelligence > Category 8: Canonicalization & Versioning > should track canonical only DECIDED items
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/b03.test.ts:769:50
+    767| 
+    768|       // Canonical should only have 1 DECIDED segment
+    769|       expect(canonical.audience_segments.length).toBe(1);
+       |                                                  ^
+    770|     });
+    771|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/10]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > builds analytics context from upstream states
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/b08.test.ts:46:31
+     44|     expect(context.kpis).toHaveLength(1);
+     45|     expect(context.channels).toHaveLength(1);
+     46|     expect(context.campaigns).toHaveLength(1);
+       |                               ^
+     47|   });
+     48| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/10]⎯
+
+ FAIL  tests/b08.test.ts > B08 — Analytics Strategy > defines analytics workflows
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/b08.test.ts:100:30
+     98|     const workflows = defineAnalyticsWorkflows(context, sources, metri…
+     99| 
+    100|     expect(workflows.length).toBeGreaterThan(0);
+       |                              ^
+    101|     expect(workflows[0]).toHaveProperty("workflow_id");
+    102|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/10]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > generates learning observations
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/b09.test.ts:29:33
+     27|     const observations = generateLearningObservations(b08State, b06Sta…
+     28| 
+     29|     expect(observations.length).toBeGreaterThan(0);
+       |                                 ^
+     30|     expect(observations[0]).toHaveProperty("observation_id");
+     31|     expect(observations[0].provenance.type).toBe("INFERRED");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/10]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > generates learning signals from observations
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/b09.test.ts:41:28
+     39|     const signals = generateLearningSignals(observations);
+     40| 
+     41|     expect(signals.length).toBeGreaterThan(0);
+       |                            ^
+     42|     expect(signals[0].source_observations.length).toBeGreaterThan(0);
+     43|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/10]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > evidence and provenance are separate
+TypeError: Cannot read properties of undefined (reading 'evidence_refs')
+ ❯ tests/b09.test.ts:85:42
+     83|     const observations = generateLearningObservations(b08State, b06Sta…
+     84| 
+     85|     expect(Array.isArray(observations[0].evidence_refs)).toBe(true);
+       |                                          ^
+     86|     expect(typeof observations[0].provenance).toBe("object");
+     87|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/10]⎯
+
+ FAIL  tests/b09.test.ts > B09 — Learning Loops > generates deterministic IDs
+TypeError: Cannot read properties of undefined (reading 'observation_id')
+ ❯ tests/b09.test.ts:125:20
+    123|     const obs2 = generateLearningObservations(b08State, b06State);
+    124| 
+    125|     expect(obs1[0].observation_id).toBe(obs2[0].observation_id);
+       |                    ^
+    126|   });
+    127| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/10]⎯
+
+ FAIL  tests/b11.test.ts > B11 — Risk & Compliance > runs compliance checks
+AssertionError: expected [ 'compliant', 'non_compliant', …(2) ] to include 'UNKNOWN'
+ ❯ tests/b11.test.ts:71:70
+     69|     expect(checks.length).toBe(rules.length);
+     70|     checks.forEach((c) => {
+     71|       expect(["compliant", "non_compliant", "pending_review", "na"]).t…
+       |                                                                      ^
+     72|     });
+     73|   });
+ ❯ tests/b11.test.ts:70:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/10]⎯
+
+ FAIL  tests/b12.test.ts > B12 — State Management > module versions have canonical state IDs
+AssertionError: expected 'b01:v1.0' to contain 'state_'
+
+Expected: "state_"
+Received: "b01:v1.0"
+
+ ❯ tests/b12.test.ts:233:44
+    231| 
+    232|     expect(versions[0].canonical_state_id).toBeDefined();
+    233|     expect(versions[0].canonical_state_id).toContain("state_");
+       |                                            ^
+    234|   });
+    235| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/10]⎯
+
+ FAIL  tests/b12.test.ts > B12 — State Management > transitions have provenance
+AssertionError: expected 'DECIDED' to be 'INFERRED' // Object.is equality
+
+Expected: "INFERRED"
+Received: "DECIDED"
+
+ ❯ tests/b12.test.ts:249:40
+    247| 
+    248|     expect(transition.provenance).toBeDefined();
+    249|     expect(transition.provenance.type).toBe("INFERRED");
+       |                                        ^
+    250|   });
+    251| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/10]⎯
+

@@ -1,0 +1,6 @@
+// B09.02 — Interpretation layer. No target comparison => no invented positive/negative result.
+import type { LearningSignal, LearningObservation } from "../types.js";
+export function generateLearningSignals(observations:LearningObservation[],deps?:{hash?:{stableSignalId:(type:string,desc:string)=>string};now?:()=>string}):LearningSignal[]{
+  const stable=deps?.hash?.stableSignalId||((t:string,d:string)=>`sig_${t}_${d.slice(0,20)}`.toLowerCase()); const now=deps?.now?.()||new Date().toISOString();
+  return observations.map((obs)=>({signal_id:stable("neutral_observation",obs.observation_id),signal_type:"neutral_observation" as const,severity:"low" as const,description:`Actual observation recorded without target comparison: ${obs.description}`,recommended_action:obs.source_external_observation_id ? `Review ${obs.affected_module} against source observation ${obs.source_external_observation_id}; no strategic change is pre-approved` : undefined,source_observations:[obs.observation_id],evidence_refs:obs.evidence_refs,provenance:{type:"INFERRED" as const,decision_authority:"B09_02:generateLearningSignals",timestamp:now,rationale:"Actual observation exists, but target/benchmark comparison is unavailable in B09 input"},interpretation_basis:obs.source_external_observation_id ? "EXTERNAL_REVIEWED_OBSERVATION" as const : "ACTUAL_OBSERVATION" as const}));
+}

@@ -1,0 +1,24 @@
+
+> b-branch-strategic-control-plane@5.0.2-final.20260906 verify:critical
+> node verification/critical-invariants.mjs
+
+PASS R01 canonical hash stable under object field reordering
+PASS R01 one-byte semantic change changes SHA-256 identity
+PASS R02 canonical identity detects post-identity mutation
+PASS R04 direct PROPOSED -> CANONICAL is rejected
+PASS R04 terminal CANONICAL mutation is rejected
+PASS R05 approval binds exact artifact/version/hash
+PASS R03 user assertion cannot silently become VERIFIED
+PASS R19 mock evidence cannot be VERIFIED/production-eligible
+PASS R20 malformed validators return structured invalid result
+PASS R13 analytics definition is not an executed measurement
+PASS R19 MOCK analytics cannot carry VERIFIED/REAL evidence
+PASS R14 no REAL validated analytics means no learning observation
+PASS R15 B10 impact/risk derives from dependency graph, not proposal hash
+PASS R16 no compliance evidence => UNKNOWN, never COMPLIANT
+PASS R16 compliance result is evidence-based, not rule/check hash
+PASS R16 evidence for wrong subject cannot establish compliance
+PASS R17 100% structural completeness does not imply semantic validity/readiness
+PASS R18 lineage mismatch is an ERROR
+
+SUMMARY 18/18 passed

@@ -1,0 +1,5 @@
+
+> b-branch-strategic-control-plane@5.0.2-final.20260906 lint:policy
+> node scripts/source-policy-check.mjs
+
+B-Branch release policy check PASS (127 TypeScript source files scanned)

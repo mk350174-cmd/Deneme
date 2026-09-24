@@ -1,0 +1,54 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/scripts/durum.mjs\" --hook",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/scripts/durum.mjs\" --hook",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm run kur)",
+      "Bash(npm run kur *)",
+      "Bash(npm run durum)",
+      "Bash(npm run doctor)",
+      "Bash(npm run verify)",
+      "Bash(npm run plan)",
+      "Bash(npm run yeni-dongu *)",
+      "Bash(npm run unified *)",
+      "Bash(node scripts/durum.mjs *)",
+      "Bash(node integration/bridges/dist/cli.js *)"
+    ],
+    "deny": [
+      "Bash(*dewatermark*)",
+      "Bash(*locate_watermark*)",
+      "Bash(agent-reach configure*)",
+      "Read(./.unified/seal.key)"
+    ],
+    "ask": [
+      "Bash(*--actor*)",
+      "Bash(*--scope-approved-by*)",
+      "Bash(*b-commit*)",
+      "Bash(*approve-f1*)",
+      "Bash(*p2-approve*)",
+      "Bash(*p1-approve*)"
+    ]
+  }
+}

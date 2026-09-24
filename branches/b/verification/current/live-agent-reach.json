@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-09-06T07:22:10.787Z",
+  "provider": "agent-reach",
+  "health": {
+    "checked_at": "2026-09-06T07:21:49.371Z",
+    "capabilities": [
+      {
+        "capability": "read",
+        "platform": "web",
+        "backend": "jina-reader",
+        "requires_auth": false,
+        "requires_cookie": false,
+        "requires_browser_session": false,
+        "requires_mcp": false,
+        "proxy_required": false,
+        "status": "UNKNOWN",
+        "last_checked": null
+      }
+    ],
+    "authenticated": "UNKNOWN",
+    "installed": true,
+    "reachable": false,
+    "provider_version": "1.5.0",
+    "status": "FAILED"
+  },
+  "execution_status": "EXECUTED_REAL",
+  "installed": "VERIFIED",
+  "reachable": "VERIFIED (jina-reader backend only)",
+  "doctor_completed": "NOT VERIFIED",
+  "authenticated": "NOT VERIFIED — public no-auth backend only",
+  "retrieval_works": "VERIFIED",
+  "data_parsed": "VERIFIED",
+  "evidence_generated": "VERIFIED (retrieval evidence, status UNKNOWN)",
+  "content_truth": "NOT VERIFIED",
+  "external_compliance": "NOT VERIFIED",
+  "source_metadata": [
+    {
+      "canonical_url": "https://example.com/",
+      "platform": "web",
+      "retrieval_method": "jina-reader HTTPS read (Agent Reach documented backend)",
+      "source_id": "extsrc_2fbe7a9e449ded0801eb4cff13b8258b65d91c9454451af24a7a292acfd069a0",
+      "project_id": "b-branch-provider-verification",
+      "retrieved_at": "2026-09-06T07:22:10.785Z",
+      "content_hash": "15adee6232daf62bcd6bf3b811d809abc95b9e2e9b7463bdb253fd422c34460c",
+      "source_mode": "REAL",
+      "backend": "jina-reader",
+      "provider_version": "1.5.0"
+    }
+  ],
+  "evidence_statuses": [
+    {
+      "id": "extev_cec65ea4fe730858872c7b0b7c7c1d15b3d9079ca2380b253a51f974c3692af6",
+      "status": "UNKNOWN",
+      "source_mode": "REAL",
+      "production_eligible": false
+    }
+  ]
+}

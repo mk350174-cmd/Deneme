@@ -1,0 +1,15 @@
+{
+  "language": "tr",
+  "piper_model_path": "tools/piper/tr_TR-dfki-medium.onnx",
+  "provider": "elevenlabs",
+  "elevenlabs": {
+    "voice_id": "<ElevenLabs voice_id — Voice Library'den kopyalayın>",
+    "model_id": "eleven_multilingual_v2",
+    "char_budget": 10000
+  },
+  "voicebox": {
+    "profile_id": "<Voicebox profil id'si — yalnızca kendi sesiniz ya da izinli ses>",
+    "engine": "chatterbox",
+    "base_url": "http://127.0.0.1:17493"
+  }
+}

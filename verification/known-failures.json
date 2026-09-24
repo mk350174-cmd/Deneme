@@ -1,0 +1,18 @@
+{
+  "note": "Pre-existing B-Branch legacy expectations that fail in the delivered B_BRANCH_V5 release (documented in branches/b/FINAL_B_BRANCH_STATUS_AND_RISKS.md). The unified merge changes B source only for the B-1/B-2/B-4 fixes (MERGE_REPORT Güncelleme 4 and 6), which touch none of these tests; verify-all fails if this set changes in either direction.",
+  "b-branch": [
+    "tests/b03.test.ts :: B03 — Audience Intelligence Category 8: Canonicalization & Versioning should track canonical only DECIDED items",
+    "tests/b08.test.ts :: B08 — Analytics Strategy builds analytics context from upstream states",
+    "tests/b08.test.ts :: B08 — Analytics Strategy defines analytics workflows",
+    "tests/b09.test.ts :: B09 — Learning Loops generates learning observations",
+    "tests/b09.test.ts :: B09 — Learning Loops generates learning signals from observations",
+    "tests/b09.test.ts :: B09 — Learning Loops evidence and provenance are separate",
+    "tests/b09.test.ts :: B09 — Learning Loops generates deterministic IDs",
+    "tests/b11.test.ts :: B11 — Risk & Compliance runs compliance checks",
+    "tests/b12.test.ts :: B12 — State Management module versions have canonical state IDs",
+    "tests/b12.test.ts :: B12 — State Management transitions have provenance"
+  ],
+  "allowed-skips": [
+    "tests/reach.test.ts :: Agent Reach backends through B08 LIVE: real yt-dlp search"
+  ]
+}

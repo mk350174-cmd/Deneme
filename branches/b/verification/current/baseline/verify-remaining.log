@@ -1,0 +1,18 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> b-branch-strategic-control-plane@5.0.2-final.20260906 verify:remaining
+> node verification/remaining-repair-guards.mjs
+
+PASS B01 platform provenance is aggregated from actual entries only
+PASS B01 runB01 candidate preserves platform provenance in aggregate
+PASS B01 contract-evolution drops remain explicit/documented
+PASS SYNTHETIC evidence cannot be VERIFIED or production eligible
+PASS UNKNOWN-source evidence cannot be VERIFIED or production eligible
+PASS Analytics execution modes remain distinct
+PASS SYNTHETIC analytics can be explicit simulation but cannot enter B09 learning
+PASS B09 learning requires validated REAL analytics with VERIFIED REAL evidence
+PASS Preserved B12 real-integration import can resolve B10 createMockPersistence
+PASS UNKNOWN analytics source mode is rejected rather than coerced
+PASS B04/B05/B06/B07 framework defaults remain DEFAULT/HEURISTIC, never measured claims
+
+SUMMARY 11/11 passed
