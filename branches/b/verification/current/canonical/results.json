@@ -1,0 +1,114 @@
+{
+  "node": "v24.19.0",
+  "package": "5.0.3-agent-reach.20260906",
+  "results": [
+    {
+      "command": "npm install",
+      "started_at": "2026-09-06T07:27:27.674Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "install.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run typecheck",
+      "started_at": "2026-09-06T07:27:28.054Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-typecheck.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run build",
+      "started_at": "2026-09-06T07:27:30.964Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-build.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run test:legacy",
+      "started_at": "2026-09-06T07:27:33.511Z",
+      "exit": 1,
+      "signal": null,
+      "error": null,
+      "log": "run-test-legacy.log",
+      "status": "FAIL"
+    },
+    {
+      "command": "npm run test:repair",
+      "started_at": "2026-09-06T07:27:36.702Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-test-repair.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm test",
+      "started_at": "2026-09-06T07:27:38.974Z",
+      "exit": 1,
+      "signal": null,
+      "error": null,
+      "log": "test.log",
+      "status": "FAIL"
+    },
+    {
+      "command": "npm run verify:critical",
+      "started_at": "2026-09-06T07:27:42.057Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-verify-critical.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run verify:integration",
+      "started_at": "2026-09-06T07:27:42.287Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-verify-integration.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run verify:remaining",
+      "started_at": "2026-09-06T07:27:42.528Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-verify-remaining.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run lint:policy",
+      "started_at": "2026-09-06T07:27:42.755Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-lint-policy.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run manifest",
+      "started_at": "2026-09-06T07:27:43.007Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-manifest.log",
+      "status": "PASS"
+    },
+    {
+      "command": "npm run verify:manifest",
+      "started_at": "2026-09-06T07:27:43.299Z",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "log": "run-verify-manifest.log",
+      "status": "PASS"
+    }
+  ]
+}

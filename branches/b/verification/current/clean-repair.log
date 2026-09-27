@@ -1,0 +1,35 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> b-branch-strategic-control-plane@5.0.3-agent-reach.20260906 test:repair
+> vitest run tests/repair
+
+
+ RUN  v2.1.9 /workspace/scratch/945cbe44077d/clean-install
+
+ ✓ tests/repair/b00-b12-lineage.integration.test.ts (1 test) 25ms
+ ✓ tests/repair/repair-adversarial.test.ts (11 tests) 14ms
+ ✓ tests/repair/remaining-repair.test.ts (7 tests) 9ms
+stderr | tests/repair/agent-reach.test.ts > B08 external module integration (controlled fixtures; NOT live) > feeds B02 only channel-bound source reports without changing heuristic scores
+B02 registry validation failed: [ 'strategic_constraints empty or missing' ]
+B02 registry validation failed: [ 'strategic_constraints empty or missing' ]
+
+stderr | tests/repair/agent-reach.test.ts > B08 external module integration (controlled fixtures; NOT live) > feeds B03 without fabricated demographics, geographic scope or verified truth
+Segment seg_a4c4ff99d72717406034943a9a2db19678ca439822a83c8d85744399b4b2b567: characteristic 'role_title' = 'Engineer' but no supporting evidence
+
+stderr | tests/repair/agent-reach.test.ts > B08 external module integration (controlled fixtures; NOT live) > blocks MOCK results from B02/B03/B09
+B02 registry validation failed: [ 'strategic_constraints empty or missing' ]
+
+stderr | tests/repair/agent-reach.test.ts > B08 external module integration (controlled fixtures; NOT live) > blocks SYNTHETIC results from B02/B03/B09
+B02 registry validation failed: [ 'strategic_constraints empty or missing' ]
+
+stderr | tests/repair/agent-reach.test.ts > B08 external module integration (controlled fixtures; NOT live) > blocks UNKNOWN results from B02/B03/B09
+B02 registry validation failed: [ 'strategic_constraints empty or missing' ]
+
+ ✓ tests/repair/agent-reach.test.ts (52 tests) 1025ms
+   ✓ Native Agent Reach backend binding (subprocess/fetch fixtures) > parses the upstream version format, calls doctor, and bounds native retrieval 889ms
+
+ Test Files  4 passed (4)
+      Tests  71 passed (71)
+   Start at  09:25:09
+   Duration  2.18s (transform 1.12s, setup 0ms, collect 1.95s, tests 1.07s, environment 1ms, prepare 401ms)
+

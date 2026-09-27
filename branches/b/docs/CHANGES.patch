@@ -1,0 +1,2918 @@
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -0,0 +1,1476 @@
++{
++  "name": "b-branch-strategic-control-plane",
++  "version": "5.0.3-agent-reach.20260906",
++  "lockfileVersion": 3,
++  "requires": true,
++  "packages": {
++    "": {
++      "name": "b-branch-strategic-control-plane",
++      "version": "5.0.3-agent-reach.20260906",
++      "license": "UNLICENSED",
++      "devDependencies": {
++        "@types/node": "^20.14.15",
++        "typescript": "^5.5.4",
++        "vitest": "^2.0.5"
++      },
++      "engines": {
++        "node": ">=20"
++      }
++    },
++    "node_modules/@esbuild/aix-ppc64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.21.5.tgz",
++      "integrity": "sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==",
++      "cpu": [
++        "ppc64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "aix"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/android-arm": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.21.5.tgz",
++      "integrity": "sha512-vCPvzSjpPHEi1siZdlvAlsPxXl7WbOVUBBAowWug4rJHb68Ox8KualB+1ocNvT5fjv6wpkX6o/iEpbDrf68zcg==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/android-arm64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.21.5.tgz",
++      "integrity": "sha512-c0uX9VAUBQ7dTDCjq+wdyGLowMdtR/GoC2U5IYk/7D1H1JYC0qseD7+11iMP2mRLN9RcCMRcjC4YMclCzGwS/A==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/android-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/android-x64/-/android-x64-0.21.5.tgz",
++      "integrity": "sha512-D7aPRUUNHRBwHxzxRvp856rjUHRFW1SdQATKXH2hqA0kAZb1hKmi02OpYRacl0TxIGz/ZmXWlbZgjwWYaCakTA==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/darwin-arm64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.21.5.tgz",
++      "integrity": "sha512-DwqXqZyuk5AiWWf3UfLiRDJ5EDd49zg6O9wclZ7kUMv2WRFr4HKjXp/5t8JZ11QbQfUS6/cRCKGwYhtNAY88kQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/darwin-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.21.5.tgz",
++      "integrity": "sha512-se/JjF8NlmKVG4kNIuyWMV/22ZaerB+qaSi5MdrXtd6R08kvs2qCN4C09miupktDitvh8jRFflwGFBQcxZRjbw==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/freebsd-arm64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/freebsd-arm64/-/freebsd-arm64-0.21.5.tgz",
++      "integrity": "sha512-5JcRxxRDUJLX8JXp/wcBCy3pENnCgBR9bN6JsY4OmhfUtIHe3ZW0mawA7+RDAcMLrMIZaf03NlQiX9DGyB8h4g==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/freebsd-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/freebsd-x64/-/freebsd-x64-0.21.5.tgz",
++      "integrity": "sha512-J95kNBj1zkbMXtHVH29bBriQygMXqoVQOQYA+ISs0/2l3T9/kj42ow2mpqerRBxDJnmkUDCaQT/dfNXWX/ZZCQ==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-arm": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-arm/-/linux-arm-0.21.5.tgz",
++      "integrity": "sha512-bPb5AHZtbeNGjCKVZ9UGqGwo8EUu4cLq68E95A53KlxAPRmUyYv2D6F0uUI65XisGOL1hBP5mTronbgo+0bFcA==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-arm64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-arm64/-/linux-arm64-0.21.5.tgz",
++      "integrity": "sha512-ibKvmyYzKsBeX8d8I7MH/TMfWDXBF3db4qM6sy+7re0YXya+K1cem3on9XgdT2EQGMu4hQyZhan7TeQ8XkGp4Q==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-ia32": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-ia32/-/linux-ia32-0.21.5.tgz",
++      "integrity": "sha512-YvjXDqLRqPDl2dvRODYmmhz4rPeVKYvppfGYKSNGdyZkA01046pLWyRKKI3ax8fbJoK5QbxblURkwK/MWY18Tg==",
++      "cpu": [
++        "ia32"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-loong64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.21.5.tgz",
++      "integrity": "sha512-uHf1BmMG8qEvzdrzAqg2SIG/02+4/DHB6a9Kbya0XDvwDEKCoC8ZRWI5JJvNdUjtciBGFQ5PuBlpEOXQj+JQSg==",
++      "cpu": [
++        "loong64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-mips64el": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-mips64el/-/linux-mips64el-0.21.5.tgz",
++      "integrity": "sha512-IajOmO+KJK23bj52dFSNCMsz1QP1DqM6cwLUv3W1QwyxkyIWecfafnI555fvSGqEKwjMXVLokcV5ygHW5b3Jbg==",
++      "cpu": [
++        "mips64el"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-ppc64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-ppc64/-/linux-ppc64-0.21.5.tgz",
++      "integrity": "sha512-1hHV/Z4OEfMwpLO8rp7CvlhBDnjsC3CttJXIhBi+5Aj5r+MBvy4egg7wCbe//hSsT+RvDAG7s81tAvpL2XAE4w==",
++      "cpu": [
++        "ppc64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-riscv64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-riscv64/-/linux-riscv64-0.21.5.tgz",
++      "integrity": "sha512-2HdXDMd9GMgTGrPWnJzP2ALSokE/0O5HhTUvWIbD3YdjME8JwvSCnNGBnTThKGEB91OZhzrJ4qIIxk/SBmyDDA==",
++      "cpu": [
++        "riscv64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-s390x": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-s390x/-/linux-s390x-0.21.5.tgz",
++      "integrity": "sha512-zus5sxzqBJD3eXxwvjN1yQkRepANgxE9lgOW2qLnmr8ikMTphkjgXu1HR01K4FJg8h1kEEDAqDcZQtbrRnB41A==",
++      "cpu": [
++        "s390x"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/linux-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.21.5.tgz",
++      "integrity": "sha512-1rYdTpyv03iycF1+BhzrzQJCdOuAOtaqHTWJZCWvijKD2N5Xu0TtVC8/+1faWqcP9iBCWOmjmhoH94dH82BxPQ==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/netbsd-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/netbsd-x64/-/netbsd-x64-0.21.5.tgz",
++      "integrity": "sha512-Woi2MXzXjMULccIwMnLciyZH4nCIMpWQAs049KEeMvOcNADVxo0UBIQPfSmxB3CWKedngg7sWZdLvLczpe0tLg==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "netbsd"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/openbsd-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/openbsd-x64/-/openbsd-x64-0.21.5.tgz",
++      "integrity": "sha512-HLNNw99xsvx12lFBUwoT8EVCsSvRNDVxNpjZ7bPn947b8gJPzeHWyNVhFsaerc0n3TsbOINvRP2byTZ5LKezow==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "openbsd"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/sunos-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/sunos-x64/-/sunos-x64-0.21.5.tgz",
++      "integrity": "sha512-6+gjmFpfy0BHU5Tpptkuh8+uw3mnrvgs+dSPQXQOv3ekbordwnzTVEb4qnIvQcYXq6gzkyTnoZ9dZG+D4garKg==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "sunos"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/win32-arm64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/win32-arm64/-/win32-arm64-0.21.5.tgz",
++      "integrity": "sha512-Z0gOTd75VvXqyq7nsl93zwahcTROgqvuAcYDUr+vOv8uHhNSKROyU961kgtCD1e95IqPKSQKH7tBTslnS3tA8A==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/win32-ia32": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/win32-ia32/-/win32-ia32-0.21.5.tgz",
++      "integrity": "sha512-SWXFF1CL2RVNMaVs+BBClwtfZSvDgtL//G/smwAc5oVK/UPu2Gu9tIaRgFmYFFKrmg3SyAjSrElf0TiJ1v8fYA==",
++      "cpu": [
++        "ia32"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@esbuild/win32-x64": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz",
++      "integrity": "sha512-tQd/1efJuzPC6rCFwEvLtci/xNFcTZknmXs98FYDfGE4wP9ClFV98nyKrzJKVPMhdDnjzLhdUyMX4PsQAPjwIw==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/@jridgewell/sourcemap-codec": {
++      "version": "1.6.0",
++      "resolved": "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.6.0.tgz",
++      "integrity": "sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/@napi-rs/lzma-linux-x64-gnu": {
++      "version": "1.5.1",
++      "resolved": "https://registry.npmjs.org/@napi-rs/lzma-linux-x64-gnu/-/lzma-linux-x64-gnu-1.5.1.tgz",
++      "integrity": "sha512-oTXEIha4SsuXdTA4Iyskj0kpdx2yVXdhd75c2v3xGrHFfVMsbhTPZU/nMPL4sWKo4pBHm3aucLaqGlF696dTyQ==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": "^22.20 || ^24.12 || >=25"
++      }
++    },
++    "node_modules/@rollup/rollup-android-arm-eabi": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.63.1.tgz",
++      "integrity": "sha512-UZ8sUxPTiHWYX9QNdJedb1kDZSpS1t/VPWBWGSgqHNi9w3Cu6IXvu2mzbhiTiPvtrqgTQJ+zqiAq2iPIPilpaQ==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ]
++    },
++    "node_modules/@rollup/rollup-android-arm64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.63.1.tgz",
++      "integrity": "sha512-cQ4nFQABN5cDvDpbvJ7bMStCpnaVxynZrRMfUJYgxcIk9Sh54FIO1vtfkg0B69REjER77ioZ/ov+eAApx/KmLQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ]
++    },
++    "node_modules/@rollup/rollup-darwin-arm64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.63.1.tgz",
++      "integrity": "sha512-FQNqd1lRy/0QhDk3xeRIkSBiCpXCiDnZO3YLVdcDKN1UBiKToNftCzcXYNLshmPDUMlu2TdeS8tGcsU6f3YF1Q==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ]
++    },
++    "node_modules/@rollup/rollup-darwin-x64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.63.1.tgz",
++      "integrity": "sha512-pvD16V939D3CloK0+qikpGaxiPrDUXTe7Y5cWOMkMSy7m1cawa8EGy/kXYi/G/cKAC4HDAbSnzCIk1WmsoOKXg==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ]
++    },
++    "node_modules/@rollup/rollup-freebsd-arm64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.63.1.tgz",
++      "integrity": "sha512-pcFGeL2345VwdTnJhA6zLbew+YgWB0qBG2+dMtXjCicf6+rm6kO6cOoh5VnTe0ZMrMRgRyuHmCJxZWrIdzYuOw==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ]
++    },
++    "node_modules/@rollup/rollup-freebsd-x64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.63.1.tgz",
++      "integrity": "sha512-mRJlqSRulVzcKq/LKA6ICSIc3K/l4fzlVn/gePn2nXIHy8seRi5z/eeRE0d/XMBxcMldiXtQTSpRj0tkkC3g8Q==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-arm-gnueabihf": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.63.1.tgz",
++      "integrity": "sha512-YDUNvVM85TI3g/1OpnqKP1h4NeW/j64DfWMf+G3M809xNk1bJSnpFp4sh83NpmVE5DXnkh8ULor4LTVZKoYLHw==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-arm-musleabihf": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.63.1.tgz",
++      "integrity": "sha512-7Mcn71p9ZuQFAj+h+dhQXy/yeLePRS2yKRnmW1DijA9thKO5qap0GNOIQK4yQ6iP3SU0Mrb/yWo8h8vgRba8lw==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-arm64-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.63.1.tgz",
++      "integrity": "sha512-4YiLQTX6U4CSl0L9cluep9A9W6UmTfqBDc2/CH6wlu54pl4E7Jn3cOD8oxzvBDEGk/JMKgJ47C8g+radF7mwvg==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-arm64-musl": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.63.1.tgz",
++      "integrity": "sha512-2ra8F7w8OquwZN9z2/fKFnli69wa8PLwaVzRMIPGb13ByMJwC28Fbp8YcVGoUhlYMTt7j5j9bNgpysrN2UM+vw==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-loong64-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-loong64-gnu/-/rollup-linux-loong64-gnu-4.63.1.tgz",
++      "integrity": "sha512-Sy20ncyhjmBP0Ml+UvQbimjlk6VFgjW5uNP+qqwHB00mTE8Bl2C1TuHTlRwK2YoXeZbee5lP2XevBWVkAQAtSQ==",
++      "cpu": [
++        "loong64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-loong64-musl": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-loong64-musl/-/rollup-linux-loong64-musl-4.63.1.tgz",
++      "integrity": "sha512-noITLp8oNjYliPnGWmLyelIHwULGqbHloQHGw1rtxbWhTuWooRpnZarZQJ1y9EUC4szuCusCc+HEpUtxpIwYvA==",
++      "cpu": [
++        "loong64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-ppc64-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-ppc64-gnu/-/rollup-linux-ppc64-gnu-4.63.1.tgz",
++      "integrity": "sha512-hlxxXd+F1mWiAcaFR7Sv9ZQT6m6UfI8+Vy/kFJzztq2pDMU/0wZ9sish0iszNZvsQDo8Gc0i5yuFEOz5dDf6fA==",
++      "cpu": [
++        "ppc64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-ppc64-musl": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-ppc64-musl/-/rollup-linux-ppc64-musl-4.63.1.tgz",
++      "integrity": "sha512-EF7OpqQTQ/BvGqLzUi4rEHuagCV9MugAUXSHemwPW5vxZ75RR+jxO/2j95Ph2dalMpFHSVECjRoioHZgA9zOYA==",
++      "cpu": [
++        "ppc64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-riscv64-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-riscv64-gnu/-/rollup-linux-riscv64-gnu-4.63.1.tgz",
++      "integrity": "sha512-wQO3JesW9PRkwlabQ27y7sPfVOOTLRG73I4F2UYHG5PXun3J9U3y+b7ezVKSYbsvSKGQ1k1cq8Qlun4C9kLt3w==",
++      "cpu": [
++        "riscv64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-riscv64-musl": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-riscv64-musl/-/rollup-linux-riscv64-musl-4.63.1.tgz",
++      "integrity": "sha512-ouAGwhO6wHRXdnOVCOsB0tRFkA7nhNB2Nwax6oECXN0YiN8EYUTBAOudADOB1PI+yDL61TeNx/u7MVCzksNbkQ==",
++      "cpu": [
++        "riscv64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-s390x-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-s390x-gnu/-/rollup-linux-s390x-gnu-4.63.1.tgz",
++      "integrity": "sha512-q2R38Sn+1J8RxhfJ+T54wSWmyKXWec+9jgDfqO2AtArEqHO5R2aeayp5H5OYLr5UYDVGsVaZPEFUooMhYCdz5A==",
++      "cpu": [
++        "s390x"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-x64-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.63.1.tgz",
++      "integrity": "sha512-gfI5T24WLLuFfSKw7Go/zDXjAAV0fny0swTaDv+WjK7vqcw4cRhFfdsyKL1n+ukI+ooBxn3bVQnyrn06WpI50w==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-linux-x64-musl": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.63.1.tgz",
++      "integrity": "sha512-4h6XqthmB4Hspji84wvgk+ElodTsGj+dbZqHJHHtKxj4mYq0ANSEEPX9ys3moJueqsRjwpaJYH7874Itwnj2ow==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ]
++    },
++    "node_modules/@rollup/rollup-openbsd-x64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-openbsd-x64/-/rollup-openbsd-x64-4.63.1.tgz",
++      "integrity": "sha512-dlfCOa87o1VAYegLQ9EKilx2JCeRofiyPGhTCmqnuXZ6bMPiycO1rq1+sKoulAp7pGLIsTIw+1x5R+zgh5LhhA==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "openbsd"
++      ]
++    },
++    "node_modules/@rollup/rollup-openharmony-arm64": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-openharmony-arm64/-/rollup-openharmony-arm64-4.63.1.tgz",
++      "integrity": "sha512-cjkLbOlfcm3QGhMM1J5zaZjsw1GggbN6rw9UTSSRrPrR1KkcXnN7Uq9rPw34xImQ9VOY9GN+6u2Zj80B9ptkcw==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "openharmony"
++      ]
++    },
++    "node_modules/@rollup/rollup-win32-arm64-msvc": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.63.1.tgz",
++      "integrity": "sha512-Li1KdUnWGE4N3e1F/B4RTB1ms+nG4WBgjByO46pkeBVX/2UBsY53xf5vK9WygVmnH3RwncIST7lkSdLSY6P9lg==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ]
++    },
++    "node_modules/@rollup/rollup-win32-ia32-msvc": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-ia32-msvc/-/rollup-win32-ia32-msvc-4.63.1.tgz",
++      "integrity": "sha512-t4ZYOSoLTgwhuFMrmTMLx/+i1DQVK7HYqMc6kY46EApwi8X0nIVphzdNoThU3xt6n+N5urG1/gxBdCaKDLavfg==",
++      "cpu": [
++        "ia32"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ]
++    },
++    "node_modules/@rollup/rollup-win32-x64-gnu": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.63.1.tgz",
++      "integrity": "sha512-RgroPfMmKlD1RzSDxvwgcPiy2HNQKoYV7OmwIXDsk73uKW5t6B/V8KIy27SMv/FNXFo/oSBtWc9J0X7t91ezZg==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ]
++    },
++    "node_modules/@rollup/rollup-win32-x64-msvc": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.63.1.tgz",
++      "integrity": "sha512-at8QVep6S3h5Y6gSbdGU06bRY5WJkf6WUduM9YtvYMbYhB1MOFfUgc6kehitQXzOtMSaT70q7f9ydPhpqu821w==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ]
++    },
++    "node_modules/@types/estree": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz",
++      "integrity": "sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/@types/node": {
++      "version": "20.19.43",
++      "resolved": "https://registry.npmjs.org/@types/node/-/node-20.19.43.tgz",
++      "integrity": "sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "undici-types": "~6.21.0"
++      }
++    },
++    "node_modules/@vitest/expect": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/expect/-/expect-2.1.9.tgz",
++      "integrity": "sha512-UJCIkTBenHeKT1TTlKMJWy1laZewsRIzYighyYiJKZreqtdxSos/S1t+ktRMQWu2CKqaarrkeszJx1cgC5tGZw==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@vitest/spy": "2.1.9",
++        "@vitest/utils": "2.1.9",
++        "chai": "^5.1.2",
++        "tinyrainbow": "^1.2.0"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/@vitest/mocker": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/mocker/-/mocker-2.1.9.tgz",
++      "integrity": "sha512-tVL6uJgoUdi6icpxmdrn5YNo3g3Dxv+IHJBr0GXHaEdTcw3F+cPKnsXFhli6nO+f/6SDKPHEK1UN+k+TQv0Ehg==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@vitest/spy": "2.1.9",
++        "estree-walker": "^3.0.3",
++        "magic-string": "^0.30.12"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      },
++      "peerDependencies": {
++        "msw": "^2.4.9",
++        "vite": "^5.0.0"
++      },
++      "peerDependenciesMeta": {
++        "msw": {
++          "optional": true
++        },
++        "vite": {
++          "optional": true
++        }
++      }
++    },
++    "node_modules/@vitest/pretty-format": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/pretty-format/-/pretty-format-2.1.9.tgz",
++      "integrity": "sha512-KhRIdGV2U9HOUzxfiHmY8IFHTdqtOhIzCpd8WRdJiE7D/HUcZVD0EgQCVjm+Q9gkUXWgBvMmTtZgIG48wq7sOQ==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "tinyrainbow": "^1.2.0"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/@vitest/runner": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/runner/-/runner-2.1.9.tgz",
++      "integrity": "sha512-ZXSSqTFIrzduD63btIfEyOmNcBmQvgOVsPNPe0jYtESiXkhd8u2erDLnMxmGrDCwHCCHE7hxwRDCT3pt0esT4g==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@vitest/utils": "2.1.9",
++        "pathe": "^1.1.2"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/@vitest/snapshot": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/snapshot/-/snapshot-2.1.9.tgz",
++      "integrity": "sha512-oBO82rEjsxLNJincVhLhaxxZdEtV0EFHMK5Kmx5sJ6H9L183dHECjiefOAdnqpIgT5eZwT04PoggUnW88vOBNQ==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@vitest/pretty-format": "2.1.9",
++        "magic-string": "^0.30.12",
++        "pathe": "^1.1.2"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/@vitest/spy": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/spy/-/spy-2.1.9.tgz",
++      "integrity": "sha512-E1B35FwzXXTs9FHNK6bDszs7mtydNi5MIfUWpceJ8Xbfb1gBMscAnwLbEu+B44ed6W3XjL9/ehLPHR1fkf1KLQ==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "tinyspy": "^3.0.2"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/@vitest/utils": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/@vitest/utils/-/utils-2.1.9.tgz",
++      "integrity": "sha512-v0psaMSkNJ3A2NMrUEHFRzJtDPFn+/VWZ5WxImB21T9fjucJRmS7xCS3ppEnARb9y11OAzaD+P2Ps+b+BGX5iQ==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@vitest/pretty-format": "2.1.9",
++        "loupe": "^3.1.2",
++        "tinyrainbow": "^1.2.0"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/assertion-error": {
++      "version": "2.0.1",
++      "resolved": "https://registry.npmjs.org/assertion-error/-/assertion-error-2.0.1.tgz",
++      "integrity": "sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">=12"
++      }
++    },
++    "node_modules/cac": {
++      "version": "6.7.14",
++      "resolved": "https://registry.npmjs.org/cac/-/cac-6.7.14.tgz",
++      "integrity": "sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">=8"
++      }
++    },
++    "node_modules/chai": {
++      "version": "5.3.3",
++      "resolved": "https://registry.npmjs.org/chai/-/chai-5.3.3.tgz",
++      "integrity": "sha512-4zNhdJD/iOjSH0A05ea+Ke6MU5mmpQcbQsSOkgdaUMJ9zTlDTD/GYlwohmIE2u0gaxHYiVHEn1Fw9mZ/ktJWgw==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "assertion-error": "^2.0.1",
++        "check-error": "^2.1.1",
++        "deep-eql": "^5.0.1",
++        "loupe": "^3.1.0",
++        "pathval": "^2.0.0"
++      },
++      "engines": {
++        "node": ">=18"
++      }
++    },
++    "node_modules/check-error": {
++      "version": "2.1.3",
++      "resolved": "https://registry.npmjs.org/check-error/-/check-error-2.1.3.tgz",
++      "integrity": "sha512-PAJdDJusoxnwm1VwW07VWwUN1sl7smmC3OKggvndJFadxxDRyFJBX/ggnu/KE4kQAB7a3Dp8f/YXC1FlUprWmA==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">= 16"
++      }
++    },
++    "node_modules/debug": {
++      "version": "4.4.3",
++      "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
++      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "ms": "^2.1.3"
++      },
++      "engines": {
++        "node": ">=6.0"
++      },
++      "peerDependenciesMeta": {
++        "supports-color": {
++          "optional": true
++        }
++      }
++    },
++    "node_modules/deep-eql": {
++      "version": "5.0.2",
++      "resolved": "https://registry.npmjs.org/deep-eql/-/deep-eql-5.0.2.tgz",
++      "integrity": "sha512-h5k/5U50IJJFpzfL6nO9jaaumfjO/f2NjK/oYB2Djzm4p9L+3T9qWpZqZ2hAbLPuuYq9wrU08WQyBTL5GbPk5Q==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">=6"
++      }
++    },
++    "node_modules/es-module-lexer": {
++      "version": "1.7.0",
++      "resolved": "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-1.7.0.tgz",
++      "integrity": "sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/esbuild": {
++      "version": "0.21.5",
++      "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.21.5.tgz",
++      "integrity": "sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==",
++      "dev": true,
++      "hasInstallScript": true,
++      "license": "MIT",
++      "bin": {
++        "esbuild": "bin/esbuild"
++      },
++      "engines": {
++        "node": ">=12"
++      },
++      "optionalDependencies": {
++        "@esbuild/aix-ppc64": "0.21.5",
++        "@esbuild/android-arm": "0.21.5",
++        "@esbuild/android-arm64": "0.21.5",
++        "@esbuild/android-x64": "0.21.5",
++        "@esbuild/darwin-arm64": "0.21.5",
++        "@esbuild/darwin-x64": "0.21.5",
++        "@esbuild/freebsd-arm64": "0.21.5",
++        "@esbuild/freebsd-x64": "0.21.5",
++        "@esbuild/linux-arm": "0.21.5",
++        "@esbuild/linux-arm64": "0.21.5",
++        "@esbuild/linux-ia32": "0.21.5",
++        "@esbuild/linux-loong64": "0.21.5",
++        "@esbuild/linux-mips64el": "0.21.5",
++        "@esbuild/linux-ppc64": "0.21.5",
++        "@esbuild/linux-riscv64": "0.21.5",
++        "@esbuild/linux-s390x": "0.21.5",
++        "@esbuild/linux-x64": "0.21.5",
++        "@esbuild/netbsd-x64": "0.21.5",
++        "@esbuild/openbsd-x64": "0.21.5",
++        "@esbuild/sunos-x64": "0.21.5",
++        "@esbuild/win32-arm64": "0.21.5",
++        "@esbuild/win32-ia32": "0.21.5",
++        "@esbuild/win32-x64": "0.21.5"
++      }
++    },
++    "node_modules/estree-walker": {
++      "version": "3.0.3",
++      "resolved": "https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz",
++      "integrity": "sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@types/estree": "^1.0.0"
++      }
++    },
++    "node_modules/expect-type": {
++      "version": "1.4.0",
++      "resolved": "https://registry.npmjs.org/expect-type/-/expect-type-1.4.0.tgz",
++      "integrity": "sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==",
++      "dev": true,
++      "license": "Apache-2.0",
++      "engines": {
++        "node": ">=12.0.0"
++      }
++    },
++    "node_modules/fsevents": {
++      "version": "2.3.3",
++      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz",
++      "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
++      "dev": true,
++      "hasInstallScript": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
++      }
++    },
++    "node_modules/loupe": {
++      "version": "3.2.1",
++      "resolved": "https://registry.npmjs.org/loupe/-/loupe-3.2.1.tgz",
++      "integrity": "sha512-CdzqowRJCeLU72bHvWqwRBBlLcMEtIvGrlvef74kMnV2AolS9Y8xUv1I0U/MNAWMhBlKIoyuEgoJ0t/bbwHbLQ==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/magic-string": {
++      "version": "0.30.21",
++      "resolved": "https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz",
++      "integrity": "sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@jridgewell/sourcemap-codec": "^1.5.5"
++      }
++    },
++    "node_modules/ms": {
++      "version": "2.1.3",
++      "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
++      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/nanoid": {
++      "version": "3.3.18",
++      "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-3.3.18.tgz",
++      "integrity": "sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==",
++      "dev": true,
++      "funding": [
++        {
++          "type": "github",
++          "url": "https://github.com/sponsors/ai"
++        }
++      ],
++      "license": "MIT",
++      "bin": {
++        "nanoid": "bin/nanoid.cjs"
++      },
++      "engines": {
++        "node": "^10 || ^12 || ^13.7 || ^14 || >=15.0.1"
++      }
++    },
++    "node_modules/pathe": {
++      "version": "1.1.2",
++      "resolved": "https://registry.npmjs.org/pathe/-/pathe-1.1.2.tgz",
++      "integrity": "sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/pathval": {
++      "version": "2.0.1",
++      "resolved": "https://registry.npmjs.org/pathval/-/pathval-2.0.1.tgz",
++      "integrity": "sha512-//nshmD55c46FuFw26xV/xFAaB5HF9Xdap7HJBBnrKdAd6/GxDBaNA1870O79+9ueg61cZLSVc+OaFlfmObYVQ==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">= 14.16"
++      }
++    },
++    "node_modules/picocolors": {
++      "version": "1.1.1",
++      "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
++      "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
++      "dev": true,
++      "license": "ISC"
++    },
++    "node_modules/postcss": {
++      "version": "8.5.28",
++      "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.28.tgz",
++      "integrity": "sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==",
++      "dev": true,
++      "funding": [
++        {
++          "type": "opencollective",
++          "url": "https://opencollective.com/postcss/"
++        },
++        {
++          "type": "tidelift",
++          "url": "https://tidelift.com/funding/github/npm/postcss"
++        },
++        {
++          "type": "github",
++          "url": "https://github.com/sponsors/ai"
++        }
++      ],
++      "license": "MIT",
++      "dependencies": {
++        "nanoid": "^3.3.18",
++        "picocolors": "^1.1.1",
++        "source-map-js": "^1.2.1"
++      },
++      "engines": {
++        "node": "^10 || ^12 || >=14"
++      }
++    },
++    "node_modules/rollup": {
++      "version": "4.63.1",
++      "resolved": "https://registry.npmjs.org/rollup/-/rollup-4.63.1.tgz",
++      "integrity": "sha512-3Df9jsstwhccuEfmAMi9l8XUh/GOkVObmFTU7CCVBysEbcOZLl84jCtaAZMcPiMz2EGKsATzQcU+Xr3n/wU6cg==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@types/estree": "1.0.9"
++      },
++      "bin": {
++        "rollup": "dist/bin/rollup"
++      },
++      "engines": {
++        "node": ">=18.0.0",
++        "npm": ">=8.0.0"
++      },
++      "optionalDependencies": {
++        "@napi-rs/lzma-linux-x64-gnu": "1.5.1",
++        "@rollup/rollup-android-arm-eabi": "4.63.1",
++        "@rollup/rollup-android-arm64": "4.63.1",
++        "@rollup/rollup-darwin-arm64": "4.63.1",
++        "@rollup/rollup-darwin-x64": "4.63.1",
++        "@rollup/rollup-freebsd-arm64": "4.63.1",
++        "@rollup/rollup-freebsd-x64": "4.63.1",
++        "@rollup/rollup-linux-arm-gnueabihf": "4.63.1",
++        "@rollup/rollup-linux-arm-musleabihf": "4.63.1",
++        "@rollup/rollup-linux-arm64-gnu": "4.63.1",
++        "@rollup/rollup-linux-arm64-musl": "4.63.1",
++        "@rollup/rollup-linux-loong64-gnu": "4.63.1",
++        "@rollup/rollup-linux-loong64-musl": "4.63.1",
++        "@rollup/rollup-linux-ppc64-gnu": "4.63.1",
++        "@rollup/rollup-linux-ppc64-musl": "4.63.1",
++        "@rollup/rollup-linux-riscv64-gnu": "4.63.1",
++        "@rollup/rollup-linux-riscv64-musl": "4.63.1",
++        "@rollup/rollup-linux-s390x-gnu": "4.63.1",
++        "@rollup/rollup-linux-x64-gnu": "4.63.1",
++        "@rollup/rollup-linux-x64-musl": "4.63.1",
++        "@rollup/rollup-openbsd-x64": "4.63.1",
++        "@rollup/rollup-openharmony-arm64": "4.63.1",
++        "@rollup/rollup-win32-arm64-msvc": "4.63.1",
++        "@rollup/rollup-win32-ia32-msvc": "4.63.1",
++        "@rollup/rollup-win32-x64-gnu": "4.63.1",
++        "@rollup/rollup-win32-x64-msvc": "4.63.1",
++        "fsevents": "~2.3.2"
++      }
++    },
++    "node_modules/siginfo": {
++      "version": "2.0.0",
++      "resolved": "https://registry.npmjs.org/siginfo/-/siginfo-2.0.0.tgz",
++      "integrity": "sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==",
++      "dev": true,
++      "license": "ISC"
++    },
++    "node_modules/source-map-js": {
++      "version": "1.2.1",
++      "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz",
++      "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==",
++      "dev": true,
++      "license": "BSD-3-Clause",
++      "engines": {
++        "node": ">=0.10.0"
++      }
++    },
++    "node_modules/stackback": {
++      "version": "0.0.2",
++      "resolved": "https://registry.npmjs.org/stackback/-/stackback-0.0.2.tgz",
++      "integrity": "sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/std-env": {
++      "version": "3.10.0",
++      "resolved": "https://registry.npmjs.org/std-env/-/std-env-3.10.0.tgz",
++      "integrity": "sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/tinybench": {
++      "version": "2.9.0",
++      "resolved": "https://registry.npmjs.org/tinybench/-/tinybench-2.9.0.tgz",
++      "integrity": "sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/tinyexec": {
++      "version": "0.3.2",
++      "resolved": "https://registry.npmjs.org/tinyexec/-/tinyexec-0.3.2.tgz",
++      "integrity": "sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/tinypool": {
++      "version": "1.1.1",
++      "resolved": "https://registry.npmjs.org/tinypool/-/tinypool-1.1.1.tgz",
++      "integrity": "sha512-Zba82s87IFq9A9XmjiX5uZA/ARWDrB03OHlq+Vw1fSdt0I+4/Kutwy8BP4Y/y/aORMo61FQ0vIb5j44vSo5Pkg==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": "^18.0.0 || >=20.0.0"
++      }
++    },
++    "node_modules/tinyrainbow": {
++      "version": "1.2.0",
++      "resolved": "https://registry.npmjs.org/tinyrainbow/-/tinyrainbow-1.2.0.tgz",
++      "integrity": "sha512-weEDEq7Z5eTHPDh4xjX789+fHfF+P8boiFB+0vbWzpbnbsEr/GRaohi/uMKxg8RZMXnl1ItAi/IUHWMsjDV7kQ==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">=14.0.0"
++      }
++    },
++    "node_modules/tinyspy": {
++      "version": "3.0.2",
++      "resolved": "https://registry.npmjs.org/tinyspy/-/tinyspy-3.0.2.tgz",
++      "integrity": "sha512-n1cw8k1k0x4pgA2+9XrOkFydTerNcJ1zWCO5Nn9scWHTD+5tp8dghT2x1uduQePZTZgd3Tupf+x9BxJjeJi77Q==",
++      "dev": true,
++      "license": "MIT",
++      "engines": {
++        "node": ">=14.0.0"
++      }
++    },
++    "node_modules/typescript": {
++      "version": "5.9.3",
++      "resolved": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
++      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
++      "dev": true,
++      "license": "Apache-2.0",
++      "bin": {
++        "tsc": "bin/tsc",
++        "tsserver": "bin/tsserver"
++      },
++      "engines": {
++        "node": ">=14.17"
++      }
++    },
++    "node_modules/undici-types": {
++      "version": "6.21.0",
++      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz",
++      "integrity": "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/vite": {
++      "version": "5.4.21",
++      "resolved": "https://registry.npmjs.org/vite/-/vite-5.4.21.tgz",
++      "integrity": "sha512-o5a9xKjbtuhY6Bi5S3+HvbRERmouabWbyUcpXXUA1u+GNUKoROi9byOJ8M0nHbHYHkYICiMlqxkg1KkYmm25Sw==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "esbuild": "^0.21.3",
++        "postcss": "^8.4.43",
++        "rollup": "^4.20.0"
++      },
++      "bin": {
++        "vite": "bin/vite.js"
++      },
++      "engines": {
++        "node": "^18.0.0 || >=20.0.0"
++      },
++      "funding": {
++        "url": "https://github.com/vitejs/vite?sponsor=1"
++      },
++      "optionalDependencies": {
++        "fsevents": "~2.3.3"
++      },
++      "peerDependencies": {
++        "@types/node": "^18.0.0 || >=20.0.0",
++        "less": "*",
++        "lightningcss": "^1.21.0",
++        "sass": "*",
++        "sass-embedded": "*",
++        "stylus": "*",
++        "sugarss": "*",
++        "terser": "^5.4.0"
++      },
++      "peerDependenciesMeta": {
++        "@types/node": {
++          "optional": true
++        },
++        "less": {
++          "optional": true
++        },
++        "lightningcss": {
++          "optional": true
++        },
++        "sass": {
++          "optional": true
++        },
++        "sass-embedded": {
++          "optional": true
++        },
++        "stylus": {
++          "optional": true
++        },
++        "sugarss": {
++          "optional": true
++        },
++        "terser": {
++          "optional": true
++        }
++      }
++    },
++    "node_modules/vite-node": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/vite-node/-/vite-node-2.1.9.tgz",
++      "integrity": "sha512-AM9aQ/IPrW/6ENLQg3AGY4K1N2TGZdR5e4gu/MmmR2xR3Ll1+dib+nook92g4TV3PXVyeyxdWwtaCAiUL0hMxA==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "cac": "^6.7.14",
++        "debug": "^4.3.7",
++        "es-module-lexer": "^1.5.4",
++        "pathe": "^1.1.2",
++        "vite": "^5.0.0"
++      },
++      "bin": {
++        "vite-node": "vite-node.mjs"
++      },
++      "engines": {
++        "node": "^18.0.0 || >=20.0.0"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      }
++    },
++    "node_modules/vitest": {
++      "version": "2.1.9",
++      "resolved": "https://registry.npmjs.org/vitest/-/vitest-2.1.9.tgz",
++      "integrity": "sha512-MSmPM9REYqDGBI8439mA4mWhV5sKmDlBKWIYbA3lRb2PTHACE0mgKwA8yQ2xq9vxDTuk4iPrECBAEW2aoFXY0Q==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@vitest/expect": "2.1.9",
++        "@vitest/mocker": "2.1.9",
++        "@vitest/pretty-format": "^2.1.9",
++        "@vitest/runner": "2.1.9",
++        "@vitest/snapshot": "2.1.9",
++        "@vitest/spy": "2.1.9",
++        "@vitest/utils": "2.1.9",
++        "chai": "^5.1.2",
++        "debug": "^4.3.7",
++        "expect-type": "^1.1.0",
++        "magic-string": "^0.30.12",
++        "pathe": "^1.1.2",
++        "std-env": "^3.8.0",
++        "tinybench": "^2.9.0",
++        "tinyexec": "^0.3.1",
++        "tinypool": "^1.0.1",
++        "tinyrainbow": "^1.2.0",
++        "vite": "^5.0.0",
++        "vite-node": "2.1.9",
++        "why-is-node-running": "^2.3.0"
++      },
++      "bin": {
++        "vitest": "vitest.mjs"
++      },
++      "engines": {
++        "node": "^18.0.0 || >=20.0.0"
++      },
++      "funding": {
++        "url": "https://opencollective.com/vitest"
++      },
++      "peerDependencies": {
++        "@edge-runtime/vm": "*",
++        "@types/node": "^18.0.0 || >=20.0.0",
++        "@vitest/browser": "2.1.9",
++        "@vitest/ui": "2.1.9",
++        "happy-dom": "*",
++        "jsdom": "*"
++      },
++      "peerDependenciesMeta": {
++        "@edge-runtime/vm": {
++          "optional": true
++        },
++        "@types/node": {
++          "optional": true
++        },
++        "@vitest/browser": {
++          "optional": true
++        },
++        "@vitest/ui": {
++          "optional": true
++        },
++        "happy-dom": {
++          "optional": true
++        },
++        "jsdom": {
++          "optional": true
++        }
++      }
++    },
++    "node_modules/why-is-node-running": {
++      "version": "2.3.0",
++      "resolved": "https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-2.3.0.tgz",
++      "integrity": "sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w==",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "siginfo": "^2.0.0",
++        "stackback": "0.0.2"
++      },
++      "bin": {
++        "why-is-node-running": "cli.js"
++      },
++      "engines": {
++        "node": ">=8"
++      }
++    }
++  }
++}
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "b-branch-strategic-control-plane",
+-  "version": "5.0.2-final.20260906",
++  "version": "5.0.3-agent-reach.20260906",
+   "description": "B-Branch V5 repaired strategic control plane (B00-B12): governed, versioned, evidence-aware and lineage-preserving.",
+   "type": "module",
+   "main": "dist/index.js",
+@@ -29,7 +29,10 @@
+     "verify:integration": "node verification/integration-fixture.mjs",
+     "test:legacy": "vitest run tests/*.test.ts",
+     "verify:remaining": "node verification/remaining-repair-guards.mjs",
+-    "lint:policy": "node scripts/source-policy-check.mjs"
++    "lint:policy": "node scripts/source-policy-check.mjs",
++    "verify:release": "node scripts/verify-release.mjs",
++    "test:agent-reach": "vitest run tests/repair/agent-reach.test.ts",
++    "typecheck:repair": "tsc --noEmit -p tsconfig.repair.json"
+   },
+   "keywords": [
+     "b-branch",
+@@ -43,5 +46,8 @@
+     "@types/node": "^20.14.15",
+     "typescript": "^5.5.4",
+     "vitest": "^2.0.5"
++  },
++  "engines": {
++    "node": ">=20"
+   }
+ }
+--- a/scripts/generate-manifest.mjs
++++ b/scripts/generate-manifest.mjs
+@@ -1,8 +1,9 @@
++import { fileURLToPath } from "node:url";
+ import { createHash } from "node:crypto";
+ import { readFile, readdir, stat, writeFile } from "node:fs/promises";
+ import path from "node:path";
+ 
+-const root = path.resolve(new URL("..", import.meta.url).pathname);
++const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+ const excludedTop = new Set(["node_modules", "dist", ".git"]);
+ const excludedFiles = new Set(["manifest.json"]);
+ 
+@@ -26,10 +27,11 @@
+   const s = await stat(file);
+   records.push({ path: rel, size: s.size, sha256: createHash("sha256").update(bytes).digest("hex") });
+ }
++const pkg = JSON.parse(await readFile(path.join(root,"package.json"),"utf8"));
+ const manifestCore = {
+   schema: "b-branch-release-manifest/v1",
+-  release_id: "B_BRANCH_V5_REPAIRED_FINAL_20260906",
+-  package_version: "5.0.2-final.20260906",
++  release_id: "B_BRANCH_V5_FINAL_WITH_AGENT_REACH_20260906",
++  package_version: pkg.version,
+   scope: "B00-B12 only; legacy SOP/M01-M10 excluded",
+   hash_algorithm: "SHA-256",
+   file_count: records.length,
+--- a/scripts/live-agent-reach.mjs
++++ b/scripts/live-agent-reach.mjs
+@@ -0,0 +1,19 @@
++// Live checks are deliberately separate from Vitest. Do not count fixture
++// retrieval as a live provider PASS. No cookies or provider output are logged.
++import { writeFileSync } from 'node:fs';
++import { AgentReachAdapter, LocalAgentReachTransport, validateExternalResult } from '../dist/b08/index.js';
++const executable=process.argv[2] || 'agent-reach';
++const output=process.argv[3];
++if(!output) throw new Error('Usage: node scripts/live-agent-reach.mjs /path/to/agent-reach /absolute/report.json');
++const adapter=new AgentReachAdapter(new LocalAgentReachTransport(executable));
++const health=await adapter.health();
++const result=await adapter.retrieve({request_id:'live-public-web-check',project_id:'b-branch-provider-verification',purpose:'Verify access and normalization; not content truth',query:'https://example.com/',source_types:['web'],platform:'web',max_results:1,observation_kind:'CommunityObservation',channel_id:'verification-only'});
++const fetched=result.status==='EXECUTED_REAL' && result.sources.length>0;
++const report={checked_at:new Date().toISOString(),provider:'agent-reach',health,execution_status:result.status,
++  installed:health.installed?'VERIFIED':'NOT VERIFIED',reachable:fetched?'VERIFIED (jina-reader backend only)':health.reachable?'VERIFIED (doctor process only)':'NOT VERIFIED',doctor_completed:health.reachable?'VERIFIED':'NOT VERIFIED',authenticated:'NOT VERIFIED — public no-auth backend only',
++  retrieval_works:fetched?'VERIFIED':'NOT VERIFIED',data_parsed:fetched&&validateExternalResult(result)?'VERIFIED':'NOT VERIFIED',
++  evidence_generated:fetched&&result.evidence.length>0?'VERIFIED (retrieval evidence, status UNKNOWN)':'NOT VERIFIED',content_truth:'NOT VERIFIED',external_compliance:'NOT VERIFIED',
++  source_metadata:result.sources.map(({content,...source})=>source),evidence_statuses:result.evidence.map(e=>({id:e.id,status:e.status,source_mode:e.source_mode,production_eligible:e.production_eligible}))};
++writeFileSync(output.replace(/\.json$/, '')+'.result.json',JSON.stringify(result,null,2)+'\n');
++writeFileSync(output,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
++process.exitCode=fetched?0:1;
+--- a/scripts/source-policy-check.mjs
++++ b/scripts/source-policy-check.mjs
+@@ -1,7 +1,8 @@
++import { fileURLToPath } from "node:url";
+ import { readFile, readdir } from "node:fs/promises";
+ import path from "node:path";
+ 
+-const root = path.resolve(new URL("..", import.meta.url).pathname);
++const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+ const failures = [];
+ 
+ async function walk(dir) {
+@@ -23,6 +24,8 @@
+ for (const file of srcFiles) {
+   const rel = path.relative(root, file).replaceAll(path.sep, "/");
+   const text = await readFile(file, "utf8");
++  if (/src\/b13\//i.test(rel)) failures.push(`B13 is outside canonical B00-B12: ${rel}`);
++  if (!rel.startsWith("src/b08/") && /from\s+["'][^"']*external\/(?:adapter|runtime)\.js/.test(text)) failures.push(`direct external provider dependency outside B08: ${rel}`);
+   if (/src\/m(?:0[1-9]|10)\//i.test(rel)) failures.push(`legacy execution module present: ${rel}`);
+   if (/from\s+["'][^"']*\/m(?:0[1-9]|10)(?:\/|["'])/i.test(text)) failures.push(`legacy execution import in ${rel}`);
+   if (/function\s+simpleHash\b|const\s+simpleHash\b|let\s+simpleHash\b/.test(text)) failures.push(`weak/canonical-confusing simpleHash implementation in ${rel}`);
+--- a/scripts/verify-manifest.mjs
++++ b/scripts/verify-manifest.mjs
+@@ -1,9 +1,12 @@
++import { fileURLToPath } from "node:url";
+ import { createHash } from "node:crypto";
+ import { readFile, readdir, stat } from "node:fs/promises";
+ import path from "node:path";
+ 
+-const root = path.resolve(new URL("..", import.meta.url).pathname);
++const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+ const manifest = JSON.parse(await readFile(path.join(root, "manifest.json"), "utf8"));
++const pkg=JSON.parse(await readFile(path.join(root,"package.json"),"utf8"));
++if(manifest.package_version!==pkg.version) throw new Error("manifest package version mismatch");
+ if (manifest.hash_algorithm !== "SHA-256") throw new Error("manifest does not use SHA-256");
+ const { manifest_content_hash, ...core } = manifest;
+ const actualManifestHash = createHash("sha256").update(JSON.stringify(core)).digest("hex");
+--- a/scripts/verify-release.mjs
++++ b/scripts/verify-release.mjs
+@@ -0,0 +1,21 @@
++// One reviewable canonical run. Logs stay outside the release by default so
++// generating a manifest never hashes a log that is still being written.
++import { spawnSync } from 'node:child_process';
++import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
++import { resolve, dirname } from 'node:path';
++import { fileURLToPath } from 'node:url';
++const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
++const output=resolve(process.argv[2] ?? resolve(root,'../b-branch-verification'));
++mkdirSync(output,{recursive:true});
++const commands=['install','run typecheck','run build','run test:legacy','run test:repair','test','run verify:critical','run verify:integration','run verify:remaining','run lint:policy','run manifest','run verify:manifest'];
++const results=[];
++for(const command of commands){
++  const start=new Date().toISOString();
++  const r=spawnSync(process.platform === 'win32' ? 'npm.cmd' : 'npm',command.split(' '),{cwd:root,encoding:'utf8',timeout:300000,maxBuffer:32*1024*1024});
++  const name=command.replaceAll(' ','-').replaceAll(':','-');
++  writeFileSync(resolve(output,`${name}.log`),(r.stdout??'')+(r.stderr??'')+(r.error?`\nRUNNER_ERROR: ${r.error.message}\n`:''));
++  results.push({command:`npm ${command}`,started_at:start,exit:r.status,signal:r.signal,error:r.error?.message??null,log:`${name}.log`,status:r.status===0?'PASS':'FAIL'});
++  console.log(`${results.at(-1).command}: ${results.at(-1).status}`);
++}
++writeFileSync(resolve(output,'results.json'),JSON.stringify({node:process.version,package:JSON.parse(readFileSync(resolve(root,'package.json'),'utf8')).version,results},null,2)+'\n');
++process.exitCode=results.some(r=>r.status!=='PASS')?1:0;
+--- a/src/b01/orchestration.ts
++++ b/src/b01/orchestration.ts
+@@ -170,7 +170,7 @@
+     ...(platform.provenance_refs ?? []),
+     ...platform.capabilities.flatMap((capability) => capability.provenance_refs ?? []),
+   ]);
+-  return Array.from(new Map(refs.map((ref) => [ref.id, ref])).values());
++  return Array.from(new Map(refs.map((ref) => [ref.id ? `id:${ref.id}` : `content:${canonicalHasher.hashValue(ref)}`, ref])).values());
+ }
+ 
+ /**
+--- a/src/b02/orchestration.ts
++++ b/src/b02/orchestration.ts
+@@ -1,8 +1,9 @@
++import { externalObservations, externalLineage, externalProvenance } from "../b08/external/context.js";
+ // B02 Orchestration
+ // Execute opportunity evaluation and manage canonical state versioning
+ 
+ import type { B01CanonicalState } from "../b00/contracts.js";
+-import { bindUnboundProvenanceRefs } from "../b00/provenanceRef.js";
++import { bindProvenanceToSubject, bindUnboundProvenanceRefs } from "../b00/provenanceRef.js";
+ import type { B02CandidateState, B02CanonicalState, B02Deps, B02StatePersistence } from "./types.js";
+ import { buildRegistryContext, validateRegistry } from "./phases/B02_01_registry.js";
+ import { evaluatePositioningAlignment, evaluateEditorialFit, createDefaultB02Deps } from "./phases/B02_02_opportunities.js";
+@@ -37,7 +38,7 @@
+   b01CanonicalState: B01CanonicalState,
+   deps?: B02Deps,
+ ): Promise<B02CandidateState> {
+-  const deps_ = deps || createDefaultB02Deps();
++  const deps_ = {...createDefaultB02Deps(), ...deps, hash:deps?.hash ?? createDefaultB02Deps().hash};
+ 
+   // Validate B01 input is available
+   const registryValidation = validateRegistry(b01CanonicalState);
+@@ -52,13 +53,17 @@
+   let opportunities = evaluatePositioningAlignment(b01CanonicalState, deps_);
+   opportunities = evaluateEditorialFit(b01CanonicalState, opportunities, deps_);
+ 
++  opportunities = opportunities.map(opp => {
++    const observations = externalObservations(deps_?.external_intelligence, ["TrendObservation", "CompetitiveObservation", "CommunityObservation"], opp.channel_id);
++    return {...opp, supporting_evidence:[...opp.supporting_evidence,...observations.flatMap(o=>o.evidence_refs)]};
++  });
+   // LAYER 3: Validation & conflict detection
+   const conflicts = detectConstraintConflicts(b01CanonicalState, opportunities);
+   const gaps = identifyGaps(b01CanonicalState);
+ 
+   // Aggregate all evidence and provenance
+   const allEvidence = opportunities.flatMap((opp) => opp.supporting_evidence);
+-  const allProvenance = opportunities.map((opp) => opp.provenance);
++  const allProvenance = [...opportunities.map((opp) => bindProvenanceToSubject(opp.provenance,createArtifactBinding(opp,opp.opportunity_id,"b02_opportunity",b01CanonicalState.version),opp.supporting_evidence.map(e=>e.id),"opportunity_evaluation")),...externalProvenance(deps_.external_intelligence)];
+ 
+   // Verify no fabrication
+   if (!validateNoFabrication(opportunities)) {
+@@ -79,7 +84,7 @@
+ 
+   const candidate: B02CandidateState = {
+     candidate_id: deterministicCandidateId,
+-    parent_references: [resolveParentReference("b01", b01CanonicalState, "opportunity_input")],
++    parent_references: [resolveParentReference("b01", b01CanonicalState, "opportunity_input"), ...externalLineage(deps_.external_intelligence)],
+     created_at: deps_.now?.() || new Date().toISOString(),
+ 
+     // All identified opportunities (INFERRED/RECOMMENDED, not canonical)
+@@ -124,7 +129,7 @@
+   userAuthority: string,
+   deps?: B02Deps,
+ ): Promise<B02CandidateState> {
+-  const deps_ = deps || createDefaultB02Deps();
++  const deps_ = {...createDefaultB02Deps(), ...deps, hash:deps?.hash ?? createDefaultB02Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   // Approve each opportunity through governance
+@@ -202,7 +207,7 @@
+   priorState?: B02CanonicalState,
+   deps?: B02Deps,
+ ): Promise<B02CanonicalState> {
+-  const deps_ = deps || createDefaultB02Deps();
++  const deps_ = {...createDefaultB02Deps(), ...deps, hash:deps?.hash ?? createDefaultB02Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   // Validate version format (semantic: v1.0, v1.1, v2.0, etc.)
+@@ -280,7 +285,7 @@
+   authority: string,
+   deps?: B02Deps,
+ ): AuditEntry[] {
+-  const deps_ = deps || createDefaultB02Deps();
++  const deps_ = {...createDefaultB02Deps(), ...deps, hash:deps?.hash ?? createDefaultB02Deps().hash};
+   const timestamp = deps_.now?.() || new Date().toISOString();
+ 
+   const version = priorState ? incrementVersion(priorState.version) : "v1.0";
+--- a/src/b02/types.ts
++++ b/src/b02/types.ts
+@@ -156,6 +156,7 @@
+ 
+ /** Dependencies for B02 phases (injected, same pattern as B01) */
+ export interface B02Deps {
++  external_intelligence?: import("../b08/external/types.js").ExternalIntelligenceContext;
+   hash?: {
+     stableOpportunityId: (inputId: string, channelId: string, opportunityType: string) => string;
+     stableClassId: (inputId: string, className: string) => string;
+@@ -188,6 +189,7 @@
+  * All top-level B02CandidateState fields are either preserved in canonical or explicitly declared below.
+  */
+ export const KNOWN_CANONICALIZATION_DROPS = {
++  parent_references: "Preserved in canonical.identity.parent_references",
+   candidate_id: "Pre-decision unique ID; not persisted to canonical versioned state",
+   conflicts_detected: "Candidate-phase conflict detection; preserved as canonical.conflicts field",
+   all_recommendations: "Candidate-phase recommendations; preserved as canonical.recommendations_considered",
+--- a/src/b03/orchestration.ts
++++ b/src/b03/orchestration.ts
+@@ -1,8 +1,9 @@
++import { externalObservations, externalLineage, externalProvenance } from "../b08/external/context.js";
+ // B03 — Orchestration & Canonicalization
+ // Executes 5-layer B03 pipeline, manages candidate→canonical transition, versioning
+ 
+ import type { B01CanonicalState } from "../b00/contracts.js";
+-import { bindUnboundProvenanceRefs } from "../b00/provenanceRef.js";
++import { bindProvenanceToSubject, bindUnboundProvenanceRefs } from "../b00/provenanceRef.js";
+ import type {
+   B03Input,
+   B03Deps,
+@@ -45,7 +46,13 @@
+   const evidenceSet = aggregateAudienceEvidence(input, deps_);
+ 
+   // LAYER 3: Analytical Segmentation
+-  const segments = inferAudienceSegments(b01State, evidenceSet.all_evidence, deps_);
++  const segments = b01State.channels.flatMap(channel => {
++    const observations = externalObservations(input.external_intelligence, ["AudienceObservation", "CommunityObservation"], channel.channel_id);
++    const externalEvidence = observations.flatMap(o=>o.evidence_refs);
++    evidenceSet.all_evidence.push(...externalEvidence);
++    // Channel binding is explicit; content text is left byte-for-byte intact.
++    return inferAudienceSegments({...b01State, channels:[channel]}, evidenceSet.all_evidence.filter(e=>!e.id.startsWith("extev_")), deps_, externalEvidence);
++  });
+ 
+   // LAYER 4: Profile Synthesis
+   const profiles = synthesizeSegmentProfiles(segments, deps_);
+@@ -67,7 +74,7 @@
+   // Aggregate insights
+   const insights = [
+     ...needs.map((n) => ({
+-      insight_id: n.need_id,
++      insight_id: `ins_${canonicalHasher.hash(n.need_id)}`,
+       type: "need" as const,
+       description: n.description,
+       related_segments: [n.segment_id],
+@@ -76,7 +83,7 @@
+       provenance: n.provenance,
+     })),
+     ...painPoints.map((p) => ({
+-      insight_id: p.pain_point_id,
++      insight_id: `ins_${canonicalHasher.hash(p.pain_point_id)}`,
+       type: "pain_point" as const,
+       description: p.description,
+       related_segments: [p.segment_id],
+@@ -85,7 +92,7 @@
+       provenance: p.provenance,
+     })),
+     ...questions.map((q) => ({
+-      insight_id: q.question_id,
++      insight_id: `ins_${canonicalHasher.hash(q.question_id)}`,
+       type: "question" as const,
+       description: q.description,
+       related_segments: [q.segment_id],
+@@ -101,7 +108,7 @@
+ 
+   const candidate: B03CandidateState = {
+     candidate_id: deterministicCandidateId,
+-    parent_references: [resolveParentReference("b01", b01State, "audience_input")],
++    parent_references: [resolveParentReference("b01", b01State, "audience_input"), ...externalLineage(input.external_intelligence)],
+     created_at: deps_.now?.() || new Date().toISOString(),
+     b01_canonical_version: b01State.version,
+ 
+@@ -116,7 +123,7 @@
+     gaps,
+ 
+     evidence_refs: evidenceSet.all_evidence,
+-    provenance_refs: segments.map((s) => s.provenance).concat(profiles.map((p) => p.provenance)),
++    provenance_refs: segments.map(s=>bindProvenanceToSubject(s.provenance,createArtifactBinding(s,s.segment_id,"b03_segment",deterministicCandidateId),s.evidence_refs.map(e=>e.id),"audience_segmentation")).concat(profiles.map(p=>bindProvenanceToSubject(p.provenance,createArtifactBinding(p,p.profile_id,"b03_profile",deterministicCandidateId),p.evidence_refs.map(e=>e.id),"profile_synthesis")), externalProvenance(input.external_intelligence)),
+ 
+     // Governance lifecycle events (empty until approveCandidate is called)
+     governance_events: {},
+@@ -159,7 +166,7 @@
+     const governanceEventsByItem: Record<string, GovernanceEvent[]> = {};
+ 
+     for (const item of items) {
+-      const itemId = item.segment_id || item.profile_id || item.need_id || item.pain_point_id || item.question_id || item.insight_id || "unknown";
++      const itemId = item.insight_id || item.need_id || item.pain_point_id || item.question_id || item.profile_id || item.segment_id || "unknown";
+ 
+       // PROPOSED → APPROVED via governance
+       const proposalInput: GovernanceTransitionInput = {
+--- a/src/b03/phases/B03_03_segmentation.ts
++++ b/src/b03/phases/B03_03_segmentation.ts
+@@ -13,11 +13,12 @@
+   b01State: B01CanonicalState,
+   allEvidence: EvidenceRef[],
+   deps?: B03Deps,
++  channelBoundEvidence: EvidenceRef[] = [],
+ ): AudienceSegment[] {
+   const segments: AudienceSegment[] = [];
+   const deps_ = deps || createDefaultB03Deps();
+ 
+-  if (allEvidence.length === 0) {
++  if (allEvidence.length === 0 && channelBoundEvidence.length === 0) {
+     return segments;
+   }
+ 
+@@ -27,11 +28,11 @@
+     const channelId = channel.channel_id;
+ 
+     // Filter evidence relevant to this channel
+-    const channelEvidence = allEvidence.filter(
++    const channelEvidence = [...channelBoundEvidence, ...allEvidence.filter(
+       (e) =>
+         (e.excerpt && e.excerpt.toLowerCase().includes(channel.name.toLowerCase())) ||
+         (e.excerpt && e.excerpt.toLowerCase().includes(platform.toLowerCase())),
+-    );
++    )];
+ 
+     // If channel has some evidence, create a segment
+     if (channelEvidence.length > 0) {
+--- a/src/b03/phases/B03_04_synthesis.ts
++++ b/src/b03/phases/B03_04_synthesis.ts
+@@ -36,7 +36,7 @@
+     const profile: SegmentProfile = {
+       profile_id: deps_.hash!.stableProfileId(
+         groupSegs[0]?.evidence_refs?.[0]?.source || "unknown",
+-        profileName,
++        `${groupKey}:${profileName}`,
+       ),
+ 
+       segment_name: profileName,
+--- a/src/b03/types.ts
++++ b/src/b03/types.ts
+@@ -149,6 +149,7 @@
+ 
+ /** Input to B03 */
+ export interface B03Input {
++  external_intelligence?: import("../b08/external/types.js").ExternalIntelligenceContext;
+   b01_canonical_state: B01CanonicalState; // Immutable
+ 
+   audience_sources?: {
+@@ -291,6 +292,7 @@
+  * All top-level B03CandidateState fields are either preserved in canonical or explicitly declared below.
+  */
+ export const KNOWN_CANONICALIZATION_DROPS = {
++  parent_references: "Preserved in canonical.identity.parent_references",
+   candidate_id: "Pre-decision unique ID; not persisted to canonical versioned state",
+   conflicts_detected: "Candidate-phase conflict detection; not carried forward to B03CanonicalState (architectural decision: conflicts handled in B11)",
+   gaps: "Data completeness gaps; not carried forward to B03CanonicalState (architectural decision: gaps are pre-decision readiness metric)",
+--- a/src/b07/orchestration.ts
++++ b/src/b07/orchestration.ts
+@@ -1,3 +1,4 @@
++import { externalObservations, externalLineage, externalProvenance, eligibleExternalReview } from "../b08/external/context.js";
+ // B07 — Performance Framework Orchestration
+ 
+ import { canonicalHasher } from "../b00/hashing.js";
+@@ -27,12 +28,20 @@
+   b06State: B06CandidateState | B06CanonicalState,
+   deps?: B07Deps,
+ ): Promise<B07CandidateState> {
+-  const deps_ = deps || createDefaultB07Deps();
++  const deps_ = {...createDefaultB07Deps(), ...deps, hash:deps?.hash ?? createDefaultB07Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   const context = buildPerformanceContext(b04State, b06State);
+ 
+-  const kpis = defineKPIs(context, deps_);
++  const kpis = defineKPIs(context, deps_).map(kpi => {
++    const reports = externalObservations(deps_.external_intelligence, ["PerformanceObservation"], kpi.channel_id)
++      .filter(o=>o.measurement?.metric_id === kpi.kpi_id && o.measurement.unit === kpi.target_unit);
++    if (!reports.length) return kpi;
++    const reviewed = reports.filter(o=>eligibleExternalReview(o,deps_.external_intelligence!));
++    return {...kpi,external_measurements:reports,
++      ...(reviewed.length === 1 ? {actual_metric_value:reviewed[0].measurement!.value} : {}),
++      evidence_refs:[...kpi.evidence_refs,...reports.flatMap(o=>o.evidence_refs),...reviewed.flatMap(o=>eligibleExternalReview(o,deps_.external_intelligence!)!.evidence_refs)]};
++  });
+   const plans = createMeasurementPlans(context, kpis.length, deps_);
+   const metrics = defineSuccessMetrics(context, kpis.map((k) => k.kpi_id), deps_);
+ 
+@@ -50,7 +59,7 @@
+ 
+   return {
+     candidate_id: `cand_${canonicalHasher.stableCandidateId("b07", `${'version' in b04State ? b04State.version : b04State.b01_version}:${kpis.length}`)}`,
+-    parent_references: [resolveParentReference("b04", b04State, "performance_strategy"), resolveParentReference("b06", b06State, "distribution_input")],
++    parent_references: [resolveParentReference("b04", b04State, "performance_strategy"), resolveParentReference("b06", b06State, "distribution_input"), ...externalLineage(deps_.external_intelligence)],
+     framework_state: "DEFINED",
+     created_at: now(),
+     b04_version: ('candidate_id' in b04State ? b04State.candidate_id : b04State.version),
+@@ -64,6 +73,7 @@
+     gaps,
+     evidence_refs: uniqueEvidence,
+     provenance_refs: [
++      ...externalProvenance(deps_.external_intelligence),
+       ...kpis.flatMap((k: KPIDefinition) => [k.provenance]),
+       ...plans.flatMap((p: MeasurementPlan) => [p.provenance]),
+       ...metrics.flatMap((m: SuccessMetric) => [m.provenance]),
+@@ -88,7 +98,7 @@
+   userAuthority: string,
+   deps?: B07Deps,
+ ): Promise<B07CandidateState> {
+-  const deps_ = deps || createDefaultB07Deps();
++  const deps_ = {...createDefaultB07Deps(), ...deps, hash:deps?.hash ?? createDefaultB07Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   const governanceEventsByKPI: Record<string, GovernanceEvent[]> = {};
+@@ -221,7 +231,7 @@
+   priorState?: B07CanonicalState,
+   deps?: B07Deps,
+ ): Promise<B07CanonicalState> {
+-  const deps_ = deps || createDefaultB07Deps();
++  const deps_ = {...createDefaultB07Deps(), ...deps, hash:deps?.hash ?? createDefaultB07Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   if (!/^v\d+\.\d+$/.test(nextVersion)) {
+@@ -292,7 +302,7 @@
+   authority: string,
+   deps?: B07Deps,
+ ): Array<{ version: string; changed_at: string; changed_by: string; summary: string }> {
+-  const deps_ = deps || createDefaultB07Deps();
++  const deps_ = {...createDefaultB07Deps(), ...deps, hash:deps?.hash ?? createDefaultB07Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   if (!priorState) {
+--- a/src/b07/types.ts
++++ b/src/b07/types.ts
+@@ -40,6 +40,7 @@
+   benchmark_definition: { value?: number; unit?: string; basis: "EVIDENCE_BACKED" | "UNKNOWN"; source?: string; status: "VERIFIED" | "UNKNOWN"; version: string };
+   /** B07 defines KPIs/targets; actual values arrive only from validated B08 observations. */
+   actual_metric_value?: number;
++  external_measurements?: import("../b08/external/types.js").ExternalObservation[];
+ 
+   evidence_refs: EvidenceRef[];
+   provenance: ProvenanceRef;
+@@ -178,6 +179,7 @@
+ 
+ /** Dependency injection for B07 */
+ export interface B07Deps {
++  external_intelligence?: import("../b08/external/types.js").ExternalIntelligenceContext;
+   hash?: {
+     stableKPIId: (campaignId: string, metricName: string) => string;
+     stablePlanId: (campaignId: string) => string;
+--- a/src/b08/external/adapter.ts
++++ b/src/b08/external/adapter.ts
+@@ -0,0 +1,117 @@
++import { canonicalHasher, canonicalStringify } from "../../b00/hashing.js";
++import { createArtifactBinding, createCanonicalIdentity, validateCanonicalIdentity } from "../../b00/identity.js";
++import { bindProvenanceToSubject } from "../../b00/provenanceRef.js";
++import { validateEvidenceSemantics, type EvidenceSourceMode } from "../../b00/evidence.js";
++import type { EvidenceRef } from "../../types/entities.js";
++import type { ExternalAccessRequest, ExternalAccessResult, ExternalMeasurement, ExternalObservation, ProviderResponse, AgentReachTransport, AccessFailure } from "./types.js";
++
++const modes = ["REAL", "MOCK", "SYNTHETIC", "UNKNOWN"] as const;
++const failures: AccessFailure[] = ["FAILED", "UNAVAILABLE", "AUTH_REQUIRED", "UNSUPPORTED_CAPABILITY", "RATE_LIMITED", "MALFORMED_RESULT"];
++const kinds = ["PerformanceObservation", "AudienceObservation", "CommunityObservation", "TrendObservation", "CompetitiveObservation"];
++const record = (x: unknown): x is Record<string, unknown> => !!x && typeof x === "object" && !Array.isArray(x);
++const nonempty = (x: unknown): x is string => typeof x === "string" && x.trim().length > 0;
++export const validTime = (x: unknown): x is string => typeof x === "string" && /^\d{4}-\d\d-\d\dT/.test(x) && Number.isFinite(Date.parse(x));
++/** Public source locators only. Credentials and query secrets must not enter artifacts. */
++export function canonicalSourceUrl(value: string): string {
++  const u = new URL(value);
++  if (!["https:", "http:"].includes(u.protocol) || u.username || u.password) throw new Error("INVALID_SOURCE_URL");
++  if ([...u.searchParams.keys()].some(k => /token|secret|password|cookie|session|api[_-]?key|signature/i.test(k))) throw new Error("SECRET_SOURCE_URL");
++  u.hash = "";
++  return u.href;
++}
++export function serializeExternalRequest(value: ExternalAccessRequest): string {
++  if (!record(value) || ![value.request_id, value.project_id, value.purpose, value.query, value.channel_id].every(nonempty)
++    || value.query.length > 16000 || !Array.isArray(value.source_types) || !value.source_types.length || !value.source_types.every(nonempty)
++    || !Number.isInteger(value.max_results) || value.max_results < 1 || value.max_results > 100 || !kinds.includes(value.observation_kind)
++    || (value.platform !== undefined && !nonempty(value.platform)) || (value.geography !== undefined && !nonempty(value.geography))) throw new Error("INVALID_ACCESS_REQUEST");
++  if (value.time_range && (!validTime(value.time_range.start) || !validTime(value.time_range.end) || Date.parse(value.time_range.start) > Date.parse(value.time_range.end))) throw new Error("INVALID_TIME_RANGE");
++  // Allowlist serialization: no arbitrary provider auth/config fields.
++  return canonicalStringify({ request_id:value.request_id, project_id:value.project_id, purpose:value.purpose, query:value.query,
++    source_types:value.source_types, platform:value.platform, geography:value.geography, time_range:value.time_range,
++    max_results:value.max_results, observation_kind:value.observation_kind, channel_id:value.channel_id });
++}
++export function parseProviderResponse(value: unknown, request: ExternalAccessRequest): ProviderResponse {
++  if (!record(value) || !(value.status === "OK" || failures.includes(value.status as AccessFailure)) || !nonempty(value.backend)
++    || !(value.provider_version === null || nonempty(value.provider_version)) || !validTime(value.retrieved_at) || !Array.isArray(value.sources)
++    || value.sources.length > request.max_results || (value.status !== "OK" && value.sources.length > 0)) throw new Error("MALFORMED_RESULT");
++  const sources = value.sources.map(s => {
++    if (!record(s) || ![s.canonical_url, s.platform, s.retrieval_method, s.content].every(nonempty) || (s.content as string).length > 1000000) throw new Error("MALFORMED_SOURCE");
++    if (request.platform && s.platform !== request.platform) throw new Error("PLATFORM_MISMATCH");
++    return { canonical_url:canonicalSourceUrl(s.canonical_url as string), platform:s.platform as string, retrieval_method:s.retrieval_method as string, content:s.content as string };
++  });
++  return { status:value.status as ProviderResponse["status"], provider_version:value.provider_version as string | null,
++    backend:value.backend as string, retrieved_at:value.retrieved_at as string, sources };
++}
++/** Only an explicit structured measurement inside the retained source text can be mapped. */
++function measurement(content: string, request: ExternalAccessRequest): ExternalMeasurement | undefined {
++  if (request.observation_kind !== "PerformanceObservation") return undefined;
++  const data: unknown = JSON.parse(content);
++  if (!record(data) || !record(data.measurement)) throw new Error("MISSING_MEASUREMENT");
++  const m = data.measurement;
++  if (![m.metric_id,m.channel_id,m.unit].every(nonempty) || m.channel_id !== request.channel_id || typeof m.value !== "number" || !Number.isFinite(m.value)
++    || !validTime(m.period_start) || !validTime(m.period_end) || Date.parse(m.period_start) > Date.parse(m.period_end)) throw new Error("INVALID_MEASUREMENT");
++  if (request.time_range && (Date.parse(m.period_start) < Date.parse(request.time_range.start) || Date.parse(m.period_end) > Date.parse(request.time_range.end))) throw new Error("MEASUREMENT_OUTSIDE_RANGE");
++  return { metric_id:m.metric_id as string, channel_id:m.channel_id as string, value:m.value, unit:m.unit as string, period_start:m.period_start, period_end:m.period_end };
++}
++export function normalizeExternalResponse(input: ExternalAccessRequest, raw: unknown, mode: EvidenceSourceMode): ExternalAccessResult {
++  const request: ExternalAccessRequest = JSON.parse(serializeExternalRequest(input));
++  if (!modes.includes(mode)) throw new Error("INVALID_SOURCE_MODE");
++  const response = parseProviderResponse(raw, request);
++  const sources = response.sources.map(s => ({...s, source_id:`extsrc_${canonicalHasher.hashValue({project:request.project_id,url:s.canonical_url,backend:response.backend,mode})}`,
++    project_id:request.project_id, retrieved_at:response.retrieved_at, content_hash:canonicalHasher.hash(s.content), source_mode:mode, backend:response.backend, provider_version:response.provider_version }));
++  // Same locator and content can appear twice; differing content must not be collapsed.
++  const uniqueSources = [...new Map(sources.map(s => [`${s.source_id}:${s.content_hash}`,s])).values()];
++  const evidence: EvidenceRef[] = uniqueSources.map(s => ({ id:`extev_${canonicalHasher.hashValue({source:s.source_id,hash:s.content_hash,at:s.retrieved_at})}`,
++    source:s.canonical_url, status:"UNKNOWN", origin:mode === "MOCK" ? "MOCK" : "PROVIDER_DATA", basis:mode === "REAL" ? "OBSERVED" : mode === "MOCK" ? "MOCK" : "UNKNOWN",
++    source_mode:mode, production_eligible:false, excerpt:s.content }));
++  for (const e of evidence) if (!validateEvidenceSemantics(e).valid) throw new Error("B00_EVIDENCE_REJECTED");
++  const provenance = uniqueSources.map((s,i) => bindProvenanceToSubject({ id:`extprov_${evidence[i].id}`, type:mode === "REAL" ? "OBSERVED" : "INFERRED",
++    decision_authority:"B08:AgentReachAdapter", timestamp:s.retrieved_at, rationale:"Source retrieval recorded; content truth remains UNKNOWN" },
++    createArtifactBinding(s, s.source_id, "B08_EXTERNAL_SOURCE", s.content_hash), [evidence[i].id], "agent_reach_retrieval_to_source"));
++  const observations: ExternalObservation[] = uniqueSources.map((s,i) => {
++    const body = { observation_id:`extobs_${canonicalHasher.hashValue({request,source:s})}`, kind:request.observation_kind, project_id:request.project_id,
++      channel_id:request.channel_id, source_id:s.source_id, source_mode:mode, observed_at:s.retrieved_at, statement:s.content,
++      ...(request.observation_kind === "PerformanceObservation" ? {measurement:measurement(s.content,request)} : {}), evidence_refs:[evidence[i]] };
++    return {...body, provenance:bindProvenanceToSubject({id:`obsprov_${body.observation_id}`, type:mode === "REAL" ? "OBSERVED" : "INFERRED",
++      decision_authority:"B08:normalizeExternalResponse",timestamp:s.retrieved_at,prior_provenance_id:provenance[i].id,rationale:"Normalized source report; not verified truth"},
++      createArtifactBinding(body,body.observation_id,"B08_EXTERNAL_OBSERVATION","v1"),[evidence[i].id],"source_to_b08_observation")};
++  });
++  const body = {request, provider:"agent-reach" as const, provider_version:response.provider_version, backend:response.backend,
++    status:response.status === "OK" ? `EXECUTED_${mode}` as ExternalAccessResult["status"] : response.status, source_mode:mode, retrieved_at:response.retrieved_at,
++    sources:uniqueSources, evidence, provenance:[...provenance,...observations.map(o=>o.provenance)], observations};
++  return {...body, identity:createCanonicalIdentity({object_id:`extresult_${canonicalHasher.hashValue(body)}`,object_type:"B08_EXTERNAL_ACCESS_RESULT",version:"v1",artifact:body,created_at:body.retrieved_at})};
++}
++/** Rebuild every B-derived field; an attacker cannot just rehash promoted evidence. */
++export function validateExternalResult(result: unknown): result is ExternalAccessResult {
++  try {
++    if (!record(result)) return false;
++    const r = result as unknown as ExternalAccessResult;
++    if (!validateCanonicalIdentity(r,r.identity).valid) return false;
++    const rebuilt = normalizeExternalResponse(r.request,{status:r.status.startsWith("EXECUTED_") ? "OK" : r.status,provider_version:r.provider_version,backend:r.backend,retrieved_at:r.retrieved_at,
++      sources:r.sources.map(s=>({canonical_url:s.canonical_url,platform:s.platform,retrieval_method:s.retrieval_method,content:s.content}))},r.source_mode);
++    return canonicalStringify(rebuilt) === canonicalStringify(r);
++  } catch { return false; }
++}
++export class AgentReachAdapter {
++  constructor(private readonly transport: AgentReachTransport, private readonly timeoutMs = 20000, private readonly now = () => new Date().toISOString()) {
++    if (!Number.isFinite(timeoutMs) || timeoutMs < 1 || timeoutMs > 120000) throw new Error("INVALID_TIMEOUT");
++  }
++  health() { return this.transport.health(); }
++  async retrieve(input: ExternalAccessRequest): Promise<ExternalAccessResult> {
++    const request = JSON.parse(serializeExternalRequest(input)) as ExternalAccessRequest;
++    const mode = this.transport.source_mode;
++    const controller = new AbortController();
++    let timer: ReturnType<typeof setTimeout> | undefined;
++    try {
++      const response = await Promise.race([this.transport.retrieve(structuredClone(request),controller.signal),new Promise<never>((_,reject)=>{
++        timer=setTimeout(()=>{controller.abort();reject(new Error("TIMEOUT"));},this.timeoutMs);
++      })]);
++      return normalizeExternalResponse(request,response,mode);
++    } catch (error) {
++      const status: AccessFailure = error instanceof AccessError ? error.status : error instanceof Error && error.message === "TIMEOUT" ? "FAILED" : "MALFORMED_RESULT";
++      // Never echo arbitrary provider stderr, cookies, tokens, or exception payloads.
++      return normalizeExternalResponse(request,{status,provider_version:null,backend:"UNKNOWN",retrieved_at:this.now(),sources:[]},mode);
++    } finally { if (timer) clearTimeout(timer); }
++  }
++}
++export class AccessError extends Error { constructor(readonly status: AccessFailure) { super(status); } }
+--- a/src/b08/external/context.ts
++++ b/src/b08/external/context.ts
+@@ -0,0 +1,44 @@
++import { canonicalHasher } from "../../b00/hashing.js";
++import { createArtifactBinding, parentReferenceFromIdentity } from "../../b00/identity.js";
++import { isApprovedForArtifact } from "../../b00/governance.js";
++import { validateEvidenceSemantics } from "../../b00/evidence.js";
++import { validateExternalResult, validTime } from "./adapter.js";
++import type { ExternalIntelligenceContext, ExternalObservation, ExternalObservationReview, ObservationKind } from "./types.js";
++
++/** Callers explicitly supply project scope; malformed/cross-project results fail
++ * closed. Non-real fixtures remain auditable in B08 but have no consumer path. */
++export function externalObservations(context: ExternalIntelligenceContext | undefined, kinds: readonly ObservationKind[], channelId?: string): ExternalObservation[] {
++  if (!context) return [];
++  if (!context.project_id || !Array.isArray(context.results)) throw new Error("INVALID_EXTERNAL_CONTEXT");
++  for (const result of context.results) {
++    if (!validateExternalResult(result) || result.request.project_id !== context.project_id) throw new Error("INVALID_OR_CROSS_PROJECT_EXTERNAL_RESULT");
++  }
++  return [...new Map(context.results.filter(r=>r.status === "EXECUTED_REAL" && r.source_mode === "REAL")
++    .flatMap(r=>r.observations).filter(o=>kinds.includes(o.kind) && (channelId === undefined || o.channel_id === channelId))
++    .map(o=>[o.observation_id,structuredClone(o)])).values()];
++}
++export function externalLineage(context?: ExternalIntelligenceContext) {
++  externalObservations(context,[]);
++  return context?.results.map(r=>parentReferenceFromIdentity("B08",r.identity,"external_intelligence_input")) ?? [];
++}
++export function externalProvenance(context?: ExternalIntelligenceContext) {
++  externalObservations(context,[]);
++  return context?.results.filter(r=>r.source_mode === "REAL" && r.status === "EXECUTED_REAL").flatMap(r=>structuredClone(r.provenance)) ?? [];
++}
++export function externalReviewBinding(review: ExternalObservationReview) {
++  return createArtifactBinding(review,`review:${review.observation_id}`,"B08_EXTERNAL_REVIEW","v1");
++}
++export function eligibleExternalReview(observation: ExternalObservation, context: ExternalIntelligenceContext): ExternalObservationReview | undefined {
++  if (observation.source_mode !== "REAL") return undefined;
++  return context.reviews?.find(review=>{
++    try {
++      if (review.observation_id !== observation.observation_id || review.observation_content_hash !== canonicalHasher.hashValue(observation)
++        || !review.authority.trim() || !validTime(review.reviewed_at) || !review.evidence_refs.length) return false;
++      // Independent confirmation must not merely reuse the retrieval evidence.
++      if (!review.evidence_refs.every(e=>validateEvidenceSemantics(e).valid && e.status === "VERIFIED" && e.source_mode === "REAL"
++        && e.production_eligible !== false && !observation.evidence_refs.some(raw=>raw.id === e.id))) return false;
++      const binding=externalReviewBinding(review);
++      return isApprovedForArtifact(review.governance_events,binding) && review.governance_events.some(e=>e.state === "APPROVED" && e.provenance.decision_authority === review.authority);
++    } catch { return false; }
++  });
++}
+--- a/src/b08/external/runtime.ts
++++ b/src/b08/external/runtime.ts
+@@ -0,0 +1,57 @@
++/** Thin B-owned binding to externally installed Agent Reach and its documented
++ * Jina Reader backend. No upstream internals, credentials, auto-install or shell. */
++import { execFile } from "node:child_process";
++import { promisify } from "node:util";
++import { AccessError, canonicalSourceUrl } from "./adapter.js";
++import type { AgentReachTransport, AgentReachHealth, AgentReachCapability, ExternalAccessRequest, ProviderResponse } from "./types.js";
++const exec = promisify(execFile);
++export class LocalAgentReachTransport implements AgentReachTransport {
++  readonly source_mode = "REAL" as const;
++  private capabilities: AgentReachCapability[] = [{capability:"read",platform:"web",backend:"jina-reader",requires_auth:false,requires_cookie:false,
++    requires_browser_session:false,requires_mcp:false,proxy_required:false,status:"UNKNOWN",last_checked:null}];
++  constructor(private readonly executable = "agent-reach", private readonly now = () => new Date().toISOString()) {}
++  private async version(): Promise<string> {
++    try {
++      const {stdout} = await exec(this.executable,["--version"],{timeout:10000,maxBuffer:65536});
++      // Persist only the version, never arbitrary CLI output.
++      const match = stdout.match(/Agent Reach v(\d+\.\d+\.\d+(?:[-+.][a-zA-Z0-9.-]+)?)/i);
++      if (!match) throw new AccessError("UNAVAILABLE");
++      return match[1];
++    } catch { throw new AccessError("UNAVAILABLE"); }
++  }
++  async health(): Promise<AgentReachHealth> {
++    const base = {checked_at:this.now(),capabilities:structuredClone(this.capabilities),authenticated:"UNKNOWN" as const};
++    let version: string;
++    try { version = await this.version(); } catch { return {...base,installed:false,reachable:false,provider_version:null,status:"UNAVAILABLE"}; }
++    try {
++      // doctor output is not research data and is deliberately not retained.
++      await exec(this.executable,["doctor"],{timeout:15000,maxBuffer:262144});
++      return {...base,installed:true,reachable:true,provider_version:version,status:"AVAILABLE"};
++    } catch { return {...base,installed:true,reachable:false,provider_version:version,status:"FAILED"}; }
++  }
++  async retrieve(request: ExternalAccessRequest, signal: AbortSignal): Promise<ProviderResponse> {
++    if (request.platform !== "web" || request.source_types.length !== 1 || request.source_types[0] !== "web" || request.max_results !== 1
++      || request.geography || request.time_range) throw new AccessError("UNSUPPORTED_CAPABILITY");
++    const url = canonicalSourceUrl(request.query);
++    const parsed = new URL(url);
++    // Explicit domain URL only. This backend does not fetch private addresses,
++    // accept auth inputs, or pretend to implement search/filtering.
++    if (parsed.protocol !== "https:" || parsed.port || !parsed.hostname.includes(".") || /^[\d.]+$/.test(parsed.hostname)
++      || parsed.hostname.includes(":") || /(?:^|\.)(?:localhost|local|internal|test|invalid)$/.test(parsed.hostname)) throw new AccessError("UNSUPPORTED_CAPABILITY");
++    const version = await this.version();
++    let response: Response;
++    try { response=await fetch(`https://r.jina.ai/${url}`,{signal,redirect:"error",headers:{Accept:"text/plain"}}); }
++    catch { throw new AccessError("FAILED"); }
++    const status = response.status === 401 || response.status === 403 ? "AUTH_REQUIRED" : response.status === 429 ? "RATE_LIMITED" : response.ok ? "AVAILABLE" : "FAILED";
++    this.capabilities[0]={...this.capabilities[0],status,last_checked:this.now()};
++    if (!response.ok) throw new AccessError(status === "AVAILABLE" ? "FAILED" : status);
++    const reader = response.body?.getReader();
++    if (!reader) throw new AccessError("MALFORMED_RESULT");
++    const chunks: Uint8Array[]=[]; let size=0;
++    try { for (;;) { const {done,value}=await reader.read(); if(done) break; size+=value.byteLength;
++      if(size>1000000) { await reader.cancel(); throw new AccessError("MALFORMED_RESULT"); } chunks.push(value); } }
++    finally { reader.releaseLock(); }
++    const content=Buffer.concat(chunks).toString("utf8");
++    return {status:"OK",provider_version:version,backend:"jina-reader",retrieved_at:this.now(),sources:[{canonical_url:url,platform:"web",retrieval_method:"jina-reader HTTPS read (Agent Reach documented backend)",content}]};
++  }
++}
+--- a/src/b08/external/types.ts
++++ b/src/b08/external/types.ts
+@@ -0,0 +1,82 @@
++import type { EvidenceRef } from "../../types/entities.js";
++import type { EvidenceSourceMode } from "../../b00/evidence.js";
++import type { CanonicalIdentity } from "../../b00/identity.js";
++import type { ProvenanceRef } from "../../b00/provenanceRef.js";
++import type { GovernanceEvent } from "../../b00/governance.js";
++
++export type ObservationKind = "PerformanceObservation" | "AudienceObservation" | "CommunityObservation" | "TrendObservation" | "CompetitiveObservation";
++export type AccessFailure = "FAILED" | "UNAVAILABLE" | "AUTH_REQUIRED" | "UNSUPPORTED_CAPABILITY" | "RATE_LIMITED" | "MALFORMED_RESULT";
++export type AccessStatus = AccessFailure | "EXECUTED_REAL" | "EXECUTED_MOCK" | "EXECUTED_SYNTHETIC" | "EXECUTED_UNKNOWN";
++export interface ExternalAccessRequest {
++  request_id: string;
++  project_id: string;
++  purpose: string;
++  query: string;
++  source_types: string[];
++  platform?: string;
++  geography?: string;
++  time_range?: { start: string; end: string };
++  max_results: number;
++  observation_kind: ObservationKind;
++  /** Explicit B channel identity; a platform name alone does not bind a channel. */
++  channel_id: string;
++}
++export interface AgentReachCapability {
++  capability: string; platform: string; backend: string;
++  requires_auth: boolean; requires_cookie: boolean; requires_browser_session: boolean;
++  requires_mcp: boolean; proxy_required: boolean;
++  status: "UNKNOWN" | "AVAILABLE" | AccessFailure; last_checked: string | null;
++}
++export interface AgentReachHealth {
++  installed: boolean; reachable: boolean; authenticated: boolean | "UNKNOWN";
++  provider_version: string | null; checked_at: string;
++  capabilities: AgentReachCapability[];
++  /** Operational telemetry only; never converted to EvidenceRef. */
++  status: "AVAILABLE" | AccessFailure;
++}
++/** B-owned transport envelope, NOT an asserted upstream Agent Reach JSON API. */
++export interface ProviderResponse {
++  status: "OK" | AccessFailure; provider_version: string | null; backend: string;
++  retrieved_at: string;
++  sources: Array<{ canonical_url: string; platform: string; retrieval_method: string; content: string }>;
++}
++export interface AgentReachTransport {
++  readonly source_mode: EvidenceSourceMode;
++  retrieve(request: ExternalAccessRequest, signal: AbortSignal): Promise<unknown>;
++  health(): Promise<AgentReachHealth>;
++}
++export interface ExternalSource {
++  source_id: string; project_id: string; platform: string; canonical_url: string;
++  retrieval_method: string; retrieved_at: string; content_hash: string;
++  source_mode: EvidenceSourceMode; backend: string; provider_version: string | null;
++  /** Exact retrieved text; data only, never instructions or executable code. */
++  content: string;
++}
++export interface ExternalMeasurement {
++  metric_id: string; channel_id: string; value: number; unit: string;
++  period_start: string; period_end: string;
++}
++export interface ExternalObservation {
++  observation_id: string; kind: ObservationKind; project_id: string; channel_id: string;
++  source_id: string; source_mode: EvidenceSourceMode; observed_at: string;
++  /** Source report, not established truth. */
++  statement: string; measurement?: ExternalMeasurement;
++  evidence_refs: EvidenceRef[]; provenance: ProvenanceRef;
++}
++export interface ExternalAccessResult {
++  identity: CanonicalIdentity; request: ExternalAccessRequest;
++  provider: "agent-reach"; provider_version: string | null; backend: string;
++  status: AccessStatus; source_mode: EvidenceSourceMode; retrieved_at: string;
++  sources: ExternalSource[]; evidence: EvidenceRef[]; provenance: ProvenanceRef[];
++  observations: ExternalObservation[];
++}
++/** Separate confirmation by a caller-owned reviewer, bound through B00 governance.
++ * Retrieval evidence remains UNKNOWN even after this review. */
++export interface ExternalObservationReview {
++  observation_id: string; observation_content_hash: string;
++  authority: string; reviewed_at: string; evidence_refs: EvidenceRef[];
++  governance_events: GovernanceEvent[];
++}
++export interface ExternalIntelligenceContext {
++  project_id: string; results: ExternalAccessResult[]; reviews?: ExternalObservationReview[];
++}
+--- a/src/b08/index.ts
++++ b/src/b08/index.ts
+@@ -21,3 +21,7 @@
+ export * from "./phases/B08_05_validation.js";
+ 
+ export * from "./execution.js";
++export * from "./external/types.js";
++export * from "./external/adapter.js";
++export * from "./external/runtime.js";
++export * from "./external/context.js";
+--- a/src/b08/orchestration.ts
++++ b/src/b08/orchestration.ts
+@@ -1,3 +1,4 @@
++import { externalObservations, externalLineage, externalProvenance } from "./external/context.js";
+ // B08 Orchestration
+ 
+ import { canonicalHasher } from "../b00/hashing.js";
+@@ -25,9 +26,10 @@
+ }
+ 
+ export async function runB08(b07State: B07CandidateState | B07CanonicalState, b06State: B06CandidateState | B06CanonicalState, b01State: B01CanonicalState, deps?: B08Deps): Promise<B08CandidateState> {
+-  const deps_ = deps || createDefaultB08Deps();
++  const deps_ = {...createDefaultB08Deps(), ...deps, hash:deps?.hash ?? createDefaultB08Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
++  externalObservations(deps_.external_intelligence, []);
+   const context = buildAnalyticsContext(b07State, b06State, b01State);
+   const sources = defineDataSources(context, deps_);
+   const metrics = defineMetrics(context, sources, deps_);
+@@ -38,6 +40,7 @@
+   const completeness = calculateAnalyticsCompleteness(context, sources.length, metrics.length, workflows.length, gaps);
+ 
+   const allEvidence = [
++    ...(deps_.external_intelligence?.results.flatMap(r=>r.evidence) ?? []),
+     ...sources.flatMap((s: DataSourceDefinition) => s.evidence_refs),
+     ...metrics.flatMap((m: MetricDefinition) => m.evidence_refs),
+     ...workflows.flatMap((w: AnalyticsWorkflow) => w.evidence_refs),
+@@ -47,7 +50,8 @@
+ 
+   return {
+     candidate_id: `cand_${canonicalHasher.stableCandidateId("b08", `${'version' in b07State ? b07State.version : b07State.b04_version}:${sources.length}`)}`,
+-    parent_references: [resolveParentReference("b01", b01State, "analytics_foundation"), resolveParentReference("b06", b06State, "distribution_input"), resolveParentReference("b07", b07State, "kpi_framework_input")],
++    parent_references: [resolveParentReference("b01", b01State, "analytics_foundation"), resolveParentReference("b06", b06State, "distribution_input"), resolveParentReference("b07", b07State, "kpi_framework_input"), ...externalLineage(deps_.external_intelligence)],
++    external_intelligence: deps_.external_intelligence ? structuredClone(deps_.external_intelligence) : undefined,
+     created_at: now(),
+     b01_version: b01State?.version,
+     b06_version: ('version' in b06State ? b06State.version : b06State.b04_version),
+@@ -62,6 +66,7 @@
+     gaps,
+     evidence_refs: uniqueEvidence,
+     provenance_refs: [
++      ...externalProvenance(deps_.external_intelligence),
+       ...sources.flatMap((s: DataSourceDefinition) => [s.provenance]),
+       ...metrics.flatMap((m: MetricDefinition) => [m.provenance]),
+       ...workflows.flatMap((w: AnalyticsWorkflow) => [w.provenance]),
+@@ -77,7 +82,7 @@
+   userAuthority: string,
+   deps?: B08Deps,
+ ): Promise<B08CandidateState> {
+-  const deps_ = deps || createDefaultB08Deps();
++  const deps_ = {...createDefaultB08Deps(), ...deps, hash:deps?.hash ?? createDefaultB08Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   const governanceEventsBySource: Record<string, GovernanceEvent[]> = {};
+@@ -210,7 +215,7 @@
+   priorState?: B08CanonicalState,
+   deps?: B08Deps,
+ ): Promise<B08CanonicalState> {
+-  const deps_ = deps || createDefaultB08Deps();
++  const deps_ = {...createDefaultB08Deps(), ...deps, hash:deps?.hash ?? createDefaultB08Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+   if (!/^v\d+\.\d+$/.test(nextVersion)) {
+     throw new Error(`Invalid semantic version format: ${nextVersion}. Expected v#.#`);
+@@ -231,6 +236,7 @@
+   const newAuditEntries = buildAuditEntries(candidate, priorState, userAuthority, deps_);
+   const auditTrail = [...(priorState?.audit_trail || []), ...newAuditEntries];
+ 
++  externalObservations(candidate.external_intelligence, []);
+   const canonicalWithoutIdentity: Omit<B08CanonicalState, "identity"> = {
+     version: nextVersion,
+     created_at: now(),
+@@ -243,6 +249,7 @@
+     metrics: candidate.metrics.filter((x)=>x.provenance.type === "DECIDED" && approvalCurrent(candidate, x, x.metric_id, "b08_metric_definition")),
+     workflows: candidate.workflows.filter((x)=>x.provenance.type === "DECIDED" && approvalCurrent(candidate, x, x.workflow_id, "b08_analytics_workflow_definition")),
+     data_ingestions: candidate.data_ingestions, raw_observations: candidate.raw_observations, normalized_observations: candidate.normalized_observations, metric_values: candidate.metric_values, aggregations: candidate.aggregations, analytics_results: candidate.analytics_results,
++    external_intelligence: candidate.external_intelligence ? structuredClone(candidate.external_intelligence) : undefined,
+     audit_trail: auditTrail,
+     decisions_made: [],
+     recommendations_considered: candidate.all_recommendations,
+@@ -276,7 +283,7 @@
+   authority: string,
+   deps?: B08Deps,
+ ): Array<{ version: string; changed_at: string; changed_by: string; summary: string }> {
+-  const deps_ = deps || createDefaultB08Deps();
++  const deps_ = {...createDefaultB08Deps(), ...deps, hash:deps?.hash ?? createDefaultB08Deps().hash};
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+   if (!priorState) {
+--- a/src/b08/phases/B08_01_registry.ts
++++ b/src/b08/phases/B08_01_registry.ts
+@@ -55,6 +55,7 @@
+   // Campaign identity comes from the explicit KPI campaign_id, never by parsing a hash/id.
+   const campaignMap = new Map<string, { campaign_id: string; campaign_name: string }>();
+   for (const kpi of kpis) {
++    if (!kpi.campaign_id) { gaps.push(`missing_campaign_for_kpi:${kpi.kpi_id}`); continue; }
+     if (!campaignMap.has(kpi.campaign_id)) campaignMap.set(kpi.campaign_id, { campaign_id:kpi.campaign_id, campaign_name:`Campaign ${kpi.campaign_id}` });
+   }
+   const campaigns = Array.from(campaignMap.values());
+--- a/src/b08/phases/B08_04_workflows.ts
++++ b/src/b08/phases/B08_04_workflows.ts
+@@ -14,7 +14,7 @@
+   const now = deps?.now?.() || new Date().toISOString();
+ 
+   for (const campaign of context.campaigns) {
+-    const campaignKpis = context.kpis.filter((k) => metrics.some((m) => m.kpi_id === k.kpi_id));
++    const campaignKpis = context.kpis.filter((k) => k.campaign_id === campaign.campaign_id && metrics.some((m) => m.kpi_id === k.kpi_id));
+     const campaignMetrics = metrics.filter((m) => campaignKpis.some((k) => k.kpi_id === m.kpi_id));
+     const sourceIds = Array.from(new Set(campaignMetrics.map((m: MetricDefinition) => m.source_id)));
+ 
+--- a/src/b08/types.ts
++++ b/src/b08/types.ts
+@@ -71,6 +71,7 @@
+ }
+ 
+ export interface B08CandidateState {
++  external_intelligence?: import("./external/types.js").ExternalIntelligenceContext;
+   candidate_id: string;
+   parent_references: CanonicalParentReference[];
+   created_at: string;
+@@ -98,6 +99,7 @@
+ }
+ 
+ export interface B08CanonicalState {
++  external_intelligence?: import("./external/types.js").ExternalIntelligenceContext;
+   identity: CanonicalIdentity;
+   version: string;
+   created_at: string;
+@@ -135,6 +137,7 @@
+ }
+ 
+ export interface B08Deps {
++  external_intelligence?: import("../b08/external/types.js").ExternalIntelligenceContext;
+   hash?: {
+     stableSourceId: (sourceType: string, platformId: string) => string;
+     stableMetricId: (kpiId: string, sourceName: string) => string;
+--- a/src/b09/orchestration.ts
++++ b/src/b09/orchestration.ts
+@@ -8,7 +8,7 @@
+ import type { B09CandidateState, B09CanonicalState, B09Deps, B09StatePersistence, LearningObservation, LearningSignal, LearningProposal } from "./types.js";
+ import type { B08CandidateState, B08CanonicalState } from "../b08/types.js";
+ import type { B06CandidateState, B06CanonicalState } from "../b06/types.js";
+-import { generateLearningObservations, identifyOperationalGaps } from "./phases/B09_01_observations.js";
++import { generateLearningObservations, generateExternalLearningObservations, identifyOperationalGaps } from "./phases/B09_01_observations.js";
+ import { generateLearningSignals } from "./phases/B09_02_signals.js";
+ import { generateLearningProposals, generateFeedbackRules } from "./phases/B09_03_proposals.js";
+ import { detectLearningConflicts, identifyLearningGaps, calculateLearningCompleteness } from "./phases/B09_04_validation.js";
+@@ -21,7 +21,7 @@
+   const deps_ = deps || createDefaultB09Deps();
+   const now = () => deps_.now?.() || new Date().toISOString();
+ 
+-  const observations = generateLearningObservations(b08State, b06State, deps_);
++  const observations = [...generateLearningObservations(b08State, b06State, deps_), ...generateExternalLearningObservations(b08State)];
+   const operationalGaps = identifyOperationalGaps(b08State, b06State, deps_);
+   const signals = generateLearningSignals(observations, deps_);
+   const feedbackRules = generateFeedbackRules(signals, deps_);
+@@ -56,6 +56,7 @@
+     gaps,
+     evidence_refs: uniqueEvidence,
+     provenance_refs: [
++      ...(b08State.external_intelligence?.results.flatMap(r=>r.provenance) ?? []),
+       ...operationalGaps.map((g) => g.provenance),
+       ...observations.flatMap((o: LearningObservation) => [o.provenance]),
+       ...signals.flatMap((s: LearningSignal) => [s.provenance]),
+--- a/src/b09/phases/B09_01_observations.ts
++++ b/src/b09/phases/B09_01_observations.ts
+@@ -1,3 +1,6 @@
++import { externalObservations, eligibleExternalReview } from "../../b08/external/context.js";
++import { createArtifactBinding } from "../../b00/identity.js";
++import { bindProvenanceToSubject } from "../../b00/provenanceRef.js";
+ // B09.01 — Actual Observations + Operational Gaps
+ // Learning observations originate only from validated REAL B08 analytics results.
+ import type { LearningObservation, OperationalGap } from "../types.js";
+@@ -39,3 +42,24 @@
+   if (!(b06State.distribution_strategies||[]).length) gaps.push({gap_id:"opgap_b06_distribution",affected_module:"B06",description:"No distribution strategies are defined",evidence_refs:[],provenance:{type:"INFERRED",decision_authority:"B09_01:identifyOperationalGaps",timestamp:now,rationale:"Configuration gap; not a performance observation"}});
+   return gaps;
+ }
++
++/** Reviewed external reports are observations of source content, not causal or
++ * population-level findings. No strength number is manufactured from text. */
++export function generateExternalLearningObservations(b08State:B08CandidateState|B08CanonicalState):LearningObservation[] {
++  const context=b08State.external_intelligence;
++  if(!context) return [];
++  return externalObservations(context,["AudienceObservation","CommunityObservation","TrendObservation","CompetitiveObservation","PerformanceObservation"])
++    .flatMap(o=>{
++      const review=eligibleExternalReview(o,context);
++      if(!review) return [];
++      const types = {AudienceObservation:"external_audience",CommunityObservation:"external_community",TrendObservation:"external_trend",CompetitiveObservation:"external_competitive",PerformanceObservation:"metric_observation"} as const;
++      const body = {observation_id:`learn_${o.observation_id}`,observation_type:types[o.kind],observation_kind:"ACTUAL" as const,
++        observed_at:o.observed_at,source_external_observation_id:o.observation_id,
++        description:`Independently reviewed source report (not a causal finding): ${o.statement}`,magnitude_basis:"UNKNOWN" as const,
++        affected_module:o.kind === "AudienceObservation" || o.kind === "CommunityObservation" ? "B03" : o.kind === "PerformanceObservation" ? "B07" : "B02",
++        evidence_refs:[...o.evidence_refs,...review.evidence_refs]};
++      return [{...body,provenance:bindProvenanceToSubject({type:"OBSERVED",decision_authority:"B09:externalReview",timestamp:review.reviewed_at,
++        prior_provenance_id:o.provenance.id,rationale:`External observation ${o.observation_id} has an exact-bound independent confirmation review`},
++        createArtifactBinding(body,body.observation_id,"B09_LEARNING_OBSERVATION","v1"),body.evidence_refs.map(e=>e.id),"reviewed_external_observation_to_learning")}];
++    });
++}
+--- a/src/b09/phases/B09_02_signals.ts
++++ b/src/b09/phases/B09_02_signals.ts
+@@ -2,5 +2,5 @@
+ import type { LearningSignal, LearningObservation } from "../types.js";
+ export function generateLearningSignals(observations:LearningObservation[],deps?:{hash?:{stableSignalId:(type:string,desc:string)=>string};now?:()=>string}):LearningSignal[]{
+   const stable=deps?.hash?.stableSignalId||((t:string,d:string)=>`sig_${t}_${d.slice(0,20)}`.toLowerCase()); const now=deps?.now?.()||new Date().toISOString();
+-  return observations.map((obs)=>({signal_id:stable("neutral_observation",obs.observation_id),signal_type:"neutral_observation" as const,severity:"low" as const,description:`Actual observation recorded without target comparison: ${obs.description}`,source_observations:[obs.observation_id],evidence_refs:obs.evidence_refs,provenance:{type:"INFERRED" as const,decision_authority:"B09_02:generateLearningSignals",timestamp:now,rationale:"Actual observation exists, but target/benchmark comparison is unavailable in B09 input"},interpretation_basis:"ACTUAL_OBSERVATION" as const}));
++  return observations.map((obs)=>({signal_id:stable("neutral_observation",obs.observation_id),signal_type:"neutral_observation" as const,severity:"low" as const,description:`Actual observation recorded without target comparison: ${obs.description}`,recommended_action:obs.source_external_observation_id ? `Review ${obs.affected_module} against source observation ${obs.source_external_observation_id}; no strategic change is pre-approved` : undefined,source_observations:[obs.observation_id],evidence_refs:obs.evidence_refs,provenance:{type:"INFERRED" as const,decision_authority:"B09_02:generateLearningSignals",timestamp:now,rationale:"Actual observation exists, but target/benchmark comparison is unavailable in B09 input"},interpretation_basis:obs.source_external_observation_id ? "EXTERNAL_REVIEWED_OBSERVATION" as const : "ACTUAL_OBSERVATION" as const}));
+ }
+--- a/src/b09/phases/B09_03_proposals.ts
++++ b/src/b09/phases/B09_03_proposals.ts
+@@ -2,9 +2,19 @@
+ import type { LearningProposal, LearningSignal, FeedbackRule } from "../types.js";
+ export function generateLearningProposals(signals:LearningSignal[],deps?:{hash?:{stableProposalId:(module:string,type:string)=>string};now?:()=>string}):LearningProposal[]{
+   const stable=deps?.hash?.stableProposalId||((m:string,t:string)=>`prop_${m}_${t}`.toLowerCase()); const now=deps?.now?.()||new Date().toISOString();
+-  return signals.filter((s)=>s.signal_type==="negative_signal").map((signal)=>({proposal_id:stable("B-Branch",`performance_optimization:${signal.signal_id}`),proposal_type:"performance_optimization" as const,target_module:"B08",description:`Investigate and address negative signal: ${signal.description}`,confidence:signal.severity==="high"?0.8:0.6,confidence_basis:"SIGNAL_CHAIN" as const,supporting_signals:[signal.signal_id],evidence_refs:signal.evidence_refs,provenance:{type:"RECOMMENDED" as const,decision_authority:"B09_03:generateLearningProposals",timestamp:now,rationale:"Proposal derives from an actual-observation signal chain"}}));
++  return [...externalReviewProposals(signals, now), ...signals.filter((s)=>s.signal_type==="negative_signal").map((signal)=>({proposal_id:stable("B-Branch",`performance_optimization:${signal.signal_id}`),proposal_type:"performance_optimization" as const,target_module:"B08",description:`Investigate and address negative signal: ${signal.description}`,confidence:signal.severity==="high"?0.8:0.6,confidence_basis:"SIGNAL_CHAIN" as const,supporting_signals:[signal.signal_id],evidence_refs:signal.evidence_refs,provenance:{type:"RECOMMENDED" as const,decision_authority:"B09_03:generateLearningProposals",timestamp:now,rationale:"Proposal derives from an actual-observation signal chain"}}))];
+ }
+ export function generateFeedbackRules(signals:LearningSignal[],deps?:{now?:()=>string}):FeedbackRule[]{
+   const now=deps?.now?.()||new Date().toISOString();
+   return signals.filter((s)=>s.signal_type==="negative_signal").map((s)=>({rule_id:`fb_${s.signal_id}`,rule_type:"optimization_candidate" as const,condition:`signal_id == ${s.signal_id} AND signal_type == negative_signal`,action:"Create a B10 optimization proposal bound to this signal",priority:s.severity,evidence_refs:s.evidence_refs,provenance:{type:"INFERRED" as const,decision_authority:"B09_03:generateFeedbackRules",timestamp:now,rationale:"Deterministic feedback rule from an actual learning signal"}}));
+ }
++
++function externalReviewProposals(signals:LearningSignal[],now:string):LearningProposal[] {
++  return signals.filter(s=>s.interpretation_basis === "EXTERNAL_REVIEWED_OBSERVATION").map(s=>({
++    proposal_id:`review_prop_${s.signal_id}`,proposal_type:"strategy_refinement",target_module:"B08",
++    description:`Assess relevance of reviewed external report before selecting any strategic change: ${s.description}`,
++    confidence:0,confidence_basis:"HEURISTIC",supporting_signals:[s.signal_id],evidence_refs:s.evidence_refs,
++    provenance:{type:"RECOMMENDED",decision_authority:"B09:externalReviewProposal",timestamp:now,
++      rationale:"Review-only candidate. Impact, causality and improvement confidence are unknown; zero is an explicit non-confidence default."}
++  }));
++}
+--- a/src/b09/types.ts
++++ b/src/b09/types.ts
+@@ -8,12 +8,13 @@
+ 
+ export interface LearningObservation {
+   observation_id: string;
+-  observation_type: "metric_observation" | "performance_variance" | "strategy_mismatch" | "opportunity_identified";
++  observation_type: "metric_observation" | "performance_variance" | "strategy_mismatch" | "opportunity_identified" | "external_audience" | "external_community" | "external_trend" | "external_competitive";
+   observation_kind: "ACTUAL";
+   observed_at: string;
+-  source_analytics_result_id: string;
++  source_analytics_result_id?: string;
++  source_external_observation_id?: string;
+   description: string;
+-  magnitude: number; // normalized signal strength when computable
++  magnitude?: number; // normalized signal strength when computable
+   magnitude_basis: "OBSERVED_VALUE" | "TARGET_VARIANCE" | "UNKNOWN";
+   affected_module: string;
+   evidence_refs: EvidenceRef[];
+@@ -33,7 +34,7 @@
+   recommended_action?: string;
+   evidence_refs: EvidenceRef[];
+   provenance: ProvenanceRef;
+-  interpretation_basis: "ACTUAL_OBSERVATION" | "TARGET_COMPARISON" | "UNKNOWN";
++  interpretation_basis: "EXTERNAL_REVIEWED_OBSERVATION" | "ACTUAL_OBSERVATION" | "TARGET_COMPARISON" | "UNKNOWN";
+ }
+ 
+ export interface FeedbackRule {
+--- a/src/b11/orchestration.ts
++++ b/src/b11/orchestration.ts
+@@ -11,8 +11,8 @@
+ import { detectComplianceConflicts,identifyComplianceGaps,calculateComplianceCompleteness } from "./phases/B11_04_validation.js";
+ 
+ function complianceSubjects(state:B10CandidateState|B10CanonicalState):ComplianceSubject[]{
+- const version="version" in state?state.version:state.candidate_id; const impactByProposal=new Map(state.impact_assessments.map(a=>[a.proposal_id,a]));
+- return state.optimization_proposals.map(p=>{const b=createArtifactBinding(p,p.proposal_id,"B10_OPTIMIZATION_PROPOSAL",version);return{subject_id:b.object_id,subject_type:b.object_type,subject_version:b.object_version,subject_content_hash:b.object_content_hash,affected_modules:impactByProposal.get(p.proposal_id)?.affected_modules||[p.target_module]};});
++ const version="version" in state?state.version:state.candidate_id; const impactByProposal=new Map((state.impact_assessments ?? []).map(a=>[a.proposal_id,a]));
++ return (state.optimization_proposals ?? []).map(p=>{const b=createArtifactBinding(p,p.proposal_id,"B10_OPTIMIZATION_PROPOSAL",version);return{subject_id:b.object_id,subject_type:b.object_type,subject_version:b.object_version,subject_content_hash:b.object_content_hash,affected_modules:impactByProposal.get(p.proposal_id)?.affected_modules||[p.target_module]};});
+ }
+ export async function runB11(b10State:B10CandidateState|B10CanonicalState,deps?:B11Deps):Promise<B11CandidateState>{
+  const d=deps||createDefaultB11Deps(),now=()=>d.now?.()||new Date().toISOString(),rules=defineComplianceRules(d),risks=assessRisks(d),checks=runComplianceChecks(rules,complianceSubjects(b10State),d),conflicts=detectComplianceConflicts(rules.length,checks),gaps=identifyComplianceGaps(rules.length,checks),completeness=calculateComplianceCompleteness(rules.length,checks,gaps);
+--- a/src/b11/phases/B11_03_checks.ts
++++ b/src/b11/phases/B11_03_checks.ts
+@@ -1,5 +1,6 @@
+ // B11.03 — Evidence-based compliance checks. Hashes identify checks; they never determine outcomes.
+ import type { ComplianceCheckResult, ComplianceRule, ComplianceSubject, ComplianceEvidence, B11Deps, ComplianceStatus } from "../types.js";
++import { validateEvidenceSemantics } from "../../b00/evidence.js";
+ import { canonicalHasher } from "../../b00/hashing.js";
+ 
+ function evaluate(evidence:ComplianceEvidence[]):{status:ComplianceStatus;findings:string[]} {
+@@ -10,13 +11,13 @@
+   if(evidence.length>0 && evidence.every(e=>e.assertion==="SATISFIES")) return {status:"COMPLIANT",findings:evidence.map(e=>e.rationale)};
+   return {status:"UNKNOWN",findings:["Evidence assertions are incomplete or conflicting"]};
+ }
+-export function runComplianceChecks(rules:ComplianceRule[],subjects:ComplianceSubject[],deps?:B11Deps):ComplianceCheckResult[]{
++export function runComplianceChecks(rules:ComplianceRule[],subjects:ComplianceSubject[]=[],deps?:B11Deps):ComplianceCheckResult[]{
+  const h=deps?.hash||createDefaultB11Deps().hash!,now=deps?.now||(()=>new Date().toISOString()), supplied=deps?.complianceEvidence||[];
+  const actualSubjects=subjects.length?subjects:[{subject_id:"B_BRANCH_UNRESOLVED_SUBJECT",subject_type:"B_BRANCH",subject_version:"UNKNOWN",subject_content_hash:"UNKNOWN",affected_modules:[]}];
+  const out:ComplianceCheckResult[]=[];
+  for(const rule of rules){
+    for(const subject of actualSubjects){
+-     const ev=supplied.filter(e=>e.rule_id===rule.rule_id&&e.subject_id===subject.subject_id);
++     const ev=supplied.filter(e=>e.rule_id===rule.rule_id && e.subject_id===subject.subject_id && e.subject_type===subject.subject_type && e.subject_version===subject.subject_version && e.subject_content_hash===subject.subject_content_hash && subject.subject_content_hash!=="UNKNOWN" && validateEvidenceSemantics(e.evidence_ref).valid && e.evidence_ref.status==="VERIFIED" && e.evidence_ref.source_mode==="REAL" && e.evidence_ref.production_eligible!==false);
+      const r=evaluate(ev); const check_id=h.stableCheckId(rule.rule_id,subject.subject_id);
+      out.push({check_id,compliance_rule_id:rule.rule_id,subject,status:r.status,check_basis:ev.length?"EVIDENCE_CHECK":"NO_EVIDENCE",findings:r.findings,finding_review_state:"UNREVIEWED",remediation_required:r.status==="NON_COMPLIANT",evidence_refs:ev.map(e=>e.evidence_ref),provenance:{type:"INFERRED",decision_authority:"B11_03:runComplianceChecks",timestamp:now(),rationale:`RULE + SUBJECT + EVIDENCE check for ${rule.rule_id}; outcome is not derived from hash or governance approval`}});
+    }
+--- a/src/b11/phases/B11_04_validation.ts
++++ b/src/b11/phases/B11_04_validation.ts
+@@ -1,7 +1,31 @@
+-// B11.04 — Structural completeness is not compliance validity.
++// Structural completeness is not compliance validity. Legacy numeric calls
++// remain supported as unverified count summaries, never as evidence findings.
+ import { canonicalHasher } from "../../b00/hashing.js";
+ import type { CompletenessScore, ComplianceCheckResult } from "../types.js";
+ import type { ConflictRecord, Gap } from "../../b00/contracts.js";
+-export function detectComplianceConflicts(ruleCount:number,checks:ComplianceCheckResult[]):ConflictRecord[]{const x:ConflictRecord[]=[];if(ruleCount>0&&checks.length===0)x.push({conflict_id:`conf_${canonicalHasher.stableConflictId("b11","unchecked_rules")}`,description:"Compliance rules defined but no checks exist",affected_items:["b11"],severity:"high"});const n=checks.filter(c=>c.status==="NON_COMPLIANT").length;if(n)x.push({conflict_id:`conf_${canonicalHasher.stableConflictId("b11",`violations_${n}`)}`,description:`${n} evidence-backed non-compliant findings`,affected_items:["b11"],severity:"high"});return x;}
+-export function identifyComplianceGaps(ruleCount:number,checks:ComplianceCheckResult[]):Gap[]{const g:Gap[]=[];if(!ruleCount)g.push({gap_id:"gap_b11_no_rules",description:"No compliance rules defined",required_for:"compliance_framework",priority:"high"});const unresolved=checks.filter(c=>c.status==="UNKNOWN"||c.status==="PENDING").length;if(unresolved)g.push({gap_id:"gap_b11_unresolved_checks",description:`${unresolved} compliance checks are UNKNOWN/PENDING because evidence or review is incomplete`,required_for:"semantic_compliance_validity",priority:"high"});const n=checks.filter(c=>c.status==="NON_COMPLIANT").length;if(n)g.push({gap_id:"gap_b11_violations",description:`${n} evidence-backed violations require remediation`,required_for:"compliance_resolution",priority:"high"});return g;}
+-export function calculateComplianceCompleteness(ruleCount:number,checks:ComplianceCheckResult[],gaps:Gap[]):CompletenessScore{const structural=ruleCount>0?Math.round(Math.min(100,(checks.length/Math.max(1,ruleCount))*100)):0;const non=checks.some(c=>c.status==="NON_COMPLIANT"), unresolved=checks.some(c=>c.status==="UNKNOWN"||c.status==="PENDING");return{score:structural,missing_inputs:[...(!ruleCount?["No compliance rules defined"]:[]),...(unresolved?["Compliance evidence/review unresolved"]:[])],blocking_decisions:[...(non?["Evidence-backed non-compliance must be remediated"]:[]),...(unresolved?["Do not claim compliance while checks are UNKNOWN/PENDING"]:[])],semantic_status:non?"INVALID":unresolved||checks.length===0?"UNKNOWN":"VALID"};}
++export function detectComplianceConflicts(ruleCount:number,checks:ComplianceCheckResult[]|number,reportedViolations=0):ConflictRecord[]{
++  const count=typeof checks === "number" ? checks : checks.length;
++  const n=typeof checks === "number" ? reportedViolations : checks.filter(c=>c.status === "NON_COMPLIANT").length;
++  const x:ConflictRecord[]=[];
++  if(ruleCount>0 && count===0)x.push({conflict_id:`conf_${canonicalHasher.stableConflictId("b11","unchecked_rules")}`,description:"Compliance rules are not checked",affected_items:["b11"],severity:"high"});
++  if(n>0)x.push({conflict_id:`conf_${canonicalHasher.stableConflictId("b11",`violations_${n}`)}`,description:`${n} ${typeof checks === "number" ? "reported, unverified" : "evidence-backed"} compliance violations`,affected_items:["b11"],severity:"high"});
++  return x;
++}
++export function identifyComplianceGaps(ruleCount:number,checks:ComplianceCheckResult[]|number,reportedViolations=0):Gap[]{
++  const g:Gap[]=[];const count=typeof checks === "number" ? checks : checks.length;
++  if(!ruleCount)g.push({gap_id:"gap_b11_no_rules",description:"No compliance rules defined",required_for:"compliance_framework",priority:"high"});
++  if(count<ruleCount)g.push({gap_id:"gap_b11_incomplete_checks",description:"Some rules lack checks",required_for:"compliance_framework",priority:"high"});
++  const unresolved=typeof checks === "number" ? count : checks.filter(c=>c.status === "UNKNOWN" || c.status === "PENDING").length;
++  if(unresolved)g.push({gap_id:"gap_b11_unresolved_checks",description:`${unresolved} checks require evidence or review; counts do not establish compliance`,required_for:"semantic_compliance_validity",priority:"high"});
++  const n=typeof checks === "number" ? reportedViolations : checks.filter(c=>c.status === "NON_COMPLIANT").length;
++  if(n)g.push({gap_id:"gap_b11_violations",description:`${n} ${typeof checks === "number" ? "unverified reported" : "evidence-backed"} violations require review`,required_for:"compliance_resolution",priority:"high"});return g;
++}
++export function calculateComplianceCompleteness(ruleCount:number,checks:ComplianceCheckResult[]|number,gapsOrViolations:Gap[]|number,legacyGaps:Gap[]=[]):CompletenessScore{
++  const count=typeof checks === "number" ? checks : checks.length;
++  const structural=ruleCount>0?Math.round(Math.min(100,(count/Math.max(1,ruleCount))*100)):0;
++  const non=typeof checks === "number" ? typeof gapsOrViolations === "number" && gapsOrViolations>0 : checks.some(c=>c.status === "NON_COMPLIANT");
++  const unresolved=typeof checks === "number" || checks.some(c=>c.status === "UNKNOWN" || c.status === "PENDING") || count<ruleCount;
++  return{score:structural,missing_inputs:[...(!ruleCount?["No compliance rules defined"]:[]),...(unresolved?["Compliance evidence/review unresolved"]:[])],
++    blocking_decisions:[...(non?["Reported non-compliance must be reviewed/remediated"]:[]),...(unresolved?["Do not claim compliance while checks are UNKNOWN/PENDING"]:[])],
++    semantic_status:typeof checks === "number" ? "UNKNOWN" : non?"INVALID":unresolved || count===0?"UNKNOWN":"VALID"};
++}
+--- a/src/b11/types.ts
++++ b/src/b11/types.ts
+@@ -15,7 +15,7 @@
+ }
+ export type ComplianceStatus="COMPLIANT"|"NON_COMPLIANT"|"PENDING"|"UNKNOWN"|"NOT_APPLICABLE";
+ export interface ComplianceSubject { subject_id:string; subject_type:string; subject_version:string; subject_content_hash:string; affected_modules:string[]; }
+-export interface ComplianceEvidence { evidence_ref:EvidenceRef; rule_id:string; subject_id:string; assertion:"SATISFIES"|"VIOLATES"|"REQUIRES_REVIEW"|"NOT_APPLICABLE"; rationale:string; }
++export interface ComplianceEvidence { evidence_ref:EvidenceRef; rule_id:string; subject_id:string; subject_type?:string; subject_version?:string; subject_content_hash?:string; assertion:"SATISFIES"|"VIOLATES"|"REQUIRES_REVIEW"|"NOT_APPLICABLE"; rationale:string; }
+ export interface ComplianceCheckResult {
+   check_id:string; compliance_rule_id:string; subject:ComplianceSubject; status:ComplianceStatus; check_basis:"EVIDENCE_CHECK"|"NO_EVIDENCE";
+   findings:string[]; finding_review_state:"UNREVIEWED"|"REVIEWED"; remediation_required:boolean; remediation?:string; final_compliance_decision?:ComplianceStatus;
+--- a/src/b12/orchestration.ts
++++ b/src/b12/orchestration.ts
+@@ -1,7 +1,7 @@
+ // B12 Orchestration — integration/control-plane only; domain logic remains upstream.
+ import { canonicalHasher,canonicalStringify } from "../b00/hashing.js"; import { createCanonicalIdentity } from "../b00/identity.js"; import type { B12Deps,B12StatePersistence,BranchCanonicalState,BranchVersion } from "./types.js"; import { aggregateModuleVersions } from "./phases/B12_01_aggregate.js"; import { trackStateTransition } from "./phases/B12_02_transitions.js"; import { validateBranchCompleteness } from "./phases/B12_03_completeness.js"; import { generateAuditTrail } from "./phases/B12_04_audit.js"; import { loadAndAggregateUpstream } from "./phases/B12_00_upstream.js";
+ function versionSig(v:BranchVersion[]){return canonicalStringify(v.map(x=>({module:x.module,version:x.version,object_id:x.canonical_state_id,content_hash:x.content_hash,identity_status:x.identity_status})).sort((a,b)=>a.module.localeCompare(b.module)))}
+-export async function createBranchState(b01?:string,b02?:string,b03?:string,b04?:string,b05?:string,b06?:string,b07?:string,b08?:string,b09?:string,b10?:string,b11?:string,deps?:B12Deps):Promise<BranchCanonicalState>{const d=deps||createDefaultB12Deps(),now=()=>d.now?.()||new Date().toISOString(),declared=aggregateModuleVersions(b01,b02,b03,b04,b05,b06,b07,b08,b09,b10,b11,d),up=await loadAndAggregateUpstream(declared,d),versions=up.resolved_versions,complete=validateBranchCompleteness(versions,up),audit0=generateAuditTrail(versions,"system","Create branch state",d),audit=[...up.upstream_audit_trail.flatMap(ua=>ua.audit_entries.map(e=>({timestamp:e.changed_at,action:`${ua.module} ${ua.version}: ${e.summary}`,actor:e.changed_by,affected_modules:[ua.module]}))),...audit0];const created=now(),stateId=(d.hash||createDefaultB12Deps().hash!).stateId(`${versionSig(versions)}:${created}`);const without:Omit<BranchCanonicalState,"identity">={state_id:stateId,created_at:created,updated_at:created,user_decision_authority:"system",module_versions:versions,state_transitions:[],last_decision:{timestamp:created,authority:"system",decision:"Initial state creation"},audit_trail:audit,completeness_summary:complete,evidence_refs:up.evidence_refs,provenance_refs:up.provenance_refs,governance_events:up.governance_events,missing_modules:up.missing_modules,failed_modules:up.failed_modules,decisions_made:up.decisions_made,recommendations_considered:up.recommendations_considered,decision_timestamp:created,cannot_be_modified_until_next_version:false};return{...without,identity:createCanonicalIdentity({object_id:stateId,object_type:"B12_BRANCH_SNAPSHOT",version:`snapshot:${stateId}`,artifact:without,parent_references:versions.filter(v=>v.content_hash!=="UNKNOWN").map(v=>({module:v.module.toUpperCase(),object_id:v.canonical_state_id,object_type:v.object_type,version:v.version,content_hash:v.content_hash,relation:"branch_snapshot_member"})),created_at:created})};}
++export async function createBranchState(b01?:string,b02?:string,b03?:string,b04?:string,b05?:string,b06?:string,b07?:string,b08?:string,b09?:string,b10?:string,b11?:string,deps?:B12Deps):Promise<BranchCanonicalState>{const d=deps||createDefaultB12Deps(),now=()=>d.now?.()||new Date().toISOString(),declared=aggregateModuleVersions(b01,b02,b03,b04,b05,b06,b07,b08,b09,b10,b11,d),up=await loadAndAggregateUpstream(declared,d),versions=up.resolved_versions,complete=validateBranchCompleteness(versions,up),audit0=generateAuditTrail(versions,"system","Create branch state",d),audit=[...up.upstream_audit_trail.flatMap(ua=>ua.audit_entries.map(e=>({timestamp:e.changed_at,action:`${ua.module} ${ua.version}: ${e.summary}`,actor:e.changed_by,affected_modules:[ua.module]}))),...audit0];const created=now(),stateId=(d.hash||createDefaultB12Deps().hash!).stateId(versionSig(versions));const without:Omit<BranchCanonicalState,"identity">={state_id:stateId,created_at:created,updated_at:created,user_decision_authority:"system",module_versions:versions,state_transitions:[],last_decision:{timestamp:created,authority:"system",decision:"Initial state creation"},audit_trail:audit,completeness_summary:complete,evidence_refs:up.evidence_refs,provenance_refs:up.provenance_refs,governance_events:up.governance_events,missing_modules:up.missing_modules,failed_modules:up.failed_modules,decisions_made:up.decisions_made,recommendations_considered:up.recommendations_considered,decision_timestamp:created,cannot_be_modified_until_next_version:false};return{...without,identity:createCanonicalIdentity({object_id:stateId,object_type:"B12_BRANCH_SNAPSHOT",version:`snapshot:${stateId}`,artifact:without,parent_references:versions.filter(v=>v.content_hash!=="UNKNOWN").map(v=>({module:v.module.toUpperCase(),object_id:v.canonical_state_id,object_type:v.object_type,version:v.version,content_hash:v.content_hash,relation:"branch_snapshot_member"})),created_at:created})};}
+ export async function commitBranchState(current:BranchCanonicalState,authority:string,rationale:string,persistence:B12StatePersistence,deps?:B12Deps):Promise<BranchCanonicalState>{const d=deps||createDefaultB12Deps(),now=()=>d.now?.()||new Date().toISOString(),timestamp=now(),transition=trackStateTransition(current.module_versions,current.module_versions,"user_decision",authority,rationale,d),newId=(d.hash||createDefaultB12Deps().hash!).stateId(`${current.identity.content_hash}:${transition.transition_id}:${timestamp}`),without:Omit<BranchCanonicalState,"identity">={...current,state_id:newId,updated_at:timestamp,user_decision_authority:authority,state_transitions:[...current.state_transitions,transition],last_decision:{timestamp,authority,decision:rationale},audit_trail:[...current.audit_trail,{timestamp,action:`Commit branch state: ${rationale}`,actor:authority,affected_modules:current.module_versions.map(v=>v.module)}],decision_timestamp:timestamp,cannot_be_modified_until_next_version:true};const updated:BranchCanonicalState={...without,identity:createCanonicalIdentity({object_id:newId,object_type:"B12_BRANCH_SNAPSHOT",version:`snapshot:${newId}`,artifact:without,parent_references:current.module_versions.filter(v=>v.content_hash!=="UNKNOWN").map(v=>({module:v.module.toUpperCase(),object_id:v.canonical_state_id,object_type:v.object_type,version:v.version,content_hash:v.content_hash,relation:"branch_snapshot_member"})),created_at:timestamp})};await persistence.save(updated);return updated;}
+ export async function loadBranchState(id:string,p:B12StatePersistence){return p.load(id)} export async function listBranchStates(p:B12StatePersistence){return p.listStates()} export async function getLatestBranchState(p:B12StatePersistence){return p.latest()}
+ function createDefaultB12Deps():B12Deps{return{hash:{stableTransitionId:(f,t)=>`transition_${canonicalHasher.hash(`${f}->${t}`).slice(0,32)}`,stateId:s=>`branch_${canonicalHasher.hash(s).slice(0,32)}`},now:()=>new Date().toISOString()};}
+--- a/tests/repair/agent-reach.test.ts
++++ b/tests/repair/agent-reach.test.ts
+@@ -0,0 +1,238 @@
++import { platformRegistryProvenance } from "../../src/b01/orchestration.js";
++import { mkdtemp, writeFile, rm } from "node:fs/promises";
++import { tmpdir } from "node:os";
++import { join } from "node:path";
++import { describe,it,expect,vi } from "vitest";
++import { AgentReachAdapter, AccessError, normalizeExternalResponse, validateExternalResult, serializeExternalRequest } from "../../src/b08/external/adapter.js";
++import { LocalAgentReachTransport } from "../../src/b08/external/runtime.js";
++import { externalObservations, externalReviewBinding, eligibleExternalReview } from "../../src/b08/external/context.js";
++import type { ExternalAccessRequest, ExternalAccessResult, ExternalObservationReview, AgentReachTransport, ExternalIntelligenceContext } from "../../src/b08/external/types.js";
++import { canonicalHasher } from "../../src/b00/hashing.js";
++import { createCanonicalIdentity, validateCanonicalIdentity } from "../../src/b00/identity.js";
++import { proposeItem,approveItem } from "../../src/b00/governance.js";
++import { runB02 } from "../../src/b02/orchestration.js";
++import { runB03 } from "../../src/b03/orchestration.js";
++import { runB07 } from "../../src/b07/orchestration.js";
++import { runB08,commitVersion as commitB08 } from "../../src/b08/orchestration.js";
++import { InMemoryB08Persistence } from "../../src/b08/persistence.js";
++import { runB09 } from "../../src/b09/orchestration.js";
++import { runB10 } from "../../src/b10/orchestration.js";
++import { runComplianceChecks } from "../../src/b11/phases/B11_03_checks.js";
++import { calculateComplianceCompleteness } from "../../src/b11/phases/B11_04_validation.js";
++
++const at="2026-09-06T00:00:00Z";
++const request:ExternalAccessRequest={request_id:"r1",project_id:"project-a",purpose:"Research channel audience",query:"https://example.com/report",source_types:["web"],platform:"web",max_results:1,observation_kind:"AudienceObservation",channel_id:"ch1"};
++const raw={status:"OK",provider_version:"fixture-only",backend:"controlled-fixture",retrieved_at:at,sources:[{canonical_url:"https://example.com/report#fragment",platform:"web",retrieval_method:"controlled fixture (no network)",content:"An individual developer reports needing a testing tool."}]};
++function result(mode:"REAL"|"MOCK"|"SYNTHETIC"|"UNKNOWN"="REAL",req=request,content=raw.sources[0].content){return normalizeExternalResponse(req,{...raw,sources:[{...raw.sources[0],content}]},mode);}
++function context(r=result()):ExternalIntelligenceContext{return{project_id:"project-a",results:[r]};}
++function review(r:ExternalAccessResult):ExternalObservationReview {
++  const o=r.observations[0];
++  const receipt:ExternalObservationReview={observation_id:o.observation_id,observation_content_hash:canonicalHasher.hashValue(o),authority:"independent-test-reviewer",reviewed_at:at,
++    evidence_refs:[{id:"independent-confirmation",source:"fixture:independent-review",status:"VERIFIED",origin:"DOCUMENTATION",basis:"OBSERVED",source_mode:"REAL",production_eligible:true}],governance_events:[]};
++  const b=externalReviewBinding(receipt);
++  const p=proposeItem({itemId:b.object_id,history:[],authority:receipt.authority,timestamp:at});
++  receipt.governance_events=approveItem({itemId:b.object_id,history:p.history,authority:receipt.authority,timestamp:at,artifact:b,requireArtifactBinding:true,sourceEvidenceRefs:receipt.evidence_refs.map(e=>e.id)}).history;
++  return receipt;
++}
++const b01:any={version:"v1.0",created_at:at,updated_at:at,user_decision_authority:"fixture",brand_profile:{brand_name:"Fixture",positioning:"Tools",mission:"Explain",values:[]},
++  channels:[{channel_id:"ch1",name:"Fixture channel",platform:"YOUTUBE",role:"primary",audience_category:"broad",evidence_refs:[]},{channel_id:"ch2",name:"Other channel",platform:"YOUTUBE",role:"secondary",audience_category:"broad",evidence_refs:[]}],
++  platforms:[{platform_id:"youtube",name:"YOUTUBE",capabilities:[],evidence_refs:[]}],ecosystems:[],content_territories:[],strategic_constraints:[],
++  editorial_constitution:{constitution_id:"ec",rules:[],evidence_refs:[]},distribution_strategy:{channel_assignments:[],evidence_refs:[]},evidence_refs:[],provenance_refs:[],audit_trail:[],decisions_made:[],recommendations_considered:[]};
++const b04:any={candidate_id:"b04",campaigns:[{campaign_id:"campaign",campaign_name:"Fixture",primary_objective:"Growth"}]};
++const b06:any={candidate_id:"b06",distribution_strategies:[{campaign_id:"campaign",channel_selections:[{channel_id:"ch1",channel_name:"YouTube"}]}]};
++function transport(response:unknown=raw,mode:AgentReachTransport["source_mode"]="REAL"):AgentReachTransport{return{source_mode:mode,retrieve:async()=>response,health:async()=>({installed:true,reachable:true,authenticated:"UNKNOWN",provider_version:"fixture",checked_at:at,status:"AVAILABLE",capabilities:[]})};}
++
++describe("B08 Agent Reach adapter and trust boundary",()=>{
++  it("serializes deterministically and strips unrecognized auth/config properties",()=>{
++    expect(serializeExternalRequest({...request,token:"never-serialize"} as any)).not.toContain("never-serialize");
++    expect(JSON.parse(serializeExternalRequest(request))).toEqual(request);
++  });
++  it.each([0,101,1.5,NaN])("rejects invalid result limit %s",limit=>expect(()=>serializeExternalRequest({...request,max_results:limit})).toThrow());
++  it("rejects malformed requests and timestamps",()=>{
++    expect(()=>serializeExternalRequest({...request,time_range:{start:"invalid",end:at}})).toThrow();
++    expect(()=>normalizeExternalResponse(request,{...raw,retrieved_at:"yesterday"},"REAL")).toThrow();
++  });
++  it("records canonical source hash and complete subject-bound source/evidence/provenance",()=>{
++    const r=result();expect(validateExternalResult(r)).toBe(true);expect(r.sources[0].canonical_url).toBe("https://example.com/report");
++    expect(r.sources[0].content_hash).toBe(canonicalHasher.hash(raw.sources[0].content));
++    expect(r.provenance[0].subject_id).toBe(r.sources[0].source_id);
++    expect(r.provenance[0].source_evidence_refs).toEqual([r.evidence[0].id]);
++    expect(r.observations[0].provenance.prior_provenance_id).toBe(r.provenance[0].id);
++    expect(r.observations[0].statement).toBe(raw.sources[0].content);
++    expect(validateCanonicalIdentity(r,r.identity).valid).toBe(true);
++  });
++  it("is deterministic but content/project/mode changes affect identity",()=>{
++    expect(result()).toEqual(result());expect(result().identity.object_id).not.toBe(result("REAL",request,"changed").identity.object_id);
++    expect(result().sources[0].source_id).not.toBe(result("MOCK").sources[0].source_id);
++    expect(result().sources[0].source_id).not.toBe(result("REAL",{...request,project_id:"other"}).sources[0].source_id);
++  });
++  it.each(["REAL","MOCK","SYNTHETIC","UNKNOWN"] as const)("never promotes %s retrieval to VERIFIED",async mode=>{
++    const r=await new AgentReachAdapter(transport({...raw,status:"OK",source_mode:"REAL",verified:true},mode)).retrieve(request);
++    expect(r.status).toBe(`EXECUTED_${mode}`);expect(r.source_mode).toBe(mode);
++    expect(r.evidence.every(e=>e.status==="UNKNOWN" && e.production_eligible===false && e.source_mode===mode)).toBe(true);
++    if(mode!=="REAL")expect(externalObservations(context(r),["AudienceObservation"])).toEqual([]);
++  });
++  it.each(["UNAVAILABLE","AUTH_REQUIRED","RATE_LIMITED","FAILED","UNSUPPORTED_CAPABILITY"] as const)("maps %s without evidence",async status=>{
++    const t=transport();t.retrieve=async()=>{throw new AccessError(status)};
++    const r=await new AgentReachAdapter(t).retrieve(request);expect(r.status).toBe(status);expect(r.sources).toEqual([]);expect(r.evidence).toEqual([]);
++  });
++  it.each([null,{},"not json",{...raw,status:"VERIFIED"},{...raw,sources:[{content:"missing source"}]}])("rejects malformed provider data %#",async rawValue=>{
++    expect((await new AgentReachAdapter(transport(rawValue)).retrieve(request)).status).toBe("MALFORMED_RESULT");
++  });
++  it("failure responses cannot smuggle sources",()=>expect(()=>normalizeExternalResponse(request,{...raw,status:"FAILED"},"REAL")).toThrow());
++  it("rejects credential URLs and platform mismatch",()=>{
++    for(const url of ["file:///etc/passwd","https://user:password@example.com/","https://example.com/?api_key=secret"])
++      expect(()=>normalizeExternalResponse(request,{...raw,sources:[{...raw.sources[0],canonical_url:url}]},"REAL")).toThrow();
++    expect(()=>normalizeExternalResponse(request,{...raw,sources:[{...raw.sources[0],platform:"reddit"}]},"REAL")).toThrow();
++  });
++  it("timeout aborts an uncooperative transport",async()=>{
++    const t=transport();let signal:AbortSignal|undefined;t.retrieve=async(_,s)=>{signal=s;return new Promise(()=>{});};
++    const r=await new AgentReachAdapter(t,5).retrieve(request);expect(r.status).toBe("FAILED");expect(signal?.aborted).toBe(true);
++  });
++  it("health is telemetry and never source evidence",async()=>{
++    const adapter=new AgentReachAdapter(transport());const h=await adapter.health();expect(h.installed).toBe(true);expect(h).not.toHaveProperty("evidence");
++    const unavailable=new LocalAgentReachTransport("/definitely-missing-agent-reach");expect((await unavailable.health()).status).toBe("UNAVAILABLE");
++    expect((await new AgentReachAdapter(unavailable).retrieve(request)).status).toBe("UNAVAILABLE");
++  });
++  it("reports unsupported native search separately",async()=>{
++    const native=new LocalAgentReachTransport("/missing");expect((await new AgentReachAdapter(native).retrieve({...request,platform:"reddit"})).status).toBe("UNSUPPORTED_CAPABILITY");
++  });
++  it("rejects tampering even when an attacker recomputes the envelope hash",()=>{
++    const r=result();r.evidence[0].status="VERIFIED";r.evidence[0].production_eligible=true;
++    r.identity=createCanonicalIdentity({object_id:r.identity.object_id,object_type:r.identity.object_type,version:"v1",artifact:r,created_at:at});
++    expect(validateExternalResult(r)).toBe(false);expect(()=>externalObservations(context(r),["AudienceObservation"])).toThrow();
++  });
++  it("rejects cross-project context",()=>expect(()=>externalObservations({project_id:"other",results:[result()]},["AudienceObservation"])).toThrow());
++  it("requires exact-bound independent reviewed evidence and B00 approval",()=>{
++    const r=result(),c=context(r);expect(eligibleExternalReview(r.observations[0],c)).toBeUndefined();
++    c.reviews=[review(r)];expect(eligibleExternalReview(r.observations[0],c)).toBeDefined();
++    c.reviews[0].observation_content_hash="changed";expect(eligibleExternalReview(r.observations[0],c)).toBeUndefined();
++    c.reviews=[review(r)];c.reviews[0].governance_events=[];expect(eligibleExternalReview(r.observations[0],c)).toBeUndefined();
++  });
++  it("review cannot reuse retrieval evidence or promote a MOCK source",()=>{
++    const r=result(),c=context(r);const receipt=review(r);receipt.evidence_refs=r.evidence;c.reviews=[receipt];expect(eligibleExternalReview(r.observations[0],c)).toBeUndefined();
++    const mock=result("MOCK");expect(eligibleExternalReview(mock.observations[0],{...context(mock),reviews:[review(mock)]})).toBeUndefined();
++  });
++});
++
++describe("B08 external module integration (controlled fixtures; NOT live)",()=>{
++  it("feeds B02 only channel-bound source reports without changing heuristic scores",async()=>{
++    const r=result("REAL",{...request,observation_kind:"TrendObservation"}),plain=await runB02(b01),updated=await runB02(b01,{external_intelligence:context(r)});
++    expect(updated.opportunities.filter(o=>o.channel_id==="ch1").some(o=>o.supporting_evidence.some(e=>e.id===r.evidence[0].id))).toBe(true);
++    expect(updated.opportunities.filter(o=>o.channel_id==="ch2").every(o=>!o.supporting_evidence.some(e=>e.id===r.evidence[0].id))).toBe(true);
++    expect(updated.opportunities.map(o=>o.strategic_relevance)).toEqual(plain.opportunities.map(o=>o.strategic_relevance));
++    expect(updated.opportunities.every(o=>o.strategic_relevance_basis==="HEURISTIC")).toBe(true);
++  });
++  it("feeds B03 without fabricated demographics, geographic scope or verified truth",()=>{
++    const r=result(),candidate=runB03(b01,{b01_canonical_state:b01,external_intelligence:context(r)});
++    expect(candidate.audience_segments).toHaveLength(1);expect(candidate.audience_segments[0].channel_ids).toEqual(["ch1"]);
++    expect(candidate.audience_segments[0].evidence_refs).toEqual(r.evidence);
++    expect(candidate.audience_segments[0].geography).toBeUndefined();expect(candidate.evidence_refs[0].status).toBe("UNKNOWN");
++  });
++  it.each(["MOCK","SYNTHETIC","UNKNOWN"] as const)("blocks %s results from B02/B03/B09",async mode=>{
++    const r=result(mode),c=context(r),audience=runB03(b01,{b01_canonical_state:b01,external_intelligence:c});
++    expect(audience.audience_segments).toEqual([]);
++    const opportunity=await runB02(b01,{external_intelligence:c});expect(opportunity.evidence_refs.some(e=>e.id===r.evidence[0].id)).toBe(false);
++    const b08=await runB08({kpi_definitions:[]} as any,b06,b01,{external_intelligence:c});
++    expect((await runB09(b08,b06)).observations).toEqual([]);
++  });
++  it("does not parse generic social text as KPI values",()=>expect(()=>result("REAL",{...request,observation_kind:"PerformanceObservation"},"Popular post with 100 likes")).toThrow());
++  it("retains B08 context through canonical persistence without fabricated analytics",async()=>{
++    const r=result(),b08=await runB08({kpi_definitions:[]} as any,b06,b01,{external_intelligence:context(r)});
++    const p=new InMemoryB08Persistence(),canonical=await commitB08(b08,"v1.0","fixture",p);
++    expect((await p.load("v1.0"))?.external_intelligence).toEqual(context(r));expect(canonical.analytics_results).toEqual([]);
++    expect((await runB09(canonical,b06)).observations).toEqual([]);
++  });
++  it("maps explicit measured KPI only after independent bound review",async()=>{
++    const base=await runB07(b04,b06),kpi=base.kpi_definitions[0];expect(kpi).toBeDefined();
++    const content=JSON.stringify({measurement:{metric_id:kpi.kpi_id,channel_id:"ch1",value:42,unit:kpi.target_unit,period_start:at,period_end:at}});
++    const r=result("REAL",{...request,observation_kind:"PerformanceObservation"},content),c=context(r);
++    const unreviewed=await runB07(b04,b06,{external_intelligence:c});expect(unreviewed.kpi_definitions[0].actual_metric_value).toBeUndefined();
++    c.reviews=[review(r)];const measured=await runB07(b04,b06,{external_intelligence:c});expect(measured.kpi_definitions[0].actual_metric_value).toBe(42);
++    expect(measured.kpi_definitions[0].target_definition).toEqual(base.kpi_definitions[0].target_definition);
++    expect(r.evidence[0].status).toBe("UNKNOWN");
++  });
++  it("B09 reviewed nonmetric observation reaches B10 as an unapproved review proposal",async()=>{
++    const r=result(),c=context(r);c.reviews=[review(r)];const b08=await runB08({kpi_definitions:[]} as any,b06,b01,{external_intelligence:c});
++    const b09=await runB09(b08,b06);expect(b09.observations).toHaveLength(1);expect(b09.observations[0].observation_type).toBe("external_audience");
++    expect(b09.observations[0].magnitude).toBeUndefined();expect(b09.signals[0].signal_type).toBe("neutral_observation");
++    const b10=await runB10(b09);expect(b10.optimization_proposals).toHaveLength(1);expect(b10.optimization_proposals[0].required_approval).toBe(true);
++    expect(b10.optimization_proposals[0].provenance.type).toBe("RECOMMENDED");expect(b10.governance_events).toEqual({});
++    expect(b10.optimization_proposals[0].evidence_refs.some(e=>e.id===r.evidence[0].id)).toBe(true);
++  });
++});
++
++describe("B11 exact subject binding",()=>{
++  const rule:any={rule_id:"rule",scope:["B10"]};const subject:any={subject_id:"s",subject_type:"B10_OPT",subject_version:"v1.0",subject_content_hash:"hash",affected_modules:["B10"]};
++  const evidence:any={rule_id:"rule",subject_id:"s",subject_type:"B10_OPT",subject_version:"v1.0",subject_content_hash:"hash",assertion:"SATISFIES",rationale:"Controlled reviewer fixture",evidence_ref:{id:"confirmed",source:"fixture",status:"VERIFIED",origin:"DOCUMENTATION",basis:"OBSERVED",source_mode:"REAL"}};
++  it.each(["subject_id","subject_type","subject_version","subject_content_hash"])("rejects wrong %s",field=>{
++    expect(runComplianceChecks([rule],[subject],{complianceEvidence:[{...evidence,[field]:"wrong"} ]})[0].status).toBe("UNKNOWN");
++  });
++  it("accepts eligible bound confirmation, rejects raw retrieval and unbound legacy evidence",()=>{
++    expect(runComplianceChecks([rule],[subject],{complianceEvidence:[evidence]})[0].status).toBe("COMPLIANT");
++    expect(runComplianceChecks([rule],[subject],{complianceEvidence:[{...evidence,evidence_ref:result().evidence[0]}]})[0].status).toBe("UNKNOWN");
++    expect(runComplianceChecks([rule],[subject],{complianceEvidence:[{...evidence,subject_version:undefined} ]})[0].status).toBe("UNKNOWN");
++  });
++  it("legacy numeric count summaries never establish semantic compliance",()=>expect(calculateComplianceCompleteness(5,5,0,[]).semantic_status).toBe("UNKNOWN"));
++});
++
++
++describe("Native Agent Reach backend binding (subprocess/fetch fixtures)",()=>{
++  it("parses the upstream version format, calls doctor, and bounds native retrieval",async()=>{
++    const dir=await mkdtemp(join(tmpdir(),"b08-native-fixture-"));
++    const cli=join(dir,"agent-reach-fixture");
++    await writeFile(cli,`#!${process.execPath}\nconsole.log(process.argv.includes('--version') ? 'Agent Reach v1.5.0' : 'fixture doctor');\n`,{mode:0o755});
++    const fetchMock=vi.fn().mockResolvedValue(new Response("retrieved public report",{status:200}));
++    vi.stubGlobal("fetch",fetchMock);
++    try {
++      const native=new LocalAgentReachTransport(cli,()=>at),adapter=new AgentReachAdapter(native);
++      const health=await adapter.health();expect(health.installed).toBe(true);expect(health.reachable).toBe(true);expect(health.provider_version).toBe("1.5.0");
++      expect(health.capabilities[0].status).toBe("UNKNOWN");
++      const r=await adapter.retrieve(request);expect(r.status).toBe("EXECUTED_REAL");expect(r.evidence[0].status).toBe("UNKNOWN");
++      expect(fetchMock.mock.calls[0][0]).toBe("https://r.jina.ai/https://example.com/report");
++      expect((await adapter.health()).capabilities[0].status).toBe("AVAILABLE");
++      for(const [code,status] of [[401,"AUTH_REQUIRED"],[403,"AUTH_REQUIRED"],[429,"RATE_LIMITED"],[500,"FAILED"]] as const){
++        fetchMock.mockResolvedValueOnce(new Response("backend error",{status:code}));expect((await adapter.retrieve(request)).status).toBe(status);
++      }
++      for(const url of ["https://127.0.0.1/","https://localhost/","https://host.internal/","http://example.com/"]){
++        expect((await adapter.retrieve({...request,query:url})).status).toBe("UNSUPPORTED_CAPABILITY");
++      }
++      expect((await adapter.retrieve({...request,time_range:{start:at,end:at}})).status).toBe("UNSUPPORTED_CAPABILITY");
++    } finally {vi.unstubAllGlobals();await rm(dir,{recursive:true,force:true});}
++  });
++});
++
++it("preserves distinct id-less B01 provenance while deduplicating actual duplicates",()=>{
++ const a:any={type:"OBSERVED",decision_authority:"source-a",timestamp:at};
++ const b:any={type:"OBSERVED",decision_authority:"source-b",timestamp:at};
++ expect(platformRegistryProvenance({web:{provenance_refs:[a,b,a],capabilities:[]}} as any)).toEqual([a,b]);
++});
++
++it("B12 preserves external evidence lineage without promoting operational readiness",async()=>{
++ const {createBranchState}=await import("../../src/b12/orchestration.js");
++ const r=result(),p=new InMemoryB08Persistence();
++ const candidate=await runB08({kpi_definitions:[]} as any,b06,b01,{external_intelligence:context(r)});
++ await commitB08(candidate,"v1.0","fixture",p);
++ const branch=await createBranchState(undefined,undefined,undefined,undefined,undefined,undefined,undefined,"v1.0",undefined,undefined,undefined,{upstreamReader:{b08:p} as any});
++ expect(branch.evidence_refs.some(e=>e.id===r.evidence[0].id && e.status==="UNKNOWN")).toBe(true);
++ expect(branch.provenance_refs.some(p=>p.subject_id===r.sources[0].source_id)).toBe(true);
++ expect(branch.completeness_summary.operational_readiness).toBe("NOT_READY");
++});
++
++it.each(["MOCK","SYNTHETIC","UNKNOWN"] as const)("B07 never uses %s measured fixtures as actual values",async mode=>{
++ const base=await runB07(b04,b06),kpi=base.kpi_definitions[0];
++ const content=JSON.stringify({measurement:{metric_id:kpi.kpi_id,channel_id:"ch1",value:42,unit:kpi.target_unit,period_start:at,period_end:at}});
++ const r=result(mode,{...request,observation_kind:"PerformanceObservation"},content);
++ const measured=await runB07(b04,b06,{external_intelligence:{...context(r),reviews:[review(r)]}});
++ expect(measured.kpi_definitions.every(k=>k.actual_metric_value===undefined && k.external_measurements===undefined)).toBe(true);
++});
++
++it("B08 never fabricates a missing campaign or mixes metric ownership between campaigns",async()=>{
++ const {buildAnalyticsContext}=await import("../../src/b08/phases/B08_01_registry.js");
++ const {defineAnalyticsWorkflows}=await import("../../src/b08/phases/B08_04_workflows.js");
++ const missing=buildAnalyticsContext({kpi_definitions:[{kpi_id:"orphan",channel_id:"ch1",metric_name:"views"}]} as any,b06,b01);
++ expect(missing.campaigns).toEqual([]);expect(missing.gaps).toContain("missing_campaign_for_kpi:orphan");
++ const ctx:any={campaigns:[{campaign_id:"a",campaign_name:"A"},{campaign_id:"b",campaign_name:"B"}],kpis:[{kpi_id:"ka",campaign_id:"a"},{kpi_id:"kb",campaign_id:"b"}],channels:[],gaps:[]};
++ const workflows=defineAnalyticsWorkflows(ctx,[],[{metric_id:"ma",kpi_id:"ka",source_id:"sa"},{metric_id:"mb",kpi_id:"kb",source_id:"sb"}] as any);
++ expect(workflows[0].metric_ids).toEqual(["ma"]);expect(workflows[1].metric_ids).toEqual(["mb"]);
++});
+--- a/tests/repair/repair-adversarial.test.ts
++++ b/tests/repair/repair-adversarial.test.ts
+@@ -135,7 +135,7 @@
+     const subject: any = { subject_id: "subject1", subject_type: "B10_OPT", subject_version: "v1.0", subject_content_hash: "hash", affected_modules: ["B10"] };
+     expect(runComplianceChecks([rule], [subject], { complianceEvidence: [] })[0]?.status).toBe("UNKNOWN");
+ 
+-    const evidence: any = { evidence_ref: { id: "real", source: "review", status: "VERIFIED", origin: "DOCUMENTATION", basis: "OBSERVED", source_mode: "REAL" }, rule_id: "rule1", subject_id: "subject1", assertion: "SATISFIES", rationale: "Reviewed evidence satisfies the rule" };
++    const evidence: any = { evidence_ref: { id: "real", source: "review", status: "VERIFIED", origin: "DOCUMENTATION", basis: "OBSERVED", source_mode: "REAL" }, rule_id: "rule1", subject_id: "subject1", subject_type: subject.subject_type, subject_version: subject.subject_version, subject_content_hash: subject.subject_content_hash, assertion: "SATISFIES", rationale: "Reviewed evidence satisfies the rule" };
+     const hashA = runComplianceChecks([rule], [subject], { hash: { stableRuleId: () => "a", stableCheckId: () => "a" }, complianceEvidence: [evidence] })[0]!;
+     const hashB = runComplianceChecks([rule], [subject], { hash: { stableRuleId: () => "b", stableCheckId: () => "b" }, complianceEvidence: [evidence] })[0]!;
+     expect(hashA.status).toBe("COMPLIANT");
+--- a/tsconfig.repair.json
++++ b/tsconfig.repair.json
+@@ -0,0 +1,16 @@
++{
++  "extends": "./tsconfig.json",
++  "compilerOptions": {
++    "rootDir": ".",
++    "declaration": false,
++    "noEmit": true
++  },
++  "include": [
++    "src/**/*.ts",
++    "tests/repair/**/*.ts"
++  ],
++  "exclude": [
++    "node_modules",
++    "dist"
++  ]
++}
+--- a/verification/critical-invariants.mjs
++++ b/verification/critical-invariants.mjs
+@@ -97,7 +97,7 @@
+ await check('R16 compliance result is evidence-based, not rule/check hash', () => {
+   const rule={rule_id:'ruleX',rule_category:'platform',description:'x',scope:['B10'],required:true,rule_basis:'USER_DEFINED',external_verified:false,evidence_refs:[],provenance:{type:'DECIDED',decision_authority:'u',timestamp:'2026-09-06T00:00:00Z'}};
+   const subject={subject_id:'subjX',subject_type:'B10_OPT',subject_version:'v1.0',subject_content_hash:'h',affected_modules:['B10']};
+-  const ev={evidence_ref:{id:'real1',source:'review',status:'VERIFIED',origin:'DOCUMENTATION',basis:'OBSERVED',source_mode:'REAL',production_eligible:true},rule_id:'ruleX',subject_id:'subjX',assertion:'SATISFIES',rationale:'Reviewed source satisfies rule'};
++  const ev={evidence_ref:{id:'real1',source:'review',status:'VERIFIED',origin:'DOCUMENTATION',basis:'OBSERVED',source_mode:'REAL',production_eligible:true},rule_id:'ruleX',subject_id:'subjX',subject_type:subject.subject_type,subject_version:subject.subject_version,subject_content_hash:subject.subject_content_hash,assertion:'SATISFIES',rationale:'Reviewed source satisfies rule'};
+   const mk=(id)=>runComplianceChecks([rule],[subject],{hash:{stableRuleId:()=>id,stableCheckId:()=>id},now:()=> '2026-09-06T00:00:00Z',complianceEvidence:[ev]})[0];
+   assert.equal(mk('aaa').status,'COMPLIANT'); assert.equal(mk('bbb').status,'COMPLIANT');
+ });

@@ -1,0 +1,2159 @@
+{
+  "zip_crc": "PASS",
+  "file_count": 178,
+  "original_manifest_files": 177,
+  "source_ts_files": 127,
+  "original_legacy_files": 15,
+  "original_repair_files": 3,
+  "files": [
+    {
+      "path": "FINAL_REPAIR_REPORT.md",
+      "bytes": 17001,
+      "lines": 349,
+      "sha256": "d457643ded705cab89215a86e9edf30b2b40d8e024f83f2f6bd4991a22ff13d9",
+      "imports": []
+    },
+    {
+      "path": "FINAL_STATUS_AND_RISKS.md",
+      "bytes": 5952,
+      "lines": 74,
+      "sha256": "286804261eca8dc8387021f5782ae7d22f03f9c193bc71fb1f6a54c90a97b529",
+      "imports": []
+    },
+    {
+      "path": "README.md",
+      "bytes": 2262,
+      "lines": 60,
+      "sha256": "8c1f94347546ec01c12b15f6deb9459c52d687a61cfeb9302345eaa9ba1b3320",
+      "imports": []
+    },
+    {
+      "path": "RELEASE_STATUS.md",
+      "bytes": 1647,
+      "lines": 33,
+      "sha256": "c950281b2aefe085e28f4a25ad25d32bb3a7cf3b82e085899780a61a04ab8de9",
+      "imports": []
+    },
+    {
+      "path": "docs/CHANGED_B_SOURCE_FILES.txt",
+      "bytes": 2815,
+      "lines": 84,
+      "sha256": "106ac4588489f1a0e772c0ae999b0d3db53d5a5b098be6750915e5ae0d533b1c",
+      "imports": []
+    },
+    {
+      "path": "docs/HISTORICAL_BOUNDARY.md",
+      "bytes": 618,
+      "lines": 7,
+      "sha256": "aba140c77ed694219b77d8125eba3043ea0bb3bc71942e80f7ee7e27240ef4b0",
+      "imports": []
+    },
+    {
+      "path": "docs/REPAIR_LEDGER.json",
+      "bytes": 1690,
+      "lines": 31,
+      "sha256": "603ffb4d95c93a85d1f8573294b07dd6d3b898a1d7b873b230f1d163de9034d9",
+      "imports": []
+    },
+    {
+      "path": "docs/REPAIR_REPORT.md",
+      "bytes": 35084,
+      "lines": 617,
+      "sha256": "5978d6e1eaa176a50307741d8af749661cef1279030a6d3e027595ff27c1934c",
+      "imports": []
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 29071,
+      "lines": 896,
+      "sha256": "80b6c0901c01fd23d25232aaf4475709948569dba4e03342738010bbbf3d5538",
+      "imports": []
+    },
+    {
+      "path": "package.json",
+      "bytes": 1407,
+      "lines": 47,
+      "sha256": "590b3ca6bd3eb7aa01ea5454af068af8fa56dd32ee2ae5f30fbfa85c385531ff",
+      "imports": []
+    },
+    {
+      "path": "scripts/generate-manifest.mjs",
+      "bytes": 1718,
+      "lines": 41,
+      "sha256": "39d7a955e2ad386f7ef26008b1f65f0d1d70cac154ce39add6c52b3e0efaf475",
+      "imports": []
+    },
+    {
+      "path": "scripts/source-policy-check.mjs",
+      "bytes": 2215,
+      "lines": 40,
+      "sha256": "42ad25f2635ca0d742a5ca0b799b9429d8052000d0d88455e219ea61be1218e8",
+      "imports": []
+    },
+    {
+      "path": "scripts/verify-manifest.mjs",
+      "bytes": 2182,
+      "lines": 42,
+      "sha256": "965822a0a560554cd96f7d3fe7b4f267ef884d96c71cc8183c3598ac33c90a4d",
+      "imports": []
+    },
+    {
+      "path": "src/b00/auditTrail.ts",
+      "bytes": 9843,
+      "lines": 303,
+      "sha256": "628c3900db8c33a24317c4e17064d35c7898a19951fe15d96b1d939036f7b494",
+      "imports": [
+        "../types/entities.js",
+        "./hashing.js"
+      ]
+    },
+    {
+      "path": "src/b00/contracts.ts",
+      "bytes": 7110,
+      "lines": 240,
+      "sha256": "da2f0b1f31ed12cb722f0266b06198ce2bf543b3e0ed325f3b6dca3127cfe4ea",
+      "imports": [
+        "../types/entities.js",
+        "./provenanceRef.js",
+        "./auditTrail.js",
+        "./identity.js",
+        "./governance.js",
+        "./terminology.js",
+        "../types/entities.js"
+      ]
+    },
+    {
+      "path": "src/b00/evidence.ts",
+      "bytes": 3829,
+      "lines": 90,
+      "sha256": "0ad6842a7b758df82f53cc2e6a477ebaf11f6d52155289ae5c9b1a7f32b4561f",
+      "imports": [
+        "../types/entities.js"
+      ]
+    },
+    {
+      "path": "src/b00/governance.ts",
+      "bytes": 8904,
+      "lines": 179,
+      "sha256": "8a3210585c60d5ea2d91368d6aa3a6cd9deb99a6f2cf8528d64d27e4885129e1",
+      "imports": [
+        "./provenanceRef.js",
+        "./provenanceRef.js",
+        "./hashing.js",
+        "./identity.js"
+      ]
+    },
+    {
+      "path": "src/b00/hashing.ts",
+      "bytes": 3175,
+      "lines": 76,
+      "sha256": "3af4d915b700e4b877112c5c67087fdf5f39dae4a85edda1d96a20fe8d24dac9",
+      "imports": [
+        "node:crypto"
+      ]
+    },
+    {
+      "path": "src/b00/identity.ts",
+      "bytes": 5758,
+      "lines": 178,
+      "sha256": "22a9a379c2834d9dc9fa2e4344299fb9d1138ddeb54025deb06ff7ee2be402d9",
+      "imports": [
+        "./hashing.js"
+      ]
+    },
+    {
+      "path": "src/b00/index.ts",
+      "bytes": 461,
+      "lines": 17,
+      "sha256": "261f6f2d809478d248d15b9d453f658e33ff99f80780f2038e66504f2316bed0",
+      "imports": [
+        "./terminology.js",
+        "./contracts.js",
+        "./provenanceRef.js",
+        "./auditTrail.js",
+        "./hashing.js",
+        "./governance.js",
+        "./identity.js",
+        "./evidence.js",
+        "./stableIds.js",
+        "./lineage.js",
+        "./validation.js"
+      ]
+    },
+    {
+      "path": "src/b00/lineage.ts",
+      "bytes": 1893,
+      "lines": 12,
+      "sha256": "320be3ab49c4cb7b88d88a9b8372207ae99a98a85eaf2c441348e753e6a5ab2d",
+      "imports": [
+        "./identity.js"
+      ]
+    },
+    {
+      "path": "src/b00/provenanceRef.ts",
+      "bytes": 8557,
+      "lines": 224,
+      "sha256": "26dcbf552c3cd3b3a3a1284b59eba53f69c6b4c2b531c8245e232be034ef3b35",
+      "imports": [
+        "../types/entities.js"
+      ]
+    },
+    {
+      "path": "src/b00/stableIds.ts",
+      "bytes": 1133,
+      "lines": 11,
+      "sha256": "44326fe62ced25b87bf40ff2d9143a951f95579c9fe6a2e06ce27b4b21dd12db",
+      "imports": [
+        "./hashing.js"
+      ]
+    },
+    {
+      "path": "src/b00/terminology.ts",
+      "bytes": 8726,
+      "lines": 254,
+      "sha256": "7abe28a728a9b5138848560be02245576d498db0ef10673256b6dda0670b7209",
+      "imports": []
+    },
+    {
+      "path": "src/b00/validation.ts",
+      "bytes": 2667,
+      "lines": 7,
+      "sha256": "30a5290e8fb50cbb4d6b917d5a2057d867aaedb1f38bb39105fc276a6f107103",
+      "imports": [
+        "../types/entities.js",
+        "./evidence.js",
+        "./governance.js",
+        "./governance.js",
+        "./provenanceRef.js",
+        "./provenanceRef.js"
+      ]
+    },
+    {
+      "path": "src/b01/completeness.ts",
+      "bytes": 11153,
+      "lines": 247,
+      "sha256": "ee1237e73873e80bfa1b34a2fddb38242f6735ba1ef0fce27978685e4fb8b8cd",
+      "imports": [
+        "./types.js",
+        "../types/entities.js",
+        "../b00/provenanceRef.js"
+      ]
+    },
+    {
+      "path": "src/b01/conflicts.ts",
+      "bytes": 7822,
+      "lines": 193,
+      "sha256": "0bf88e72702d54115db6f29c97e3434dfdb204da20119ce56dc9bb1a971e1aa5",
+      "imports": [
+        "./types.js",
+        "../b00/contracts.js"
+      ]
+    },
+    {
+      "path": "src/b01/index.ts",
+      "bytes": 2042,
+      "lines": 57,
+      "sha256": "f97aab8db458117d14a067f94c9ce27ac242f14be9de3935762f7c0092a0437f",
+      "imports": [
+        "../b00/contracts.js",
+        "./types.js",
+        "./phases/B01_01_ecosystem.js",
+        "./phases/B01_02_brand_arch.js",
+        "./phases/B01_03_channel_roles.js",
+        "./phases/B01_04_relationships.js",
+        "./phases/B01_05_platform_registry.js",
+        "./phases/B01_06_channel_fit.js",
+        "./phases/B01_07_territory.js",
+        "./phases/B01_08_distribution.js",
+        "./phases/B01_09_editorial.js",
+        "./phases/B01_10_decision_logic.js",
+        "./phases/B01_11_constraint_aggregation.js",
+        "./phases/B01_12_assembly.js",
+        "./conflicts.js",
+        "./completeness.js",
+        "./orchestration.js",
+        "./persistence.js"
+      ]
+    },
+    {
+      "path": "src/b01/orchestration.ts",
+      "bytes": 46530,
+      "lines": 962,
+      "sha256": "6ff95689b25a9e1841cae85fc6a61896693649f545e8b939223a30ac32c64efc",
+      "imports": [
+        "../b00/contracts.js",
+        "../b00/provenanceRef.js",
+        "../b00/provenanceRef.js",
+        "./types.js",
+        "../b00/terminology.js",
+        "./types.js",
+        "./types.js",
+        "../b00/hashing.js",
+        "../b00/identity.js",
+        "./completeness.js",
+        "./conflicts.js",
+        "../b00/auditTrail.js",
+        "../b00/governance.js",
+        "./phases/B01_01_ecosystem.js",
+        "./phases/B01_02_brand_arch.js",
+        "./phases/B01_03_channel_roles.js",
+        "./phases/B01_04_relationships.js",
+        "./phases/B01_05_platform_registry.js",
+        "./phases/B01_06_channel_fit.js",
+        "./phases/B01_07_territory.js",
+        "./phases/B01_08_distribution.js",
+        "./phases/B01_09_editorial.js",
+        "./phases/B01_10_decision_logic.js",
+        "./phases/B01_11_constraint_aggregation.js",
+        "./phases/B01_12_assembly.js"
+      ]
+    },
+    {
+      "path": "src/b01/persistence.ts",
+      "bytes": 2822,
+      "lines": 88,
+      "sha256": "9f298d33174ecf9b2d1fe9fd41f60cd6519e59e2491bb3263783ab17c64e8961",
+      "imports": [
+        "./types.js",
+        "../b00/contracts.js",
+        "../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_01_ecosystem.ts",
+      "bytes": 6139,
+      "lines": 178,
+      "sha256": "f91c4b541a8b0e146cd2754763ff2a02371c25ef9bc97d8c634f18dfc4e21a8b",
+      "imports": [
+        "../../b00/contracts.js",
+        "../../b00/terminology.js",
+        "../../b00/terminology.js",
+        "../types.js",
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_02_brand_arch.ts",
+      "bytes": 5064,
+      "lines": 147,
+      "sha256": "17031fcb9251d5e7753b197a1e7dea921b2ec41b7e4fff05076b05b903506c38",
+      "imports": [
+        "../../b00/stableIds.js",
+        "../../b00/contracts.js",
+        "../types.js",
+        "../types.js",
+        "../../b00/contracts.js",
+        "../../b00/provenanceRef.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_03_channel_roles.ts",
+      "bytes": 4842,
+      "lines": 132,
+      "sha256": "1890480d5ef5cccef0a6c92e3826f923cbb09f81a2c5c70c9e4dcadba0c15332",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js",
+        "../types.js",
+        "../../b00/terminology.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_04_relationships.ts",
+      "bytes": 6792,
+      "lines": 215,
+      "sha256": "4073bb3d4ff6ba7f2f3d584e08e7ba5662ff5d8adedb0e8f01d73fd7875527a2",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_05_platform_registry.ts",
+      "bytes": 6195,
+      "lines": 147,
+      "sha256": "f5be4581dab3a9c86e92e222f4f89af7b878bb1e6179652e20385f811b7c6a30",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/terminology.js",
+        "../../b00/contracts.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_06_channel_fit.ts",
+      "bytes": 6391,
+      "lines": 184,
+      "sha256": "3d24d208a4638f7dfe980cd7189d53e9c3238562240a56446f25e1c60bf8fbd6",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_07_territory.ts",
+      "bytes": 10081,
+      "lines": 300,
+      "sha256": "0735bf31578e73e254649fbb31ba2d67e889e4540154857b8f4b97e41cf78a25",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_08_distribution.ts",
+      "bytes": 8699,
+      "lines": 213,
+      "sha256": "e4829f4741734154e3c61864cebcf1834463eaecbdda4642e7f8136b11d7c8b4",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_09_editorial.ts",
+      "bytes": 10849,
+      "lines": 309,
+      "sha256": "95b937be45c93034679e58f9e44f803cb90f7f26af6905d40204f7f535f2cafa",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_10_decision_logic.ts",
+      "bytes": 9269,
+      "lines": 260,
+      "sha256": "a5a0a2f940a1477170b8f24018c0392af47d4df246eda12a5691a923e9ee0997",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_11_constraint_aggregation.ts",
+      "bytes": 9543,
+      "lines": 254,
+      "sha256": "ee400e932e9672e01511a2e7e2bbf1881639e354422b2f1298f103692a74b808",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "../../b00/terminology.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/stableIds.js"
+      ]
+    },
+    {
+      "path": "src/b01/phases/B01_12_assembly.ts",
+      "bytes": 4286,
+      "lines": 115,
+      "sha256": "1a74fb86e804df3e81c777c067a1273760214506c4adfeb5e060538a1647494e",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "./B01_11_constraint_aggregation.js",
+        "../completeness.js"
+      ]
+    },
+    {
+      "path": "src/b01/types.ts",
+      "bytes": 13079,
+      "lines": 328,
+      "sha256": "82a8247143878a5b0ce781ebacf7a2c509bdb9c0a8e290a1e008048134fd244d",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/auditTrail.js",
+        "../b00/contracts.js",
+        "../b00/terminology.js",
+        "./orchestration.js"
+      ]
+    },
+    {
+      "path": "src/b02/index.ts",
+      "bytes": 761,
+      "lines": 23,
+      "sha256": "1a2dff9f6d70ffcd22207a5b43681fb959a681d09d2e6ad1927e16feb03f6814",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B02_01_registry.js",
+        "./phases/B02_02_opportunities.js",
+        "./phases/B02_03_validation.js",
+        "./phases/B02_04_prioritization.js"
+      ]
+    },
+    {
+      "path": "src/b02/orchestration.ts",
+      "bytes": 12948,
+      "lines": 354,
+      "sha256": "22f9cedcec2c4a3c2576e1d27df8d9ede187084f2c69daeffbeb117fe537162a",
+      "imports": [
+        "../b00/contracts.js",
+        "../b00/provenanceRef.js",
+        "./types.js",
+        "./phases/B02_01_registry.js",
+        "./phases/B02_02_opportunities.js",
+        "./phases/B02_03_validation.js",
+        "./phases/B02_04_prioritization.js",
+        "../b00/hashing.js",
+        "../b00/governance.js",
+        "../b00/auditTrail.js",
+        "../b00/auditTrail.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b02/persistence.ts",
+      "bytes": 2768,
+      "lines": 76,
+      "sha256": "860f3f01587312f31b6cb105075313c5caa7a4086d491c16813d3381996e01cf",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b02/phases/B02_01_registry.ts",
+      "bytes": 3231,
+      "lines": 103,
+      "sha256": "779673fa4562ee968ca0ac7c8ea646f362efa9aa762923ec212a7128979bb598",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js",
+        "../../b00/terminology.js"
+      ]
+    },
+    {
+      "path": "src/b02/phases/B02_02_opportunities.ts",
+      "bytes": 10167,
+      "lines": 266,
+      "sha256": "61126b525f8102cea82d57e420984abb3f49ecb345dc72ec640a35913ec421c5",
+      "imports": [
+        "../../b00/contracts.js",
+        "../../b00/provenanceRef.js",
+        "../types.js",
+        "./B02_01_registry.js",
+        "../../b00/hashing.js",
+        "../../b00/evidence.js"
+      ]
+    },
+    {
+      "path": "src/b02/phases/B02_03_validation.ts",
+      "bytes": 5015,
+      "lines": 144,
+      "sha256": "8d2a7434029bed458c792df493d8f3e64895c0b754acd99ae92301463eaf04c4",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b02/phases/B02_04_prioritization.ts",
+      "bytes": 3699,
+      "lines": 119,
+      "sha256": "add811595230cb92c3e47b3b5af731d4a300140a086df58eaa900c8e171d1232",
+      "imports": [
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b02/types.ts",
+      "bytes": 6823,
+      "lines": 194,
+      "sha256": "62f504cdddce942d24d73d75ff9e1483187cf66e1d8bc9980f134a3d4bdfce6c",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/auditTrail.js",
+        "../b00/contracts.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b03/index.ts",
+      "bytes": 1354,
+      "lines": 67,
+      "sha256": "ad5a2d2ac361a513ee4ec0d42a186c62d9a81362a799ddb69f639deb96006d60",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./phases/B03_01_registry.js",
+        "./phases/B03_02_evidence.js",
+        "./phases/B03_03_segmentation.js",
+        "./phases/B03_04_synthesis.js",
+        "./phases/B03_05_validation.js",
+        "./orchestration.js",
+        "./persistence.js"
+      ]
+    },
+    {
+      "path": "src/b03/orchestration.ts",
+      "bytes": 13711,
+      "lines": 368,
+      "sha256": "024bedc2c35720580e1399fbd91bcb3d403bd5b7aa232ff365f924dec3b858e9",
+      "imports": [
+        "../b00/contracts.js",
+        "../b00/provenanceRef.js",
+        "./types.js",
+        "../b00/contracts.js",
+        "../b00/provenanceRef.js",
+        "../b00/hashing.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./phases/B03_01_registry.js",
+        "./phases/B03_02_evidence.js",
+        "./phases/B03_03_segmentation.js",
+        "./phases/B03_04_synthesis.js",
+        "./phases/B03_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b03/persistence.ts",
+      "bytes": 2384,
+      "lines": 64,
+      "sha256": "44eb4181400f8d38703c7b35f6b78ef5a116c2715b9df30ebb57634d4bc6d728",
+      "imports": [
+        "./types.js",
+        "../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b03/phases/B03_01_registry.ts",
+      "bytes": 2690,
+      "lines": 88,
+      "sha256": "8b7526c48c0ff393b64d5c8e4bfd1c578cfc560c5944a0ca9025b0996c34f04a",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b03/phases/B03_02_evidence.ts",
+      "bytes": 4855,
+      "lines": 69,
+      "sha256": "ebc85eed7b07c6da839dfa3de4514508fc5ad115f6f45bb959312ab1f4af1e33",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/contracts.js",
+        "../../b00/evidence.js"
+      ]
+    },
+    {
+      "path": "src/b03/phases/B03_03_segmentation.ts",
+      "bytes": 7340,
+      "lines": 191,
+      "sha256": "b984d7133392bef24ebba3713bd25220ce14c790ccaa2809401c6c792da16671",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js",
+        "../../b00/provenanceRef.js",
+        "../../types/entities.js",
+        "../../b00/hashing.js",
+        "../../b00/evidence.js"
+      ]
+    },
+    {
+      "path": "src/b03/phases/B03_04_synthesis.ts",
+      "bytes": 10493,
+      "lines": 277,
+      "sha256": "52ec9c7eaad2ae7e279f5ea69755e0a824b198b7d85b255c4f522015549eedb3",
+      "imports": [
+        "../types.js",
+        "../../b00/provenanceRef.js",
+        "../../types/entities.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b03/phases/B03_05_validation.ts",
+      "bytes": 6342,
+      "lines": 188,
+      "sha256": "3114291651c04c5097194b0eccf4e2f2a0c06710805f009d6c175e7e57dff68d",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b03/types.ts",
+      "bytes": 10156,
+      "lines": 299,
+      "sha256": "5c761157049e1749bc6a6df65bd0e4a28612d50158c673e56818283ca42676a6",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b04/index.ts",
+      "bytes": 923,
+      "lines": 46,
+      "sha256": "7fdcb4bcb2d59792e13961c391879c0b836dfa8052d6e7907777c7b4d38fb4f2",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B04_01_registry.js",
+        "./phases/B04_02_opportunities.js",
+        "./phases/B04_03_synthesis.js",
+        "./phases/B04_04_validation.js"
+      ]
+    },
+    {
+      "path": "src/b04/orchestration.ts",
+      "bytes": 12146,
+      "lines": 329,
+      "sha256": "46f05977272bc12b0f0f59025c6e41f0869853d0116eeb1b537b5bbcb11d4679",
+      "imports": [
+        "../b00/contracts.js",
+        "../b00/provenanceRef.js",
+        "../b02/types.js",
+        "../b03/types.js",
+        "./types.js",
+        "./types.js",
+        "../b00/hashing.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./phases/B04_01_registry.js",
+        "./phases/B04_02_opportunities.js",
+        "./phases/B04_03_synthesis.js",
+        "./phases/B04_04_validation.js"
+      ]
+    },
+    {
+      "path": "src/b04/persistence.ts",
+      "bytes": 1550,
+      "lines": 45,
+      "sha256": "8dbc582c38e77a257269a25f799e8a4bd6acd9d2ce74958e3a717d96ae633d11",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b04/phases/B04_01_registry.ts",
+      "bytes": 4163,
+      "lines": 58,
+      "sha256": "bff517e48ba86cf394d473ae90f4e436d8d7cc5fa7e57b2ec1cfb2012a24e6b9",
+      "imports": [
+        "../../b00/contracts.js",
+        "../../b02/types.js",
+        "../../b03/types.js",
+        "../types.js",
+        "../../types/entities.js"
+      ]
+    },
+    {
+      "path": "src/b04/phases/B04_02_opportunities.ts",
+      "bytes": 2157,
+      "lines": 25,
+      "sha256": "b952b1a64733be0ad2943a1d8752aefff35d87fc23f06ae51fab461dff525b84",
+      "imports": [
+        "../types.js",
+        "./B04_01_registry.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b04/phases/B04_03_synthesis.ts",
+      "bytes": 4517,
+      "lines": 116,
+      "sha256": "cb05ad6de6373077e3af16add91750e93fb915b95f9a802ab6a949694631a601",
+      "imports": [
+        "../types.js",
+        "../types.js",
+        "../../b00/provenanceRef.js",
+        "./B04_01_registry.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b04/phases/B04_04_validation.ts",
+      "bytes": 4369,
+      "lines": 143,
+      "sha256": "e4ff87d2d582e13f3466d5bbdaa373ddc15f544c40b8423664b739f86314ada0",
+      "imports": [
+        "../types.js",
+        "../types.js",
+        "../../b00/contracts.js",
+        "./B04_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b04/types.ts",
+      "bytes": 6506,
+      "lines": 199,
+      "sha256": "3b16e07a6e56586add1a27d72f4adf2ec362548b584dc18bc4e9cd0a0a24b71b",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "../b02/types.js",
+        "../b03/types.js"
+      ]
+    },
+    {
+      "path": "src/b05/index.ts",
+      "bytes": 1010,
+      "lines": 29,
+      "sha256": "3cea0f3e2f88defa1a1e6f3d6d575e473a0f4a74916dc3e2bac5a56c89263595",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B05_01_registry.js",
+        "./phases/B05_02_angles.js",
+        "./phases/B05_03_messaging.js",
+        "./phases/B05_04_constraints.js",
+        "./phases/B05_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b05/orchestration.ts",
+      "bytes": 15739,
+      "lines": 407,
+      "sha256": "93ee91e1f135e9c4937f26b7a40c5fbcefea0793be799fa20b13a8ad10b6fcfd",
+      "imports": [
+        "./types.js",
+        "../b00/provenanceRef.js",
+        "./types.js",
+        "../b00/contracts.js",
+        "../b03/types.js",
+        "../b04/types.js",
+        "../b00/hashing.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./phases/B05_01_registry.js",
+        "./phases/B05_02_angles.js",
+        "./phases/B05_03_messaging.js",
+        "./phases/B05_04_constraints.js",
+        "./phases/B05_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b05/persistence.ts",
+      "bytes": 1550,
+      "lines": 45,
+      "sha256": "32a926993de405f29a5b07beb9b9b53eb078d1ba465cfd07c324cb6378b8359b",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b05/phases/B05_01_registry.ts",
+      "bytes": 2656,
+      "lines": 100,
+      "sha256": "eb71de48878610a68a80659b92daebd5821311018502812b21a2473dbc4b8e66",
+      "imports": [
+        "../../b00/contracts.js",
+        "../../b03/types.js",
+        "../../b04/types.js"
+      ]
+    },
+    {
+      "path": "src/b05/phases/B05_02_angles.ts",
+      "bytes": 4463,
+      "lines": 110,
+      "sha256": "06eed2fdd713c72e2286731187d91ad1d2bb5dccaf6c75a3f45c94987e08c1ac",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "./B05_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b05/phases/B05_03_messaging.ts",
+      "bytes": 4620,
+      "lines": 112,
+      "sha256": "d061b1cd9918f5789d94018e2cb78e5a2dcb6f26d5ef87eb4f7db5051a3da24f",
+      "imports": [
+        "../types.js",
+        "../../types/entities.js",
+        "../../b00/provenanceRef.js",
+        "./B05_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b05/phases/B05_04_constraints.ts",
+      "bytes": 4630,
+      "lines": 116,
+      "sha256": "66c7f4e34e4653de799231eb7e59cb61f743d2b51f732da75fc539d270b25920",
+      "imports": [
+        "../types.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/contracts.js",
+        "../../b04/types.js"
+      ]
+    },
+    {
+      "path": "src/b05/phases/B05_05_validation.ts",
+      "bytes": 4086,
+      "lines": 136,
+      "sha256": "7e07513a70deba8386139b440d200e57650c4fab1072267b8c9046c85bb6e310",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "./B05_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b05/types.ts",
+      "bytes": 7048,
+      "lines": 217,
+      "sha256": "2b497b30ad395b9d35ecb6a2690f7cd04e5673ef29c7019ffaa67aeffbf8f0a4",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "../b03/types.js",
+        "../b04/types.js"
+      ]
+    },
+    {
+      "path": "src/b06/index.ts",
+      "bytes": 959,
+      "lines": 27,
+      "sha256": "97c3b87d5aa6fc6f559e31b40eb21158c8120063ab43044fe07e4dbbb74d4696",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B06_01_registry.js",
+        "./phases/B06_02_channels.js",
+        "./phases/B06_03_scheduling.js",
+        "./phases/B06_04_formats.js",
+        "./phases/B06_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b06/orchestration.ts",
+      "bytes": 16262,
+      "lines": 400,
+      "sha256": "4bc95ce6f63bc44e876fa08f95506f92ed561a46cd2e47f61fbff44ee59f1bfd",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./types.js",
+        "./types.js",
+        "../b00/contracts.js",
+        "../b03/types.js",
+        "../b04/types.js",
+        "./phases/B06_01_registry.js",
+        "./phases/B06_02_channels.js",
+        "./phases/B06_03_scheduling.js",
+        "./phases/B06_04_formats.js",
+        "./phases/B06_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b06/persistence.ts",
+      "bytes": 1498,
+      "lines": 44,
+      "sha256": "7f08d24bc1e090ec58f4a3b7c93ef40f720f3abfd03d3b1ca6ca5459f447c89b",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b06/phases/B06_01_registry.ts",
+      "bytes": 2126,
+      "lines": 80,
+      "sha256": "0157b38809ee06f5394325bf0494d299692c47b3bb195cb66bea28cd3e9e5d0f",
+      "imports": [
+        "../../b00/contracts.js",
+        "../../b03/types.js",
+        "../../b04/types.js",
+        "../../b03/types.js"
+      ]
+    },
+    {
+      "path": "src/b06/phases/B06_02_channels.ts",
+      "bytes": 3192,
+      "lines": 88,
+      "sha256": "29ba07d628399cd8af9fbd77fbaa54de87e64c82a44ce7bbfdfe4845244697cd",
+      "imports": [
+        "../types.js",
+        "./B06_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b06/phases/B06_03_scheduling.ts",
+      "bytes": 3139,
+      "lines": 86,
+      "sha256": "6da20517998ced4adf55dd7502590224566b6f3335acef2bf7dbbdc228199941",
+      "imports": [
+        "../types.js",
+        "../types.js",
+        "./B06_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b06/phases/B06_04_formats.ts",
+      "bytes": 3288,
+      "lines": 89,
+      "sha256": "3dfaa0fb847557858ced3284610cf65cc764c08efda07116c07d626fb701e974",
+      "imports": [
+        "../types.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b06/phases/B06_05_validation.ts",
+      "bytes": 3191,
+      "lines": 116,
+      "sha256": "43773b2c74828969b786694ec2a646bcbd438a0bae5759c68dc67141fe9aa682",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "./B06_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b06/types.ts",
+      "bytes": 6837,
+      "lines": 218,
+      "sha256": "56844af5bf298e95506aa4054a69a77e1f2d9b1dd04f14097ac169a661e642c4",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "../b03/types.js",
+        "../b04/types.js"
+      ]
+    },
+    {
+      "path": "src/b07/index.ts",
+      "bytes": 698,
+      "lines": 22,
+      "sha256": "19b8e39690ef457f1007f673ec381424fd7e690f18af4dbddc6b7dbb1744aa8e",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B07_01_registry.js",
+        "./phases/B07_02_kpis.js",
+        "./phases/B07_03_measurement.js",
+        "./phases/B07_04_success.js",
+        "./phases/B07_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b07/orchestration.ts",
+      "bytes": 13477,
+      "lines": 343,
+      "sha256": "f490fd028f48258290599c9963a29483ce16a969974d2263ccf523aba61d9c34",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./types.js",
+        "../b04/types.js",
+        "../b06/types.js",
+        "./phases/B07_01_registry.js",
+        "./phases/B07_02_kpis.js",
+        "./phases/B07_03_measurement.js",
+        "./phases/B07_04_success.js",
+        "./phases/B07_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b07/persistence.ts",
+      "bytes": 1493,
+      "lines": 42,
+      "sha256": "c81c803b3ee70323f3d44c073439b5f87ac4060223fb3dfff677ab57b518c170",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b07/phases/B07_01_registry.ts",
+      "bytes": 1517,
+      "lines": 50,
+      "sha256": "1afb7c128793873f60c23e8f3d45f6ee310d35e7a2c7c03ec681b78190651787",
+      "imports": [
+        "../../b04/types.js",
+        "../../b06/types.js"
+      ]
+    },
+    {
+      "path": "src/b07/phases/B07_02_kpis.ts",
+      "bytes": 3566,
+      "lines": 93,
+      "sha256": "e86ba9d9eac614c720a645cc082e15d564653fe43709cf2e7090f9e2d2bf19ff",
+      "imports": [
+        "../types.js",
+        "./B07_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b07/phases/B07_03_measurement.ts",
+      "bytes": 1800,
+      "lines": 53,
+      "sha256": "7fcaae11a2836defb67c734d7a7cb559b7c80af9f71f157e388c51afea0981f9",
+      "imports": [
+        "../types.js",
+        "./B07_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b07/phases/B07_04_success.ts",
+      "bytes": 1921,
+      "lines": 52,
+      "sha256": "c1d1b454762a9f78b20605100c8cbdd7e2a4e8c9fe8cfe6fd3056b636a9dab7b",
+      "imports": [
+        "../types.js",
+        "./B07_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b07/phases/B07_05_validation.ts",
+      "bytes": 2438,
+      "lines": 94,
+      "sha256": "b3295f438698898953f55bfbe21b5fdcef66cec7b38f32a825871db93bfc4a10",
+      "imports": [
+        "../types.js",
+        "../../b00/contracts.js",
+        "./B07_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b07/types.ts",
+      "bytes": 6509,
+      "lines": 205,
+      "sha256": "248c166892b3906a8559b31e78d894b26ff78f519271e8bf6c1871a2e46c96b8",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "../b04/types.js",
+        "../b06/types.js"
+      ]
+    },
+    {
+      "path": "src/b08/execution.ts",
+      "bytes": 2512,
+      "lines": 45,
+      "sha256": "2d3bbb49258f516c33669eabc31a4c3bbf99220d1ffe7c761df4729c3e40d1ff",
+      "imports": [
+        "./types.js",
+        "../b00/validation.js"
+      ]
+    },
+    {
+      "path": "src/b08/index.ts",
+      "bytes": 729,
+      "lines": 23,
+      "sha256": "2ae443568804e73d96e8b2f6b428343a31896487e0ea418c6da071309e69b1d1",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B08_01_registry.js",
+        "./phases/B08_02_sources.js",
+        "./phases/B08_03_metrics.js",
+        "./phases/B08_04_workflows.js",
+        "./phases/B08_05_validation.js",
+        "./execution.js"
+      ]
+    },
+    {
+      "path": "src/b08/orchestration.ts",
+      "bytes": 14164,
+      "lines": 323,
+      "sha256": "b1baff3fde1411c9d858d6c394cc58a5447eca2f224dba76e08d62d49d0dda31",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./execution.js",
+        "./types.js",
+        "../b00/contracts.js",
+        "../b06/types.js",
+        "../b07/types.js",
+        "./phases/B08_01_registry.js",
+        "./phases/B08_02_sources.js",
+        "./phases/B08_03_metrics.js",
+        "./phases/B08_04_workflows.js",
+        "./phases/B08_05_validation.js"
+      ]
+    },
+    {
+      "path": "src/b08/persistence.ts",
+      "bytes": 1487,
+      "lines": 42,
+      "sha256": "953fbcc453bf3296d6fce3361a8ace0ffbd2069dc620500c304289f83c48b5f8",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b08/phases/B08_01_registry.ts",
+      "bytes": 2055,
+      "lines": 63,
+      "sha256": "c970f5d477b7836ee580a80c712765f35901bae0b6b01dec84a138e5c22f0d01",
+      "imports": [
+        "../../b00/contracts.js",
+        "../../b06/types.js",
+        "../../b07/types.js"
+      ]
+    },
+    {
+      "path": "src/b08/phases/B08_02_sources.ts",
+      "bytes": 2572,
+      "lines": 70,
+      "sha256": "92897ea94ddd8a55f92a0d7cc7226876d2f4f450de5be9c0f4baba2cabbe5640",
+      "imports": [
+        "../types.js",
+        "./B08_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b08/phases/B08_03_metrics.ts",
+      "bytes": 2262,
+      "lines": 62,
+      "sha256": "65b6c8901e372fc9d766122e077534f58702e85cc8ef2a2e8db271faf3813bea",
+      "imports": [
+        "../types.js",
+        "./B08_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b08/phases/B08_04_workflows.ts",
+      "bytes": 2123,
+      "lines": 51,
+      "sha256": "0d360082f6e82714bd99ee81d47d523021c3fc880b5fb1038533b85176d2c659",
+      "imports": [
+        "../types.js",
+        "./B08_01_registry.js"
+      ]
+    },
+    {
+      "path": "src/b08/phases/B08_05_validation.ts",
+      "bytes": 2936,
+      "lines": 109,
+      "sha256": "620799dfdc357915a150fddcc4e06964fdb906d5861d3a4c897704edac0e3541",
+      "imports": [
+        "../../b00/contracts.js",
+        "./B08_01_registry.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b08/types.ts",
+      "bytes": 6585,
+      "lines": 161,
+      "sha256": "db0708bc5d1cc4df9959959f5af59cf1584677027af59afc48fb4710889bb666",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b09/index.ts",
+      "bytes": 664,
+      "lines": 21,
+      "sha256": "4c61dbdf2898dcc066934ed3053b1af9f87c112f9da4932bdc7117c58695506c",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B09_01_observations.js",
+        "./phases/B09_02_signals.js",
+        "./phases/B09_03_proposals.js",
+        "./phases/B09_04_validation.js"
+      ]
+    },
+    {
+      "path": "src/b09/orchestration.ts",
+      "bytes": 13411,
+      "lines": 311,
+      "sha256": "7ac77a8d063ba97171d9194aa42cdb274409e6fcd25d0da2278670e05d9716f1",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./types.js",
+        "../b08/types.js",
+        "../b06/types.js",
+        "./phases/B09_01_observations.js",
+        "./phases/B09_02_signals.js",
+        "./phases/B09_03_proposals.js",
+        "./phases/B09_04_validation.js"
+      ]
+    },
+    {
+      "path": "src/b09/persistence.ts",
+      "bytes": 1487,
+      "lines": 42,
+      "sha256": "a0c007741e54b06ee0da483d25914d2b554b9f0dbac265501987339332fc3f55",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b09/phases/B09_01_observations.ts",
+      "bytes": 3661,
+      "lines": 41,
+      "sha256": "891661d14aaed30207fb7bdff95e3b9fe50fbb6bf59fd00860a2825758a39ebe",
+      "imports": [
+        "../types.js",
+        "../../b08/types.js",
+        "../../b08/execution.js",
+        "../../b00/evidence.js",
+        "../../b06/types.js"
+      ]
+    },
+    {
+      "path": "src/b09/phases/B09_02_signals.ts",
+      "bytes": 1087,
+      "lines": 6,
+      "sha256": "bcb8c885e1ecf7537eb853ed2eb91671999f474bdf8ca6965c46b523e14a10a8",
+      "imports": [
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b09/phases/B09_03_proposals.ts",
+      "bytes": 1790,
+      "lines": 10,
+      "sha256": "58b54cce50d158fc97ee67753f1b8978371a016ee04b8663a4c60227f8f37a89",
+      "imports": [
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b09/phases/B09_04_validation.ts",
+      "bytes": 2100,
+      "lines": 86,
+      "sha256": "9f4456c8eaa00b4a5401bcbf09b17c76c71376f0d840c17a377bd368d071f952",
+      "imports": [
+        "../../b00/contracts.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b09/types.ts",
+      "bytes": 4885,
+      "lines": 143,
+      "sha256": "c0479f1cc13d6a40c3998537e005543d062f2c0ce8aa79eee0e1c3e915344215",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b10/index.ts",
+      "bytes": 613,
+      "lines": 18,
+      "sha256": "ae7970652bf89b16505608c5bcd954ccbd5cae118a74a977365ed0f8956ecbb5",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B10_01_proposals.js",
+        "./phases/B10_02_impact.js",
+        "./phases/B10_03_validation.js"
+      ]
+    },
+    {
+      "path": "src/b10/orchestration.ts",
+      "bytes": 6720,
+      "lines": 40,
+      "sha256": "469ebbc164eecdd953c1b3096e5987aee9acb972baaeae7be090581adac33133",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./types.js",
+        "../b09/types.js",
+        "./phases/B10_01_proposals.js",
+        "./phases/B10_02_impact.js",
+        "./phases/B10_03_validation.js"
+      ]
+    },
+    {
+      "path": "src/b10/persistence.ts",
+      "bytes": 1678,
+      "lines": 47,
+      "sha256": "150e595772f25728dc819ff6a2630003e07a182c1c721c18257d014aba17cca4",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b10/phases/B10_01_proposals.ts",
+      "bytes": 2587,
+      "lines": 38,
+      "sha256": "c923b4bf79e4a8c5b6c36b34696f551f109da8443c1680f6907549167e3d4778",
+      "imports": [
+        "../types.js",
+        "../../b09/types.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b10/phases/B10_02_impact.ts",
+      "bytes": 2898,
+      "lines": 30,
+      "sha256": "f08185c0b68d7de52f718b43fd206deeb57168904f9fd8b2d05ff4adc3f87d96",
+      "imports": [
+        "../types.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b10/phases/B10_03_validation.ts",
+      "bytes": 2914,
+      "lines": 95,
+      "sha256": "b872e88262f33871a4a26c427b4003823833c8722d2577b23ec7aa57d885aea1",
+      "imports": [
+        "../../b00/hashing.js",
+        "../types.js",
+        "../../b00/contracts.js"
+      ]
+    },
+    {
+      "path": "src/b10/types.ts",
+      "bytes": 3720,
+      "lines": 93,
+      "sha256": "c8db9fa73b19de6eedafcca5dc6acad432d62f7a86bf8a04e712c8f1a3bf247d",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b11/index.ts",
+      "bytes": 639,
+      "lines": 20,
+      "sha256": "80e0fd1bb8060d87cdb37df4ab520db275a65b759060626c6bb1213d1eb96f90",
+      "imports": [
+        "./types.js",
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./phases/B11_01_rules.js",
+        "./phases/B11_02_risks.js",
+        "./phases/B11_03_checks.js",
+        "./phases/B11_04_validation.js"
+      ]
+    },
+    {
+      "path": "src/b11/orchestration.ts",
+      "bytes": 7489,
+      "lines": 36,
+      "sha256": "b9772a2603ed2ee8c7cf7778a700a89d09f9dcf1d384defac8103194ec47b818",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/identity.js",
+        "./types.js",
+        "../b10/types.js",
+        "./phases/B11_01_rules.js",
+        "./phases/B11_02_risks.js",
+        "./phases/B11_03_checks.js",
+        "./phases/B11_04_validation.js"
+      ]
+    },
+    {
+      "path": "src/b11/persistence.ts",
+      "bytes": 1487,
+      "lines": 42,
+      "sha256": "3301252454b2dca0f39e3f02d4028549f9bbc3fddd4025a2e92479b3aad88e91",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b11/phases/B11_01_rules.ts",
+      "bytes": 3851,
+      "lines": 108,
+      "sha256": "c75fc2f4c7b05986e9ef438bca84e438e2ff72827980c4ca0582d771d208a4f9",
+      "imports": [
+        "../types.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b11/phases/B11_02_risks.ts",
+      "bytes": 4212,
+      "lines": 113,
+      "sha256": "e453f20c665efe677982e6b9754610a8d8a4e0073441654bea60890b72d5c13a",
+      "imports": [
+        "../types.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b11/phases/B11_03_checks.ts",
+      "bytes": 2746,
+      "lines": 26,
+      "sha256": "dde9e4e26f92251c9dae6d13575ee2c0224a0b42736bb7afa26028c12b548949",
+      "imports": [
+        "../types.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b11/phases/B11_04_validation.ts",
+      "bytes": 2436,
+      "lines": 7,
+      "sha256": "ccd484688150b316ef669ff58850a9fded782b2dba27ea0934b8741b5ca19b78",
+      "imports": [
+        "../../b00/hashing.js",
+        "../types.js",
+        "../../b00/contracts.js"
+      ]
+    },
+    {
+      "path": "src/b11/types.ts",
+      "bytes": 3980,
+      "lines": 29,
+      "sha256": "43e313bf665c5b20f912f2b24370b63f52ef2305235210f0f399c46bbfdc1fe8",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/contracts.js",
+        "../b00/governance.js",
+        "../b00/identity.js"
+      ]
+    },
+    {
+      "path": "src/b12/index.ts",
+      "bytes": 565,
+      "lines": 17,
+      "sha256": "d07ec6d6c2b73ffaafb1c89279ecaa06c2afa0e491f20ed0df3c5c6c6f33f1c1",
+      "imports": [
+        "./types.js",
+        "./orchestration.js",
+        "./persistence.js",
+        "./upstreamPersistenceAdapter.js",
+        "./phases/B12_00_upstream.js",
+        "./phases/B12_01_aggregate.js",
+        "./phases/B12_02_transitions.js",
+        "./phases/B12_03_completeness.js",
+        "./phases/B12_04_audit.js"
+      ]
+    },
+    {
+      "path": "src/b12/orchestration.ts",
+      "bytes": 4913,
+      "lines": 7,
+      "sha256": "66bc5994d295fc8a08aeedcf1707bf02c2c982ae32fa7c36995f2173088a4431",
+      "imports": [
+        "../b00/hashing.js",
+        "../b00/identity.js",
+        "./types.js",
+        "./phases/B12_01_aggregate.js",
+        "./phases/B12_02_transitions.js",
+        "./phases/B12_03_completeness.js",
+        "./phases/B12_04_audit.js",
+        "./phases/B12_00_upstream.js"
+      ]
+    },
+    {
+      "path": "src/b12/persistence.ts",
+      "bytes": 1630,
+      "lines": 54,
+      "sha256": "f11c6a27c61d3c1d8e29188a19cd79a30860d195ae06faca41483c5edb6c607b",
+      "imports": [
+        "./types.js"
+      ]
+    },
+    {
+      "path": "src/b12/phases/B12_00_upstream.ts",
+      "bytes": 10075,
+      "lines": 229,
+      "sha256": "2e8c78500deb6b6f31fb61dbc9612a8d74288c00241e3caff9bf187af3dadd5f",
+      "imports": [
+        "../../types/entities.js",
+        "../../b00/evidence.js",
+        "../../b00/lineage.js",
+        "../../b00/identity.js",
+        "../../b00/identity.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/provenanceRef.js",
+        "../../b00/governance.js",
+        "../../b00/governance.js",
+        "../../b00/contracts.js",
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b12/phases/B12_01_aggregate.ts",
+      "bytes": 1077,
+      "lines": 4,
+      "sha256": "38e889f1c7690c2eccf1c4def352be437a5ae11ed535dd63fdb5cd86ecf11e28",
+      "imports": [
+        "../types.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b12/phases/B12_02_transitions.ts",
+      "bytes": 1421,
+      "lines": 5,
+      "sha256": "59e22f31d5ead65cd7cb47addfad2d11e201c244f90f50d0711f5d313b1b527a",
+      "imports": [
+        "../types.js",
+        "../../b00/hashing.js"
+      ]
+    },
+    {
+      "path": "src/b12/phases/B12_03_completeness.ts",
+      "bytes": 1131,
+      "lines": 4,
+      "sha256": "ad0f277c317d9d574bc98cb1917da7b7598ee51ce8638fbc451a4684c0208ffe",
+      "imports": [
+        "../types.js",
+        "./B12_00_upstream.js"
+      ]
+    },
+    {
+      "path": "src/b12/phases/B12_04_audit.ts",
+      "bytes": 751,
+      "lines": 32,
+      "sha256": "f26d2cf566782ac0a512cdb5bd8fac3a1b0156c2cd4400c9428ee9a7dfc6ce45",
+      "imports": [
+        "../types.js"
+      ]
+    },
+    {
+      "path": "src/b12/types.ts",
+      "bytes": 3875,
+      "lines": 23,
+      "sha256": "d68a48ee7809717d68daa6a87aec43ba6ea5b77611ccc7534434a14254f527f9",
+      "imports": [
+        "../types/entities.js",
+        "../b00/provenanceRef.js",
+        "../b00/governance.js",
+        "../b00/contracts.js",
+        "../b00/identity.js",
+        "../b01/types.js",
+        "../b02/types.js",
+        "../b03/types.js",
+        "../b04/types.js",
+        "../b05/types.js",
+        "../b06/types.js",
+        "../b07/types.js",
+        "../b08/types.js",
+        "../b09/types.js",
+        "../b10/types.js",
+        "../b11/types.js"
+      ]
+    },
+    {
+      "path": "src/b12/upstreamPersistenceAdapter.ts",
+      "bytes": 2193,
+      "lines": 50,
+      "sha256": "518ff524edddf44e297c0908df600da8c133cbd6ece3520c0114eeb3b4504c64",
+      "imports": [
+        "./types.js",
+        "../b01/persistence.js",
+        "../b02/persistence.js",
+        "../b03/persistence.js",
+        "../b04/persistence.js",
+        "../b05/persistence.js",
+        "../b06/persistence.js",
+        "../b07/persistence.js",
+        "../b08/persistence.js",
+        "../b09/persistence.js",
+        "../b10/persistence.js",
+        "../b11/persistence.js"
+      ]
+    },
+    {
+      "path": "src/index.ts",
+      "bytes": 647,
+      "lines": 15,
+      "sha256": "5d07fc81c0a60f3bc4e4309bc6f31a62229d2a7db7305f11e3694a9858147f8c",
+      "imports": [
+        "./b00/index.js",
+        "./b01/index.js",
+        "./b02/index.js",
+        "./b03/index.js",
+        "./b04/index.js",
+        "./b05/index.js",
+        "./b06/index.js",
+        "./b07/index.js",
+        "./b08/index.js",
+        "./b09/index.js",
+        "./b10/index.js",
+        "./b11/index.js",
+        "./b12/index.js",
+        "./types/entities.js"
+      ]
+    },
+    {
+      "path": "src/types/entities.ts",
+      "bytes": 1267,
+      "lines": 37,
+      "sha256": "7a93c9d59f5530e9bf03ef00a5adc68a66e2202474a6f59b0cc899acef0e3135",
+      "imports": []
+    },
+    {
+      "path": "tests/b00-governance.test.ts",
+      "bytes": 14228,
+      "lines": 317,
+      "sha256": "1ff4a8b5e054b992b2de7845b09c703abc978f725df3c98062ebbaf7a411940c",
+      "imports": [
+        "vitest",
+        "../src/b00/governance.js",
+        "../src/b00/provenanceRef.js",
+        "../src/b00/auditTrail.js",
+        "../src/b00/hashing.js"
+      ]
+    },
+    {
+      "path": "tests/b00.test.ts",
+      "bytes": 14088,
+      "lines": 425,
+      "sha256": "19b6087972eb14f4b78722faf17802bb5b2b6fa09bc419ab439cbde9718b94a3",
+      "imports": [
+        "vitest",
+        "../src/b00/terminology.js",
+        "../src/b00/contracts.js",
+        "../src/b00/provenanceRef.js",
+        "../src/b00/auditTrail.js",
+        "../src/types/entities.js"
+      ]
+    },
+    {
+      "path": "tests/b01.test.ts",
+      "bytes": 92556,
+      "lines": 2352,
+      "sha256": "41c24e2ff1ed148fb86ca1410a3ecdf6eae41a2a2d3528a28e7a1fc6ecc02337",
+      "imports": [
+        "vitest",
+        "../src/b01/index.js",
+        "../src/b01/index.js",
+        "../src/b01/phases/B01_01_ecosystem.js",
+        "../src/b01/phases/B01_02_brand_arch.js",
+        "../src/b01/phases/B01_03_channel_roles.js",
+        "../src/b01/phases/B01_04_relationships.js",
+        "../src/b01/phases/B01_05_platform_registry.js",
+        "../src/b01/phases/B01_06_channel_fit.js",
+        "../src/b01/phases/B01_07_territory.js",
+        "../src/b01/phases/B01_08_distribution.js",
+        "../src/b01/phases/B01_09_editorial.js",
+        "../src/b01/phases/B01_10_decision_logic.js",
+        "../src/b01/phases/B01_11_constraint_aggregation.js",
+        "../src/b01/phases/B01_12_assembly.js",
+        "../src/b01/orchestration.js",
+        "../src/b01/completeness.js",
+        "../src/b01/conflicts.js",
+        "../src/b01/persistence.js"
+      ]
+    },
+    {
+      "path": "tests/b02.test.ts",
+      "bytes": 41345,
+      "lines": 1210,
+      "sha256": "772b1ef91553e045f8befaebf48170ff1c0d3f08c12eaea474012e525ebadfea",
+      "imports": [
+        "vitest",
+        "../src/b00/contracts.js",
+        "../src/b02/types.js",
+        "../src/b02/index.js",
+        "../src/b02/persistence.js"
+      ]
+    },
+    {
+      "path": "tests/b03.test.ts",
+      "bytes": 46759,
+      "lines": 1280,
+      "sha256": "2e89fcb82f5b943c0d5f99e384b78c8c48b2606f0bf58a2441cfa241365e1c32",
+      "imports": [
+        "vitest",
+        "../src/b00/contracts.js",
+        "../src/b03/types.js",
+        "../src/b03/index.js"
+      ]
+    },
+    {
+      "path": "tests/b04.test.ts",
+      "bytes": 28131,
+      "lines": 806,
+      "sha256": "33d376af65895f544cc76795efaac57c955c564c901649aba918b2d05ed72028",
+      "imports": [
+        "vitest",
+        "../src/b04/types.js",
+        "../src/b00/contracts.js",
+        "../src/b02/types.js",
+        "../src/b03/types.js",
+        "../src/b04/index.js",
+        "../src/b00/hashing.js"
+      ]
+    },
+    {
+      "path": "tests/b05.test.ts",
+      "bytes": 25498,
+      "lines": 617,
+      "sha256": "3dd57b5adf13e3739592a6df8d24adcbcd832b2610ddc8eb0d915c4357b3135d",
+      "imports": [
+        "vitest",
+        "../src/b05/types.js",
+        "../src/b05/index.js",
+        "../src/b00/hashing.js"
+      ]
+    },
+    {
+      "path": "tests/b06.test.ts",
+      "bytes": 12035,
+      "lines": 313,
+      "sha256": "66162d4f8c2fc597e449b0b038be73495ed58bd28b46860242b5481e5d271e6d",
+      "imports": [
+        "vitest",
+        "../src/b06/index.js"
+      ]
+    },
+    {
+      "path": "tests/b07.test.ts",
+      "bytes": 21270,
+      "lines": 685,
+      "sha256": "adb1431ef1be584d595bc762284eef68baf8d0998868c3b35b5c44db36b83e3b",
+      "imports": [
+        "vitest",
+        "../src/b07/types.js",
+        "../src/b07/index.js"
+      ]
+    },
+    {
+      "path": "tests/b08.test.ts",
+      "bytes": 11570,
+      "lines": 309,
+      "sha256": "1c2a2d3ea521489fc4d5b825113baa854973f6c5d0a36345c08e6800298e4cee",
+      "imports": [
+        "vitest",
+        "../src/b08/index.js"
+      ]
+    },
+    {
+      "path": "tests/b09.test.ts",
+      "bytes": 4921,
+      "lines": 152,
+      "sha256": "d54c357004f28903ee5069826140ac46d2cbee08f46fb3eace1c9935fa01f26a",
+      "imports": [
+        "vitest",
+        "../src/b09/index.js"
+      ]
+    },
+    {
+      "path": "tests/b10.test.ts",
+      "bytes": 12356,
+      "lines": 373,
+      "sha256": "77428f36115554284ce110f98fbb40fd0eb97dc030d0c07e42636ee8eafc846e",
+      "imports": [
+        "vitest",
+        "../src/b10/index.js"
+      ]
+    },
+    {
+      "path": "tests/b11.test.ts",
+      "bytes": 11596,
+      "lines": 318,
+      "sha256": "a7d72c1eb2caaf49680ad25526cbdc38992e651da9faa1a89fa16e66d08613d6",
+      "imports": [
+        "vitest",
+        "../src/b11/index.js"
+      ]
+    },
+    {
+      "path": "tests/b12-real-integration.test.ts",
+      "bytes": 26222,
+      "lines": 567,
+      "sha256": "3e4c974f0350d2d15fbf93e1d7f4811fbeb31d8083da7f039d12b8f4bab80ff4",
+      "imports": [
+        "vitest",
+        "../src/b12/index.js",
+        "../src/b12/types.js",
+        "../src/b01/persistence.js",
+        "../src/b05/persistence.js",
+        "../src/b10/persistence.js",
+        "../src/b09/persistence.js",
+        "../src/b10/persistence.js",
+        "../src/b11/persistence.js",
+        "../src/b01/types.js",
+        "../src/b05/types.js"
+      ]
+    },
+    {
+      "path": "tests/b12.test.ts",
+      "bytes": 48684,
+      "lines": 1293,
+      "sha256": "fd885739bd046a240adb3bf2c6a9345475a1897554200b1d1967b0b342a82047",
+      "imports": [
+        "vitest",
+        "../src/b12/index.js"
+      ]
+    },
+    {
+      "path": "tests/repair/b00-b12-lineage.integration.test.ts",
+      "bytes": 7596,
+      "lines": 108,
+      "sha256": "193c49c0836ada37f6bd0d108b921142ed8b31e7b40811c4ebdde031c2eb539c",
+      "imports": [
+        "vitest",
+        "../../src/b00/identity.js",
+        "../../src/b00/governance.js",
+        "../../src/b12/orchestration.js",
+        "../../src/b12/types.js",
+        "../../src/b00/identity.js"
+      ]
+    },
+    {
+      "path": "tests/repair/remaining-repair.test.ts",
+      "bytes": 7668,
+      "lines": 123,
+      "sha256": "3b8dcb0c380772747821a83500c83b24186f02d6ccce1ed8056f1aa097e9c32b",
+      "imports": [
+        "vitest",
+        "../../src/b00/evidence.js",
+        "../../src/b01/orchestration.js",
+        "../../src/b08/execution.js",
+        "../../src/b09/phases/B09_01_observations.js",
+        "../../src/b04/phases/B04_03_synthesis.js",
+        "../../src/b05/phases/B05_02_angles.js",
+        "../../src/b06/phases/B06_03_scheduling.js",
+        "../../src/b07/phases/B07_04_success.js"
+      ]
+    },
+    {
+      "path": "tests/repair/repair-adversarial.test.ts",
+      "bytes": 11138,
+      "lines": 173,
+      "sha256": "953b0047fb097957c0ec389dc9601817053d88db9c8d07984c64dd2ca669459d",
+      "imports": [
+        "vitest",
+        "../../src/b00/hashing.js",
+        "../../src/b00/identity.js",
+        "../../src/b00/governance.js",
+        "../../src/b00/evidence.js",
+        "../../src/b00/validation.js",
+        "../../src/b00/lineage.js",
+        "../../src/b08/execution.js",
+        "../../src/b09/phases/B09_01_observations.js",
+        "../../src/b10/phases/B10_02_impact.js",
+        "../../src/b11/phases/B11_03_checks.js",
+        "../../src/b12/phases/B12_03_completeness.js"
+      ]
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 430,
+      "lines": 18,
+      "sha256": "b51f1285003a6befc4eef2d012a408c8ce44b7fb79acb79e22560281ebbb8e54",
+      "imports": []
+    },
+    {
+      "path": "verification/README.md",
+      "bytes": 1665,
+      "lines": 33,
+      "sha256": "8e7de44bb0ab00022a6910265eefeacdf5a035e7bc6e9acc7fcded5fd61d725b",
+      "imports": []
+    },
+    {
+      "path": "verification/critical-invariants.mjs",
+      "bytes": 12114,
+      "lines": 124,
+      "sha256": "d63f91e4c3a0c262fd0c1a8971d842bd9ca3eac19a60bfc465ef32f21746476d",
+      "imports": []
+    },
+    {
+      "path": "verification/integration-fixture.mjs",
+      "bytes": 6342,
+      "lines": 15,
+      "sha256": "b7ddb052189a2e26cc36065318205589c3ce6150c40db7c597514c3c94e7841a",
+      "imports": []
+    },
+    {
+      "path": "verification/remaining-repair-guards.mjs",
+      "bytes": 8594,
+      "lines": 81,
+      "sha256": "824b4fc330e23567f87286a510120e3c53a324509e2baf0333496edbc30785fa",
+      "imports": []
+    },
+    {
+      "path": "verification/results/all-tests-transpile-check.final.log",
+      "bytes": 0,
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "imports": []
+    },
+    {
+      "path": "verification/results/critical-invariants.final.log",
+      "bytes": 1222,
+      "lines": 24,
+      "sha256": "ceb09a8423d5f4790df1d5de77368f93947b9a69e5c8ca9851798d90882142c5",
+      "imports": []
+    },
+    {
+      "path": "verification/results/fallback-source-build.final.log",
+      "bytes": 0,
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "imports": []
+    },
+    {
+      "path": "verification/results/integration-fixture.final.log",
+      "bytes": 1848,
+      "lines": 84,
+      "sha256": "cf3a7acdb6bacb96b17814dd9b41a97d4c73d52c62bfc4e7689b1936540a5b58",
+      "imports": []
+    },
+    {
+      "path": "verification/results/legacy-tests-static-strict-diagnostic.summary.log",
+      "bytes": 716,
+      "lines": 6,
+      "sha256": "1a64a542a20808af219013dd96526e9b933a1c5875cd8e1da759b6e09910c241",
+      "imports": []
+    },
+    {
+      "path": "verification/results/npm-build.final.log",
+      "bytes": 252,
+      "lines": 7,
+      "sha256": "31ce886c8dd26a7b9c932eadacb6da0e6a1953c4b82f66f1ba2d07730ee2928b",
+      "imports": []
+    },
+    {
+      "path": "verification/results/npm-install.final.log",
+      "bytes": 312,
+      "lines": 5,
+      "sha256": "792faf261484c528f436c513db006170a74d07cba29c8270bf1c429cf28b77d0",
+      "imports": []
+    },
+    {
+      "path": "verification/results/npm-test-legacy.final.log",
+      "bytes": 124,
+      "lines": 5,
+      "sha256": "feee5f4aa17fa2adfa90af56e3ad5ef8e81eb0e35631adfdd40319cd134e3f9e",
+      "imports": []
+    },
+    {
+      "path": "verification/results/npm-test-repair.final.log",
+      "bytes": 121,
+      "lines": 5,
+      "sha256": "288b10724a93cc22d9ca60e6ad233eb724d9b953ae1cc0b0e99adb488bc34aa6",
+      "imports": []
+    },
+    {
+      "path": "verification/results/npm-test.final.log",
+      "bytes": 101,
+      "lines": 5,
+      "sha256": "2e0f297cc55a360ddf93531cd671258d864cf1a97c3e3230c52b24c3bbee170f",
+      "imports": []
+    },
+    {
+      "path": "verification/results/npm-typecheck.final.log",
+      "bytes": 265,
+      "lines": 7,
+      "sha256": "3dae72c110bcf2d38f672409b9618e4124ae07071ba37c5645549e7b1f06cd51",
+      "imports": []
+    },
+    {
+      "path": "verification/results/remaining-repair-guards.final.log",
+      "bytes": 925,
+      "lines": 17,
+      "sha256": "16897659520a5c853f31392cd7a1e2c70b2c603b76cb254d8d1c807478ce5ff3",
+      "imports": []
+    },
+    {
+      "path": "verification/results/repair-tests-static-strict.final.log",
+      "bytes": 0,
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "imports": []
+    },
+    {
+      "path": "verification/results/source-policy.final.log",
+      "bytes": 182,
+      "lines": 5,
+      "sha256": "a2f267a1f9cdd0283935d65bcd7703e17af82382b9faf133c7d60a3d0683ae9e",
+      "imports": []
+    },
+    {
+      "path": "verification/results/source-policy.package-final.log",
+      "bytes": 182,
+      "lines": 5,
+      "sha256": "a2f267a1f9cdd0283935d65bcd7703e17af82382b9faf133c7d60a3d0683ae9e",
+      "imports": []
+    }
+  ]
+}

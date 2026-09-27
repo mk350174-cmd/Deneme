@@ -1,0 +1,26 @@
+node_modules/
+dist/
+work/
+apps/youtube-agent/data/
+apps/youtube-agent/logs/
+apps/youtube-agent/temp/
+apps/youtube-agent/.env
+*.wav
+tools/
+# secrets and local config — never commit
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+kaggle.json
+# media and generated reports
+*.mp4
+*.mov
+*.mp3
+*.m4a
+/verification/current/
+
+# local signing key for unified envelopes — never commit, never share
+/.unified/

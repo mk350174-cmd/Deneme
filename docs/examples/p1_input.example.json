@@ -1,0 +1,84 @@
+{
+  "input_type": "P1_RESEARCH_INPUT",
+  "_readme": [
+    "P1 araştırma girdisi. Araştırmayı siz (ya da Claude ile birlikte) yaparsınız; P1 bulguları yapılandırır, kaynaklara bağlar ve mühürler — hiçbir bulguyu kendisi uydurmaz.",
+    "Her bulgunun query + dimension'ı 'queries' listesindeki bir soruyla eşleşmeli.",
+    "source.origin: URL ya da tam künye. '<…>' yer tutucuları doldurulmadan dosya reddedilir.",
+    "verifications: VERIFIED yalnızca bulgunun kendi kaynağından BAŞKA en az bir bağımsız kaynakla doğruladıysanız (cross_checked_with alanına o kaynakları yazın); tek kaynak = INFERRED; kaynaksız = UNKNOWN.",
+    "Bu dosyadaki ifadeler örnektir; yayından önce her birini kaynağından kontrol edin.",
+    "Akış: p1-scope → (kapsamı onayla) p1-draft → (p1_review.md'yi oku) p1-approve"
+  ],
+  "topic": "Taydula Hatun",
+  "question": "Taydula Hatun, Altın Orda'da siyasi olarak ne kadar etkiliydi?",
+  "objective": "9:16 dikey, 60–90 saniyelik kaynak temelli belgesel kısa video",
+  "constraints": [
+    "yalnızca kaynakta geçen bilgi",
+    "modern siyasi benzetme yok"
+  ],
+  "output_language": "tr",
+  "target_context": {
+    "channel": "Bozkırın Kadınları",
+    "format": "9:16 short"
+  },
+  "queries": [
+    {
+      "query": "Özbek Han'ın eşi olarak konumu",
+      "dimension": "people"
+    },
+    {
+      "query": "Rus metropolitlerine verilen yarlıklar",
+      "dimension": "events"
+    },
+    {
+      "query": "İbn Battûta'nın anlatımı",
+      "dimension": "examples"
+    }
+  ],
+  "findings": [
+    {
+      "query": "Özbek Han'ın eşi olarak konumu",
+      "dimension": "people",
+      "statement": "Taydula, Özbek Han'ın hatunlarından biriydi.",
+      "source": {
+        "origin": "<kaynak künyesi ya da URL>",
+        "source_type": "secondary",
+        "retrieved_at": "2026-09-23T00:00:00Z",
+        "access_method": "book"
+      },
+      "excerpt": "<kaynaktaki ilgili cümle ya da sayfa numarası>"
+    },
+    {
+      "query": "Rus metropolitlerine verilen yarlıklar",
+      "dimension": "events",
+      "statement": "Taydula adına Rus Ortodoks metropolitlerine yarlık verildiği kaydedilmiştir.",
+      "source": {
+        "origin": "<kaynak künyesi ya da URL>",
+        "source_type": "secondary",
+        "access_method": "book"
+      },
+      "excerpt": "<sayfa / bölüm>"
+    },
+    {
+      "query": "İbn Battûta'nın anlatımı",
+      "dimension": "examples",
+      "statement": "İbn Battûta seyahatnamesinde Özbek Han'ın hatunlarını ve onların sarayda gördüğü saygıyı anlatır.",
+      "source": {
+        "origin": "<İbn Battûta, Rihle — kullandığınız baskı/çeviri ve sayfa>",
+        "source_type": "primary",
+        "access_method": "book"
+      },
+      "excerpt": "<ilgili pasaj>"
+    }
+  ],
+  "verifications": [
+    {
+      "statement": "Taydula, Özbek Han'ın hatunlarından biriydi.",
+      "status": "VERIFIED",
+      "rationale": "<iki kaynağın ne söylediği>",
+      "cross_checked_with": [
+        "<bağımsız ikinci kaynağın künyesi ya da URL'si>"
+      ]
+    }
+  ],
+  "handoff_notes": ""
+}

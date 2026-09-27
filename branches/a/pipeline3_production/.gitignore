@@ -1,0 +1,17 @@
+node_modules/
+dist/
+state/
+
+# Python generated artifacts (scripts/ has .py helper scripts) — real
+# example that leaked into a prior canonical ZIP snapshot before this rule
+# existed: pipeline3_production/scripts/__pycache__/*.pyc
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Credentials / local env — never commit (audit §13.6/§13.7 real connectivity checks)
+.env
+.env.*
+!.env.example
